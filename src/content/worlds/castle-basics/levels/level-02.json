@@ -1,0 +1,84 @@
+{
+  "id": "cb-level-02",
+  "worldId": "castle-basics",
+  "title": "What's Your Name?",
+  "order": 2,
+  "storySnippet": "The princess meets new friends in the castle. They want to know her name!",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cb-level-01" },
+  "exercises": [
+    {
+      "id": "cb-02-ex-01",
+      "minigameType": "listen-and-tap",
+      "prompt": "Listen and tap the phrase you hear",
+      "data": {
+        "audioWord": "My name is",
+        "options": [
+          { "text": "My name is", "isCorrect": true },
+          { "text": "My house is", "isCorrect": false },
+          { "text": "My cat is", "isCorrect": false }
+        ]
+      }
+    },
+    {
+      "id": "cb-02-ex-02",
+      "minigameType": "sentence-builder",
+      "prompt": "Introduce yourself!",
+      "data": {
+        "targetSentence": "My name is Sara",
+        "scrambledWords": ["name", "Sara", "My", "is"],
+        "hint": "Start with 'My'"
+      }
+    },
+    {
+      "id": "cb-02-ex-03",
+      "minigameType": "word-picture-match",
+      "prompt": "Tap the picture that shows 'I am happy'",
+      "data": {
+        "targetWord": "I am happy",
+        "options": [
+          { "imageEmoji": "😊", "label": "Happy face", "isCorrect": true },
+          { "imageEmoji": "😢", "label": "Sad face", "isCorrect": false },
+          { "imageEmoji": "😠", "label": "Angry face", "isCorrect": false }
+        ]
+      }
+    },
+    {
+      "id": "cb-02-ex-04",
+      "minigameType": "listen-and-tap",
+      "prompt": "Listen and tap the phrase you hear",
+      "data": {
+        "audioWord": "Nice to meet you",
+        "options": [
+          { "text": "Nice to meet you", "isCorrect": true },
+          { "text": "Nice to eat food", "isCorrect": false },
+          { "text": "Nine to meet you", "isCorrect": false }
+        ]
+      }
+    },
+    {
+      "id": "cb-02-ex-05",
+      "minigameType": "sentence-builder",
+      "prompt": "Say hello and introduce yourself",
+      "data": {
+        "targetSentence": "Hello, I am Sara",
+        "scrambledWords": ["am", "Hello,", "Sara", "I"],
+        "hint": "Start with a greeting!"
+      }
+    },
+    {
+      "id": "cb-02-ex-06",
+      "minigameType": "word-picture-match",
+      "prompt": "Tap the picture that shows 'friend'",
+      "data": {
+        "targetWord": "Friend",
+        "options": [
+          { "imageEmoji": "🤝", "label": "Two people shaking hands", "isCorrect": true },
+          { "imageEmoji": "🏠", "label": "A house", "isCorrect": false },
+          { "imageEmoji": "🌙", "label": "The moon", "isCorrect": false }
+        ]
+      }
+    }
+  ]
+}

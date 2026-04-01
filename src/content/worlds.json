@@ -1,0 +1,55 @@
+[
+  {
+    "id": "castle-basics",
+    "name": "Castle Basics",
+    "theme": "castle",
+    "description": "Learn greetings, names, and simple words at the royal castle.",
+    "storyIntro": "Welcome, brave princess! The castle gates are open, and everyone is eager to meet you. Let us begin your journey with the most important words — the words of greeting and friendship.",
+    "iconEmoji": "🏰",
+    "levelIds": [
+      "cb-level-01", "cb-level-02", "cb-level-03", "cb-level-04",
+      "cb-level-05", "cb-level-06", "cb-level-07", "cb-level-08"
+    ],
+    "unlockCondition": { "type": "always" }
+  },
+  {
+    "id": "garden-of-words",
+    "name": "Garden of Words",
+    "theme": "garden",
+    "description": "Discover colors, animals, and the beauty of nature.",
+    "storyIntro": "Beyond the castle walls lies a magical garden filled with wonders...",
+    "iconEmoji": "🌸",
+    "levelIds": [],
+    "unlockCondition": { "type": "stars-in-world", "worldId": "castle-basics", "minStars": 12 }
+  },
+  {
+    "id": "village-voices",
+    "name": "Village Voices",
+    "theme": "village",
+    "description": "Meet the villagers and learn about family and daily life.",
+    "storyIntro": "The village below the castle is full of kind people...",
+    "iconEmoji": "🏘️",
+    "levelIds": [],
+    "unlockCondition": { "type": "stars-in-world", "worldId": "garden-of-words", "minStars": 12 }
+  },
+  {
+    "id": "royal-market",
+    "name": "Royal Market",
+    "theme": "market",
+    "description": "Numbers, food, and the art of asking for things.",
+    "storyIntro": "The royal market is bustling with activity...",
+    "iconEmoji": "🛒",
+    "levelIds": [],
+    "unlockCondition": { "type": "stars-in-world", "worldId": "village-voices", "minStars": 12 }
+  },
+  {
+    "id": "sky-kingdom",
+    "name": "Sky Kingdom",
+    "theme": "sky",
+    "description": "Build sentences and have your first conversations.",
+    "storyIntro": "High above the clouds, the Sky Kingdom awaits...",
+    "iconEmoji": "☁️",
+    "levelIds": [],
+    "unlockCondition": { "type": "stars-in-world", "worldId": "royal-market", "minStars": 12 }
+  }
+]
