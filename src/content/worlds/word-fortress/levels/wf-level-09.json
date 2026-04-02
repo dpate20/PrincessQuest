@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-09",
+  "worldId": "word-fortress",
+  "title": "The Scribe's Challenge",
+  "order": 9,
+  "storySnippet": "The royal scribe tests your knowledge of grand words before granting passage to the inner keep.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-08" },
+  "exercises": [
+    {
+      "id": "wf-09-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "abbreviation",
+        "incorrectSpelling": "abreviation",
+        "sentenceContext": "The abbreviation for 'doctor' is 'Dr.' in most English texts."
+      }
+    },
+    {
+      "id": "wf-09-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accomplishment",
+        "incorrectSpelling": "accomplyshment",
+        "sentenceContext": "Winning the spelling tournament was her greatest accomplishment this year."
+      }
+    },
+    {
+      "id": "wf-09-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accessible",
+        "incorrectSpelling": "accessable",
+        "sentenceContext": "The castle library should be accessible to all citizens of the kingdom."
+      }
+    },
+    {
+      "id": "wf-09-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bibliography",
+        "incorrectSpelling": "biblography",
+        "sentenceContext": "The scholar included a detailed bibliography at the end of her research paper."
+      }
+    },
+    {
+      "id": "wf-09-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "circumstances",
+        "incorrectSpelling": "circumstanses",
+        "sentenceContext": "Under normal circumstances, the drawbridge is lowered at sunrise."
+      }
+    },
+    {
+      "id": "wf-09-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "controversial",
+        "incorrectSpelling": "contraversial",
+        "sentenceContext": "The king's new tax law was extremely controversial among the townspeople."
+      }
+    },
+    {
+      "id": "wf-09-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "correspondence",
+        "incorrectSpelling": "correspondance",
+        "sentenceContext": "The princess kept up regular correspondence with her allies across the land."
+      }
+    },
+    {
+      "id": "wf-09-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "deteriorate",
+        "incorrectSpelling": "deterioate",
+        "sentenceContext": "Without proper care, the fortress walls will deteriorate over time."
+      }
+    },
+    {
+      "id": "wf-09-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ for 'United States of America' is 'USA.'",
+        "correctAnswer": "abbreviation",
+        "acceptableSpellings": ["abbreviation"],
+        "hint": "A shortened form of a word or phrase"
+      }
+    },
+    {
+      "id": "wf-09-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Graduating from school was a remarkable ___.",
+        "correctAnswer": "accomplishment",
+        "acceptableSpellings": ["accomplishment"],
+        "hint": "Something achieved successfully"
+      }
+    },
+    {
+      "id": "wf-09-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The new ramp makes the building ___ for everyone.",
+        "correctAnswer": "accessible",
+        "acceptableSpellings": ["accessible"],
+        "hint": "Easy to reach or enter"
+      }
+    },
+    {
+      "id": "wf-09-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Please list all your sources in the ___ at the end of your report.",
+        "correctAnswer": "bibliography",
+        "acceptableSpellings": ["bibliography"],
+        "hint": "A list of books and references used in research"
+      }
+    }
+  ]
+}

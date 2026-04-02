@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-16",
+  "worldId": "word-fortress",
+  "title": "The Throne of Words",
+  "order": 16,
+  "storySnippet": "You face the final trial at the Throne of Words, where every spelling challenge from the fortress awaits your mastery.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-15" },
+  "exercises": [
+    {
+      "id": "wf-16-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "onomatopoeia",
+        "incorrectSpelling": "onomatopeia",
+        "sentenceContext": "The poet used onomatopoeia to bring the sounds of the battlefield to life."
+      }
+    },
+    {
+      "id": "wf-16-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "serendipitous",
+        "incorrectSpelling": "serendipetous",
+        "sentenceContext": "A serendipitous encounter with an old friend led to a wonderful adventure."
+      }
+    },
+    {
+      "id": "wf-16-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bourgeoisie",
+        "incorrectSpelling": "bourgeoisee",
+        "sentenceContext": "The revolution was driven by tensions between the bourgeoisie and the working class."
+      }
+    },
+    {
+      "id": "wf-16-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accomplishment",
+        "incorrectSpelling": "accomplishmant",
+        "sentenceContext": "Completing all sixteen levels is a tremendous accomplishment."
+      }
+    },
+    {
+      "id": "wf-16-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "pharmaceutical",
+        "incorrectSpelling": "pharmaceutcal",
+        "sentenceContext": "Advances in pharmaceutical research have saved countless lives."
+      }
+    },
+    {
+      "id": "wf-16-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "deteriorate",
+        "incorrectSpelling": "detereorate",
+        "sentenceContext": "Old parchments will deteriorate quickly if exposed to moisture."
+      }
+    },
+    {
+      "id": "wf-16-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "idiosyncrasy",
+        "incorrectSpelling": "idiosyncracity",
+        "sentenceContext": "Each kingdom had its own idiosyncrasy that set it apart from the others."
+      }
+    },
+    {
+      "id": "wf-16-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rendezvous",
+        "incorrectSpelling": "randevouz",
+        "sentenceContext": "The heroes arranged a final rendezvous before storming the fortress gates."
+      }
+    },
+    {
+      "id": "wf-16-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ scales of the fish sparkled in shades of blue and green.",
+        "correctAnswer": "iridescent",
+        "acceptableSpellings": ["iridescent"],
+        "hint": "Displaying shifting, rainbow-like colors"
+      }
+    },
+    {
+      "id": "wf-16-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The new law will ___ the outdated regulation from last century.",
+        "correctAnswer": "supersede",
+        "acceptableSpellings": ["supersede"],
+        "hint": "To take the place of; to replace"
+      }
+    },
+    {
+      "id": "wf-16-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The spy made a ___ escape through the back door without anyone noticing.",
+        "correctAnswer": "surreptitious",
+        "acceptableSpellings": ["surreptitious"],
+        "hint": "Done in a secret or sneaky way"
+      }
+    },
+    {
+      "id": "wf-16-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The story had such ___ that the audience forgot it was fiction.",
+        "correctAnswer": "verisimilitude",
+        "acceptableSpellings": ["verisimilitude"],
+        "hint": "The quality of appearing to be true or real"
+      }
+    }
+  ]
+}

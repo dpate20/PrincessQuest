@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-07",
+  "worldId": "context-courtyard",
+  "title": "The Scholar's Trial",
+  "order": 7,
+  "storySnippet": "Lira faces the Scholar's Trial, where only mastery of the most powerful words will see her through.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-06" },
+  "exercises": [
+    {
+      "id": "cc-07-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Seeing a knight use a laptop in the medieval play was clearly ___.",
+        "choices": ["anachronistic", "antagonistic"],
+        "correctChoice": "anachronistic",
+        "definition": "Anachronistic: belonging to a different time period; noticeably out of place in the era depicted."
+      }
+    },
+    {
+      "id": "cc-07-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The idea of wasting resources is ___ to the goals of the school's conservation club.",
+        "choices": ["antithetical", "analytical"],
+        "correctChoice": "antithetical",
+        "definition": "Antithetical: directly opposed or contrasted; completely opposite in nature."
+      }
+    },
+    {
+      "id": "cc-07-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "A rainbow appearing on the morning of the championship felt like an ___ sign for the team.",
+        "choices": ["auspicious", "audacious"],
+        "correctChoice": "auspicious",
+        "definition": "Auspicious: indicating a good chance of success; favorable and promising."
+      }
+    },
+    {
+      "id": "cc-07-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Instead of giving a straight answer, the witness used ___ to avoid the question.",
+        "choices": ["circumlocution", "circumstances"],
+        "correctChoice": "circumlocution",
+        "definition": "Circumlocution: the use of many words where fewer would do, especially to avoid saying something directly."
+      }
+    },
+    {
+      "id": "cc-07-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Pollution can have ___ effects on wildlife habitats for many years.",
+        "choices": ["deleterious", "deliberate"],
+        "correctChoice": "deleterious",
+        "definition": "Deleterious: causing harm or damage; injurious to health or well-being."
+      }
+    },
+    {
+      "id": "cc-07-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ nature of the documentary made it feel like a classroom lesson about ocean life.",
+        "choices": ["didactic", "dramatic"],
+        "correctChoice": "didactic",
+        "definition": "Didactic: intended to teach or instruct, sometimes in a way that feels overly moralistic."
+      }
+    },
+    {
+      "id": "cc-07-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The long hike in the summer heat began to ___ even the strongest members of the group.",
+        "choices": ["enervate", "energize"],
+        "correctChoice": "enervate",
+        "definition": "Enervate: to drain of energy or vitality; to weaken physically or mentally."
+      }
+    },
+    {
+      "id": "cc-07-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ professor could speak knowledgeably about subjects ranging from ancient Rome to quantum physics.",
+        "choices": ["erudite", "earnest"],
+        "correctChoice": "erudite",
+        "definition": "Erudite: having or showing great knowledge gained from study and reading; deeply learned."
+      }
+    },
+    {
+      "id": "cc-07-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Skipping warm-ups before practice will only ___ the risk of getting injured.",
+        "choices": ["exacerbate", "examine"],
+        "correctChoice": "exacerbate",
+        "definition": "Exacerbate: to make a problem, bad situation, or negative feeling worse."
+      }
+    },
+    {
+      "id": "cc-07-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ artist challenged traditional painting styles by using unusual materials like sand and wire.",
+        "choices": ["iconoclastic", "identical"],
+        "correctChoice": "iconoclastic",
+        "definition": "Iconoclastic: challenging or rejecting widely accepted beliefs, traditions, or institutions."
+      }
+    }
+  ]
+}

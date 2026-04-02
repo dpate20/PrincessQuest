@@ -2,11 +2,13 @@
 
 import { useCallback } from "react";
 import type { Exercise, MinigameType } from "@/types/content";
-import type { MinigameProps } from "@/types/minigame";
+import type { MinigameProps, AnswerResult } from "@/types/minigame";
 import { useMinigame } from "@/hooks/useMinigame";
-import WordPictureMatch from "./WordPictureMatch";
-import ListenAndTap from "./ListenAndTap";
-import SentenceBuilder from "./SentenceBuilder";
+import SpellingPairs from "./SpellingPairs";
+import VocabularyInContext from "./VocabularyInContext";
+import ReadingComprehension from "./ReadingComprehension";
+import ShortStoryInference from "./ShortStoryInference";
+import FillInTheBlank from "./FillInTheBlank";
 import CorrectFeedback from "@/components/feedback/CorrectFeedback";
 import IncorrectFeedback from "@/components/feedback/IncorrectFeedback";
 
@@ -14,23 +16,30 @@ const MINIGAME_COMPONENTS: Record<
   MinigameType,
   React.ComponentType<MinigameProps>
 > = {
-  "word-picture-match": WordPictureMatch,
-  "listen-and-tap": ListenAndTap,
-  "sentence-builder": SentenceBuilder,
+  "spelling-pairs": SpellingPairs,
+  "vocabulary-in-context": VocabularyInContext,
+  "reading-comprehension": ReadingComprehension,
+  "short-story-inference": ShortStoryInference,
+  "fill-in-the-blank": FillInTheBlank,
 };
 
 function getCorrectAnswer(exercise: Exercise): string {
   const data = exercise.data;
-  if ("targetWord" in data) return data.targetWord;
-  if ("audioWord" in data) return data.audioWord;
-  if ("targetSentence" in data) return data.targetSentence;
+  if ("correctSpelling" in data) return data.correctSpelling;
+  if ("correctChoice" in data) return data.correctChoice;
+  if ("correctAnswer" in data) return data.correctAnswer;
+  if ("questions" in data) {
+    const q = data.questions[0];
+    if ("correctOption" in q) return q.correctOption;
+    if ("sampleAnswer" in q) return q.sampleAnswer;
+  }
   return "";
 }
 
 interface MinigameShellProps {
   exercises: Exercise[];
   starThresholds: [number, number, number];
-  onComplete: (score: number, starCount: number) => void;
+  onComplete: (score: number, starCount: number, results: AnswerResult[]) => void;
 }
 
 export default function MinigameShell({
@@ -41,6 +50,7 @@ export default function MinigameShell({
   const {
     currentIndex,
     currentExercise,
+    results,
     submitAnswer,
     advance,
     isComplete,
@@ -55,10 +65,8 @@ export default function MinigameShell({
     advance();
   }, [advance]);
 
-  // Trigger completion callback
   if (isComplete) {
-    // Use requestAnimationFrame to avoid calling during render
-    requestAnimationFrame(() => onComplete(score, starCount));
+    requestAnimationFrame(() => onComplete(score, starCount, results));
     return null;
   }
 
@@ -69,7 +77,7 @@ export default function MinigameShell({
   return (
     <div className="flex flex-col flex-1 items-center px-4 py-6">
       {/* Progress dots */}
-      <div className="flex gap-1.5 mb-4">
+      <div className="flex gap-1.5 mb-4 flex-wrap justify-center">
         {Array.from({ length: total }, (_, i) => (
           <div
             key={i}
@@ -77,7 +85,7 @@ export default function MinigameShell({
               i < currentIndex
                 ? "bg-[var(--color-success)]"
                 : i === currentIndex
-                  ? "bg-[var(--color-primary)]"
+                  ? "bg-[var(--color-accent)]"
                   : "bg-gray-200"
             }`}
           />
@@ -85,7 +93,7 @@ export default function MinigameShell({
       </div>
 
       {/* Exercise prompt */}
-      <p className="text-lg font-semibold text-gray-700 text-center mb-6">
+      <p className="text-lg font-semibold text-[var(--color-primary)] text-center mb-6">
         {currentExercise.prompt}
       </p>
 
@@ -97,16 +105,16 @@ export default function MinigameShell({
       />
 
       {/* Feedback overlay */}
-      {showingFeedback && lastResult && (
-        lastResult.correct ? (
+      {showingFeedback &&
+        lastResult &&
+        (lastResult.correct ? (
           <CorrectFeedback onDone={handleFeedbackDone} />
         ) : (
           <IncorrectFeedback
             correctAnswer={getCorrectAnswer(currentExercise)}
             onDone={handleFeedbackDone}
           />
-        )
-      )}
+        ))}
     </div>
   );
 }

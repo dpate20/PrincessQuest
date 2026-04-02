@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-07",
+  "worldId": "word-fortress",
+  "title": "The War Room",
+  "order": 7,
+  "storySnippet": "In the fortress war room, maps and dispatches cover every wall. Only those with expert-level spelling can decode the messages.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-06" },
+  "exercises": [
+    {
+      "id": "wf-07-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "connoisseur",
+        "incorrectSpelling": "connosieur",
+        "sentenceContext": "My grandmother is a connoisseur of fine teas from around the world."
+      }
+    },
+    {
+      "id": "wf-07-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "liaison",
+        "incorrectSpelling": "liason",
+        "sentenceContext": "The teacher served as a liaison between the parents and the school administration."
+      }
+    },
+    {
+      "id": "wf-07-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "maneuver",
+        "incorrectSpelling": "manuever",
+        "sentenceContext": "The pilot had to maneuver the aircraft through a narrow mountain pass during the storm."
+      }
+    },
+    {
+      "id": "wf-07-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "millennium",
+        "incorrectSpelling": "millenium",
+        "sentenceContext": "The turn of the millennium in the year 2000 was celebrated with fireworks worldwide."
+      }
+    },
+    {
+      "id": "wf-07-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "reconnaissance",
+        "incorrectSpelling": "reconaissance",
+        "sentenceContext": "The team conducted a reconnaissance of the trail before leading the group on the hike."
+      }
+    },
+    {
+      "id": "wf-07-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "surveillance",
+        "incorrectSpelling": "surveilance",
+        "sentenceContext": "Security cameras provide surveillance of the school parking lot during events."
+      }
+    },
+    {
+      "id": "wf-07-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "acquiescence",
+        "incorrectSpelling": "acquiesence",
+        "sentenceContext": "Her quiet acquiescence to the new rules surprised everyone who expected her to argue."
+      }
+    },
+    {
+      "id": "wf-07-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "perseverance",
+        "incorrectSpelling": "perserverance",
+        "sentenceContext": "The Mars rover named Perseverance was designed to search for signs of ancient life."
+      }
+    },
+    {
+      "id": "wf-07-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The spy plane was sent on a ___ mission to gather information.",
+        "correctAnswer": "reconnaissance",
+        "acceptableSpellings": ["reconnaissance"],
+        "hint": "Double 's' near the end, and two 'n's"
+      }
+    },
+    {
+      "id": "wf-07-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The driver had to ___ around the fallen tree blocking the road.",
+        "correctAnswer": "maneuver",
+        "acceptableSpellings": ["maneuver"],
+        "hint": "The vowels in the middle go 'e-u', not 'u-e'"
+      }
+    },
+    {
+      "id": "wf-07-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "A ___ of fine art can tell the difference between an original and a copy.",
+        "correctAnswer": "connoisseur",
+        "acceptableSpellings": ["connoisseur"],
+        "hint": "Double 'n', double 's', ends in '-eur'"
+      }
+    },
+    {
+      "id": "wf-07-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The security team used ___ cameras to monitor the building entrance.",
+        "correctAnswer": "surveillance",
+        "acceptableSpellings": ["surveillance"],
+        "hint": "Contains '-veill-' with double 'l'"
+      }
+    }
+  ]
+}

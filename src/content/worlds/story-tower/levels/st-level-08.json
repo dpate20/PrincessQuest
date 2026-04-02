@@ -1,0 +1,35 @@
+{
+  "id": "st-level-08",
+  "worldId": "story-tower",
+  "title": "The Final Chapter",
+  "order": 8,
+  "storySnippet": "The tower's highest floor holds its greatest story.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-07" },
+  "exercises": [
+    {
+      "id": "st-08-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Maya always stayed late at the school library, but today something was different. While reshelving books in the back corner, her elbow bumped a shelf and she heard a hollow click. A section of the wall swung inward, revealing a narrow room lit by a single dusty window. Inside were stacks of leather-bound journals, a globe with countries that no longer existed, and a chalkboard covered in equations. 'What is this place?' she whispered. Her heart raced as she opened the nearest journal. The handwriting inside was elegant and old-fashioned: 'September 12, 1932—Today I have hidden my life's work where only the curious will find it.' Maya ran her fingers along the spines of the journals, counting dozens of them. She pulled out her phone to take a photo, then stopped. Something about this room felt sacred, like a secret meant to be earned, not shared carelessly. She sat down at the small wooden desk, opened the first journal to page one, and began to read.",
+        "passageTitle": "The Hidden Room",
+        "questions": [
+          {
+            "id": "st-08-si-01-q1",
+            "question": "How does the main character feel about their discovery?",
+            "acceptableAnswers": ["excited", "curious", "amazed", "thrilled", "surprised", "awed", "fascinated"],
+            "sampleAnswer": "Maya feels excited and curious about finding the hidden room, as shown by her racing heart and her decision to sit down and start reading the journals rather than leaving."
+          },
+          {
+            "id": "st-08-si-01-q2",
+            "question": "Why might the room have been hidden?",
+            "acceptableAnswers": ["secret", "forgotten", "private", "special", "protected", "to preserve the work", "to keep it safe"],
+            "sampleAnswer": "The room was likely hidden because the person who wrote the journals wanted to protect their life's work and ensure it would only be found by someone genuinely curious enough to discover it by accident."
+          }
+        ]
+      }
+    }
+  ]
+}

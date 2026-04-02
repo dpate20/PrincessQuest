@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-10",
+  "worldId": "word-fortress",
+  "title": "The Herald's Decree",
+  "order": 10,
+  "storySnippet": "The royal herald demands you prove your command of challenging words before announcing your arrival.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-09" },
+  "exercises": [
+    {
+      "id": "wf-10-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "distinguished",
+        "incorrectSpelling": "distiguished",
+        "sentenceContext": "The distinguished knight was honored for years of loyal service to the crown."
+      }
+    },
+    {
+      "id": "wf-10-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "extravagant",
+        "incorrectSpelling": "extravagent",
+        "sentenceContext": "The queen hosted an extravagant feast to celebrate the kingdom's victory."
+      }
+    },
+    {
+      "id": "wf-10-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "abbreviation",
+        "incorrectSpelling": "abbrieviation",
+        "sentenceContext": "Each abbreviation in the ancient text had to be decoded by the scholars."
+      }
+    },
+    {
+      "id": "wf-10-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "circumstances",
+        "incorrectSpelling": "curcumstances",
+        "sentenceContext": "The circumstances surrounding the missing treasure remain a mystery."
+      }
+    },
+    {
+      "id": "wf-10-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "correspondence",
+        "incorrectSpelling": "corrispondence",
+        "sentenceContext": "The intercepted correspondence revealed the enemy's secret plans."
+      }
+    },
+    {
+      "id": "wf-10-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "deteriorate",
+        "incorrectSpelling": "deterioarate",
+        "sentenceContext": "Morale among the guards began to deteriorate after weeks without supplies."
+      }
+    },
+    {
+      "id": "wf-10-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "controversial",
+        "incorrectSpelling": "controversal",
+        "sentenceContext": "The controversial decision to close the market divided the village in two."
+      }
+    },
+    {
+      "id": "wf-10-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accomplishment",
+        "incorrectSpelling": "acomplishment",
+        "sentenceContext": "Building the new bridge was a great accomplishment for the entire village."
+      }
+    },
+    {
+      "id": "wf-10-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ general led his troops with courage and wisdom.",
+        "correctAnswer": "distinguished",
+        "acceptableSpellings": ["distinguished"],
+        "hint": "Well-known and respected"
+      }
+    },
+    {
+      "id": "wf-10-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The wedding decorations were so ___ that they sparkled from every corner.",
+        "correctAnswer": "extravagant",
+        "acceptableSpellings": ["extravagant"],
+        "hint": "Exceeding what is reasonable; lavish"
+      }
+    },
+    {
+      "id": "wf-10-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "If the old roof is not repaired, it will continue to ___.",
+        "correctAnswer": "deteriorate",
+        "acceptableSpellings": ["deteriorate"],
+        "hint": "To become progressively worse"
+      }
+    },
+    {
+      "id": "wf-10-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Due to unusual ___, the festival was postponed until next month.",
+        "correctAnswer": "circumstances",
+        "acceptableSpellings": ["circumstances"],
+        "hint": "Conditions or facts surrounding a situation"
+      }
+    }
+  ]
+}

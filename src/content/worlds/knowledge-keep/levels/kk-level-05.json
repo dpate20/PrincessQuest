@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-05",
+  "worldId": "knowledge-keep",
+  "title": "Photosynthesis",
+  "order": 5,
+  "storySnippet": "How plants turn sunlight into food.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-04" },
+  "exercises": [
+    {
+      "id": "kk-05-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Photosynthesis is the process by which green plants, algae, and some bacteria convert sunlight into chemical energy stored as glucose. It takes place primarily in the leaves, inside tiny structures called chloroplasts that contain the green pigment chlorophyll. Chlorophyll absorbs red and blue wavelengths of light while reflecting green light, which is why most plants appear green. During photosynthesis, plants absorb carbon dioxide from the air through small pores called stomata and draw water up from the soil through their roots. Using the energy from sunlight, they combine these ingredients to produce glucose and release oxygen as a byproduct. The simplified equation is: carbon dioxide plus water plus light energy yields glucose plus oxygen. This process is essential for life on Earth for two reasons. First, it produces the oxygen that most living things need to breathe. Second, it forms the base of nearly every food chain, since animals either eat plants directly or eat other animals that feed on plants. Without photosynthesis, Earth's atmosphere would contain almost no oxygen, and complex life as we know it could not exist.",
+        "passageTitle": "Photosynthesis",
+        "questions": [
+          {
+            "id": "kk-05-rc-01-q1",
+            "question": "Based on the passage, why do plants appear green to our eyes?",
+            "options": ["Because chlorophyll reflects green light while absorbing red and blue wavelengths", "Because plants produce green-colored glucose during photosynthesis", "Because the oxygen released by plants has a green tint", "Because soil minerals give plant leaves their green color"],
+            "correctOption": "Because chlorophyll reflects green light while absorbing red and blue wavelengths"
+          },
+          {
+            "id": "kk-05-rc-01-q2",
+            "question": "What would most likely happen to animal life if photosynthesis suddenly stopped?",
+            "options": ["Animals would eventually die because their food supply and oxygen would disappear", "Animals would quickly learn to produce their own food from sunlight", "Animals would not be affected because they do not depend on plants", "Animals would simply switch to eating rocks and minerals"],
+            "correctOption": "Animals would eventually die because their food supply and oxygen would disappear"
+          },
+          {
+            "id": "kk-05-rc-01-q3",
+            "question": "Why does the author call oxygen a byproduct of photosynthesis?",
+            "options": ["Because oxygen is not the main goal of the process—glucose is the plant's primary product", "Because oxygen is harmful to plants and they want to get rid of it", "Because oxygen is only produced when photosynthesis goes wrong", "Because the author believes oxygen is not important"],
+            "correctOption": "Because oxygen is not the main goal of the process—glucose is the plant's primary product"
+          }
+        ]
+      }
+    }
+  ]
+}

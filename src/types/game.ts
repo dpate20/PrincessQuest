@@ -1,3 +1,5 @@
+import type { MinigameType } from "./content";
+
 export interface LevelProgress {
   levelId: string;
   worldId: string;
@@ -13,3 +15,10 @@ export interface StreakData {
   longestStreak: number;
   lastActiveDate: string;
 }
+
+export interface ExerciseTypeStats {
+  totalAttempted: number;
+  totalCorrect: number;
+}
+
+export type ExerciseTypeTracking = Record<MinigameType, ExerciseTypeStats>;

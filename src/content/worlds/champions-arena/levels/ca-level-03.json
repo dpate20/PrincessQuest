@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-03",
+  "worldId": "champions-arena",
+  "title": "Trial by Knowledge",
+  "order": 3,
+  "storySnippet": "The arena demands more from its challengers.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-02" },
+  "exercises": [
+    {
+      "id": "ca-03-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "privilege", "incorrectSpelling": "privelege", "sentenceContext": "It was a privilege to meet the famous author." }
+    },
+    {
+      "id": "ca-03-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "conscience", "incorrectSpelling": "concience", "sentenceContext": "Her conscience told her to return the lost wallet." }
+    },
+    {
+      "id": "ca-03-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "rhythm", "incorrectSpelling": "rythm", "sentenceContext": "The drummer kept a steady rhythm throughout the song." }
+    },
+    {
+      "id": "ca-03-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ weather forced the hikers to turn back.", "choices": ["treacherous", "tremendous"], "correctChoice": "treacherous", "definition": "Presenting hidden or unpredictable dangers." }
+    },
+    {
+      "id": "ca-03-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The artist used ___ colors to create a cheerful painting.", "choices": ["vibrant", "violent"], "correctChoice": "vibrant", "definition": "Full of energy and life; bright and strong." }
+    },
+    {
+      "id": "ca-03-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "Scientists need ___ to support their claims.", "choices": ["evidence", "elegance"], "correctChoice": "evidence", "definition": "Facts or information indicating whether something is true or valid." }
+    },
+    {
+      "id": "ca-03-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Elephants are known to mourn their dead. When an elephant encounters the bones of a deceased family member, it will often stop, gently touch the bones with its trunk, and stand silently for several minutes. Elephants have also been observed covering dead companions with leaves and branches.",
+        "passageTitle": "Elephant Grief",
+        "questions": [
+          {
+            "id": "ca-03-rc-01-q1",
+            "question": "What does this behavior suggest about the emotional intelligence of elephants?",
+            "options": ["Elephants may experience complex emotions similar to human grief", "Elephants are afraid of bones", "Elephants have poor eyesight and mistake bones for food", "Elephants cover things with leaves to mark their territory"],
+            "correctOption": "Elephants may experience complex emotions similar to human grief"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Venus is often called Earth's twin because it is similar in size and mass. However, conditions on Venus are extremely different. Its thick atmosphere traps heat through a runaway greenhouse effect, making surface temperatures hot enough to melt lead at around 465 degrees Celsius. The atmospheric pressure is ninety times greater than Earth's.",
+        "passageTitle": "Earth's Dangerous Twin",
+        "questions": [
+          {
+            "id": "ca-03-rc-02-q1",
+            "question": "What lesson about greenhouse gases on Earth can be inferred from Venus's conditions?",
+            "options": ["That unchecked greenhouse gas buildup could make a planet uninhabitable", "That Earth will become exactly like Venus next year", "That greenhouse gases are only found on Venus", "That Venus was never similar to Earth"],
+            "correctOption": "That unchecked greenhouse gas buildup could make a planet uninhabitable"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The Rosetta Stone, discovered in 1799, contained the same text written in three scripts: Greek, Demotic, and Egyptian hieroglyphs. Because scholars could already read Greek, they used it as a key to decode the hieroglyphs. Without this stone, ancient Egyptian writing might still be a mystery today.",
+        "passageTitle": "The Rosetta Stone",
+        "questions": [
+          {
+            "id": "ca-03-rc-03-q1",
+            "question": "Why was it significant that the same message appeared in three different scripts?",
+            "options": ["Because a known language could be used to decode an unknown one by comparing them", "Because three languages are always better than one", "Because the stone was very large", "Because Greek is the oldest language in the world"],
+            "correctOption": "Because a known language could be used to decode an unknown one by comparing them"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "After dinner, Mom brought out a cake with a single candle. 'Make a wish,' she said to Lily. Lily closed her eyes tight. When she opened them, she looked at the empty chair across the table where Dad usually sat. She blew out the candle without smiling.",
+        "passageTitle": "The Birthday Wish",
+        "questions": [
+          {
+            "id": "ca-03-si-01-q1",
+            "question": "What is Lily most likely wishing for?",
+            "acceptableAnswers": ["for her dad to come home", "for her dad to be there", "to see her father", "for her family to be together"],
+            "sampleAnswer": "Lily is most likely wishing for her father to be there, since she looks at his empty chair and does not smile."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The coach posted the roster on the gym door. A crowd of students pushed forward to look. Sam scanned the list three times, then stepped back. He walked past his teammates without a word and sat on the bench outside, staring at his basketball shoes.",
+        "passageTitle": "The Roster",
+        "questions": [
+          {
+            "id": "ca-03-si-02-q1",
+            "question": "What happened to Sam?",
+            "acceptableAnswers": ["he didn't make the team", "his name wasn't on the list", "he was cut from the roster", "he wasn't selected"],
+            "sampleAnswer": "Sam did not make the team, as shown by him scanning the list multiple times and then walking away silently in disappointment."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The librarian noticed the same boy coming in every afternoon. He never checked out books. Instead, he sat in the warmest corner near the heater, doing homework until closing time. One day she placed a mug of hot chocolate on his table without saying anything. He looked up, surprised, and whispered, 'Thank you.'",
+        "passageTitle": "The Warmest Corner",
+        "questions": [
+          {
+            "id": "ca-03-si-03-q1",
+            "question": "Why does the boy always sit near the heater in the library?",
+            "acceptableAnswers": ["his home may not have heat", "he might not have a warm home", "he comes for warmth", "his house might be cold", "he may not have adequate heating at home"],
+            "sampleAnswer": "The boy likely comes to the library for warmth because his home may not have adequate heating, which is why he always sits near the heater."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-03-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The prefix 'un' means the ___ of a word.", "correctAnswer": "opposite", "acceptableSpellings": ["opposite"] }
+    },
+    {
+      "id": "ca-03-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A triangle has three ___ and three angles.", "correctAnswer": "sides", "acceptableSpellings": ["sides"] }
+    },
+    {
+      "id": "ca-03-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The process by which plants make food from sunlight is called ___.", "correctAnswer": "photosynthesis", "acceptableSpellings": ["photosynthesis"] }
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { isUnlocked } from "@/lib/progression";
 import { useGameStore } from "@/stores/useGameStore";
 import GameHeader from "@/components/layout/GameHeader";
 import BottomNav from "@/components/layout/BottomNav";
+import Icon, { type IconName } from "@/components/ui/Icon";
 
 export default function WorldMapPage() {
   const levelProgress = useGameStore((s) => s.levelProgress);
@@ -17,7 +18,7 @@ export default function WorldMapPage() {
 
       <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         <p className="text-center text-gray-500 mb-6">
-          Choose a kingdom to explore!
+          Choose a kingdom to explore
         </p>
 
         <div className="flex flex-col gap-4">
@@ -32,11 +33,17 @@ export default function WorldMapPage() {
               <div key={world.id} className="animate-fade-in-up">
                 {unlocked && totalLevels > 0 ? (
                   <Link href={`/world/${world.id}`}>
-                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border-2 border-purple-200 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] animate-glow-pulse">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-5 border-2 border-amber-200/50 shadow-md hover:shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] hover:border-[var(--color-accent)]">
                       <div className="flex items-center gap-4">
-                        <span className="text-4xl">{world.iconEmoji}</span>
+                        <div className="w-12 h-12 rounded-lg bg-[var(--color-primary)] flex items-center justify-center shrink-0">
+                          <Icon
+                            name={world.icon as IconName}
+                            size={24}
+                            className="text-[var(--color-accent)]"
+                          />
+                        </div>
                         <div className="flex-1">
-                          <h2 className="text-lg font-bold text-[var(--color-primary)]">
+                          <h2 className="text-lg font-bold font-[var(--font-heading)] text-[var(--color-primary)]">
                             {world.name}
                           </h2>
                           <p className="text-sm text-gray-500">
@@ -44,12 +51,12 @@ export default function WorldMapPage() {
                           </p>
                           {totalLevels > 0 && (
                             <div className="mt-2 flex items-center gap-2">
-                              <div className="flex-1 h-2 bg-purple-100 rounded-full overflow-hidden">
+                              <div className="flex-1 h-2 bg-amber-100 rounded-full overflow-hidden">
                                 <div
                                   className="h-full rounded-full"
                                   style={{
                                     width: `${(completedLevels / totalLevels) * 100}%`,
-                                    background: "var(--gradient-magic)",
+                                    background: "var(--gradient-gold)",
                                   }}
                                 />
                               </div>
@@ -63,17 +70,19 @@ export default function WorldMapPage() {
                     </div>
                   </Link>
                 ) : (
-                  <div className="bg-gray-100/60 rounded-2xl p-5 border-2 border-gray-200 opacity-60">
+                  <div className="bg-gray-100/60 rounded-xl p-5 border-2 border-gray-200 opacity-60">
                     <div className="flex items-center gap-4">
-                      <span className="text-4xl grayscale">{world.iconEmoji}</span>
+                      <div className="w-12 h-12 rounded-lg bg-gray-300 flex items-center justify-center shrink-0">
+                        <Icon name="lock" size={20} className="text-gray-500" />
+                      </div>
                       <div className="flex-1">
-                        <h2 className="text-lg font-bold text-gray-400">
+                        <h2 className="text-lg font-bold font-[var(--font-heading)] text-gray-400">
                           {world.name}
                         </h2>
                         <p className="text-sm text-gray-400">
                           {totalLevels === 0
                             ? "Coming soon..."
-                            : "🔒 Complete previous worlds to unlock"}
+                            : "Complete challenges in other kingdoms to unlock"}
                         </p>
                       </div>
                     </div>

@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-04",
+  "worldId": "word-fortress",
+  "title": "The Hall of Knowledge",
+  "order": 4,
+  "storySnippet": "Deep within the fortress, the Hall of Knowledge tests your command of the words that fill textbooks and essays.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-03" },
+  "exercises": [
+    {
+      "id": "wf-04-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "independent",
+        "incorrectSpelling": "independant",
+        "sentenceContext": "Learning to be independent means taking responsibility for your own decisions."
+      }
+    },
+    {
+      "id": "wf-04-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "maintenance",
+        "incorrectSpelling": "maintainance",
+        "sentenceContext": "Regular maintenance of your bicycle will keep it running smoothly for years."
+      }
+    },
+    {
+      "id": "wf-04-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "privilege",
+        "incorrectSpelling": "privelege",
+        "sentenceContext": "It is a privilege to be chosen as the class representative this year."
+      }
+    },
+    {
+      "id": "wf-04-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "restaurant",
+        "incorrectSpelling": "restaraunt",
+        "sentenceContext": "The new Italian restaurant downtown serves the best pasta in the city."
+      }
+    },
+    {
+      "id": "wf-04-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "perseverance",
+        "incorrectSpelling": "perseverence",
+        "sentenceContext": "Her perseverance through difficult training led to winning the championship."
+      }
+    },
+    {
+      "id": "wf-04-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "occurrence",
+        "incorrectSpelling": "occurance",
+        "sentenceContext": "Flooding is a common occurrence in low-lying areas during the spring season."
+      }
+    },
+    {
+      "id": "wf-04-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "temperament",
+        "incorrectSpelling": "temperment",
+        "sentenceContext": "The dog's calm temperament makes it a perfect companion for young children."
+      }
+    },
+    {
+      "id": "wf-04-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "questionnaire",
+        "incorrectSpelling": "questionaire",
+        "sentenceContext": "Please fill out this questionnaire so we can learn about your reading habits."
+      }
+    },
+    {
+      "id": "wf-04-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Being able to cook for yourself is part of becoming ___.",
+        "correctAnswer": "independent",
+        "acceptableSpellings": ["independent"],
+        "hint": "Ends in '-ent', not '-ant'"
+      }
+    },
+    {
+      "id": "wf-04-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The building requires regular ___ to stay in good condition.",
+        "correctAnswer": "maintenance",
+        "acceptableSpellings": ["maintenance"],
+        "hint": "Drop the second 'a' from 'maintain'"
+      }
+    },
+    {
+      "id": "wf-04-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "We ate dinner at a wonderful ___ near the harbor.",
+        "correctAnswer": "restaurant",
+        "acceptableSpellings": ["restaurant"],
+        "hint": "Contains '-tau-' in the middle, not '-tua-'"
+      }
+    },
+    {
+      "id": "wf-04-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The survey ___ asked students about their favorite subjects.",
+        "correctAnswer": "questionnaire",
+        "acceptableSpellings": ["questionnaire"],
+        "hint": "Double 'n' and ends in '-aire'"
+      }
+    }
+  ]
+}

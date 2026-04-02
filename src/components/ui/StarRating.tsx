@@ -1,5 +1,7 @@
 "use client";
 
+import Icon from "./Icon";
+
 interface StarRatingProps {
   stars: number;
   maxStars?: number;
@@ -7,11 +9,7 @@ interface StarRatingProps {
   animated?: boolean;
 }
 
-const sizeClasses = {
-  sm: "text-lg",
-  md: "text-2xl",
-  lg: "text-4xl",
-};
+const sizeMap = { sm: 16, md: 24, lg: 36 };
 
 export default function StarRating({
   stars,
@@ -19,19 +17,26 @@ export default function StarRating({
   size = "md",
   animated = false,
 }: StarRatingProps) {
+  const iconSize = sizeMap[size];
+
   return (
     <div className="flex gap-1">
-      {Array.from({ length: maxStars }, (_, i) => (
-        <span
-          key={i}
-          className={`${sizeClasses[size]} ${
-            animated && i < stars ? "animate-star-fill" : ""
-          }`}
-          style={animated ? { animationDelay: `${i * 0.2}s` } : undefined}
-        >
-          {i < stars ? "⭐" : "☆"}
-        </span>
-      ))}
+      {Array.from({ length: maxStars }, (_, i) => {
+        const filled = i < stars;
+        return (
+          <span
+            key={i}
+            className={`${animated && filled ? "animate-star-fill" : ""}`}
+            style={animated && filled ? { animationDelay: `${i * 0.2}s` } : undefined}
+          >
+            <Icon
+              name={filled ? "star" : "star-outline"}
+              size={iconSize}
+              className={filled ? "text-[var(--color-accent)]" : "text-gray-300"}
+            />
+          </span>
+        );
+      })}
     </div>
   );
 }

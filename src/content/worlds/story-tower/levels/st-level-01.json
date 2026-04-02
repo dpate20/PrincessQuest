@@ -1,0 +1,35 @@
+{
+  "id": "st-level-01",
+  "worldId": "story-tower",
+  "title": "The Mysterious Letter",
+  "order": 1,
+  "storySnippet": "A strange envelope appears at the tower door.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "always" },
+  "exercises": [
+    {
+      "id": "st-01-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Maya found the envelope tucked under the front door just as the sun was setting. Her name was written on it in shaky handwriting she didn't recognize. She tore it open and read: 'Meet me at the old oak tree at midnight. Come alone. Tell no one.' Maya's hands trembled as she folded the letter and slipped it into her pocket. She glanced around the empty hallway, then walked to the kitchen where her mother was cooking dinner. 'Everything okay, sweetie?' her mother asked. Maya forced a smile. 'Fine, Mom. Just homework stuff.' She pushed her food around her plate all through dinner, unable to eat. Later that night, she lay in bed staring at the ceiling, the letter burning a hole in her pocket.",
+        "passageTitle": "The Mysterious Letter",
+        "questions": [
+          {
+            "id": "st-01-si-01-q1",
+            "question": "How does Maya feel after reading the letter?",
+            "acceptableAnswers": ["nervous", "anxious", "scared", "worried", "frightened", "uneasy"],
+            "sampleAnswer": "Maya feels nervous and anxious because her hands tremble and she cannot eat dinner."
+          },
+          {
+            "id": "st-01-si-01-q2",
+            "question": "Why does Maya lie to her mother about the letter?",
+            "acceptableAnswers": ["the letter said to tell no one", "she was told to keep it secret", "the note said come alone and tell no one", "she wants to keep it a secret"],
+            "sampleAnswer": "Maya lies because the letter instructed her to tell no one about the meeting."
+          }
+        ]
+      }
+    }
+  ]
+}

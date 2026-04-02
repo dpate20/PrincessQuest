@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-11",
+  "worldId": "word-fortress",
+  "title": "The Enchanted Archives",
+  "order": 11,
+  "storySnippet": "Deep within the enchanted archives, ancient spell-words guard secrets that only master spellers can unlock.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-10" },
+  "exercises": [
+    {
+      "id": "wf-11-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "Mediterranean",
+        "incorrectSpelling": "Mediteranean",
+        "sentenceContext": "The merchant fleet sailed across the Mediterranean Sea to trade with distant kingdoms."
+      }
+    },
+    {
+      "id": "wf-11-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "onomatopoeia",
+        "incorrectSpelling": "onomatapoeia",
+        "sentenceContext": "Words like 'buzz' and 'hiss' are examples of onomatopoeia."
+      }
+    },
+    {
+      "id": "wf-11-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "pharmaceutical",
+        "incorrectSpelling": "farmaceutical",
+        "sentenceContext": "The court alchemist studied pharmaceutical remedies to heal the sick."
+      }
+    },
+    {
+      "id": "wf-11-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "questionnaire",
+        "incorrectSpelling": "questionaire",
+        "sentenceContext": "Every visitor to the fortress must complete a questionnaire before entering."
+      }
+    },
+    {
+      "id": "wf-11-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rendezvous",
+        "incorrectSpelling": "rendevouz",
+        "sentenceContext": "The spies arranged a secret rendezvous at midnight near the old bridge."
+      }
+    },
+    {
+      "id": "wf-11-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rheumatism",
+        "incorrectSpelling": "rhuematism",
+        "sentenceContext": "The elderly knight suffered from rheumatism in his joints after years of battle."
+      }
+    },
+    {
+      "id": "wf-11-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "sacrilegious",
+        "incorrectSpelling": "sacreligious",
+        "sentenceContext": "Stealing from the temple was considered a sacrilegious act by the villagers."
+      }
+    },
+    {
+      "id": "wf-11-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "supersede",
+        "incorrectSpelling": "supercede",
+        "sentenceContext": "The new royal decree will supersede all previous laws on the matter."
+      }
+    },
+    {
+      "id": "wf-11-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The fleet sailed across the ___ to reach the southern coast.",
+        "correctAnswer": "Mediterranean",
+        "acceptableSpellings": ["Mediterranean", "mediterranean"],
+        "hint": "A large sea between Europe and Africa"
+      }
+    },
+    {
+      "id": "wf-11-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "'Crash' and 'sizzle' are both examples of ___.",
+        "correctAnswer": "onomatopoeia",
+        "acceptableSpellings": ["onomatopoeia"],
+        "hint": "Words that imitate the sounds they describe"
+      }
+    },
+    {
+      "id": "wf-11-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Please fill out this ___ so we can learn more about your visit.",
+        "correctAnswer": "questionnaire",
+        "acceptableSpellings": ["questionnaire"],
+        "hint": "A form with a set of questions"
+      }
+    },
+    {
+      "id": "wf-11-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The updated rules will ___ the older guidelines starting next week.",
+        "correctAnswer": "supersede",
+        "acceptableSpellings": ["supersede"],
+        "hint": "To replace or take the place of something"
+      }
+    }
+  ]
+}

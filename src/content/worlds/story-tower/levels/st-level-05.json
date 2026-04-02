@@ -1,0 +1,35 @@
+{
+  "id": "st-level-05",
+  "worldId": "story-tower",
+  "title": "The Stray Dog",
+  "order": 5,
+  "storySnippet": "A boy finds more than he expected in the park.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-04" },
+  "exercises": [
+    {
+      "id": "st-05-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Marcus sat on the park bench eating his sandwich alone, like he did every Saturday since moving to the new town. He didn't have any friends here yet. A skinny brown dog limped over and sat at his feet, looking up with wide, hopeful eyes. Its ribs showed through matted fur, and it had no collar. 'You lost too, huh?' Marcus said. He tore off half his sandwich and held it out. The dog took it gently, then rested its chin on Marcus's shoe. Marcus scratched behind the dog's ears and felt something loosen in his chest—a tightness he'd been carrying for weeks. 'I think I'll call you Buddy,' he whispered. When Marcus stood to leave, the dog followed. He looked back at the empty bench, then down at the dog. 'Okay, Buddy. Let's go home and see what Mom says.'",
+        "passageTitle": "The Stray Dog",
+        "questions": [
+          {
+            "id": "st-05-si-01-q1",
+            "question": "What has Marcus been struggling with since moving to the new town?",
+            "acceptableAnswers": ["loneliness", "being alone", "not having friends", "feeling isolated", "missing his old home"],
+            "sampleAnswer": "Marcus has been struggling with loneliness since moving, as he eats alone every Saturday and has no friends in his new town."
+          },
+          {
+            "id": "st-05-si-01-q2",
+            "question": "What does the phrase 'felt something loosen in his chest' suggest about Marcus's emotions?",
+            "acceptableAnswers": ["he feels comforted", "he feels less lonely", "he feels relief", "the dog makes him feel better", "he feels a sense of connection"],
+            "sampleAnswer": "The phrase suggests Marcus feels emotional relief and comfort from connecting with the dog, easing the loneliness he has been carrying."
+          }
+        ]
+      }
+    }
+  ]
+}

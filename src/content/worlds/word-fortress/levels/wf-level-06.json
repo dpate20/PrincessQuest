@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-06",
+  "worldId": "word-fortress",
+  "title": "The Arcane Archive",
+  "order": 6,
+  "storySnippet": "Hidden behind a secret door, the Arcane Archive contains words so tricky that many adventurers have turned back in defeat.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-05" },
+  "exercises": [
+    {
+      "id": "wf-06-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "phenomenon",
+        "incorrectSpelling": "phenomonon",
+        "sentenceContext": "The northern lights are a natural phenomenon that attracts tourists from around the world."
+      }
+    },
+    {
+      "id": "wf-06-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accommodate",
+        "incorrectSpelling": "acommodate",
+        "sentenceContext": "The school cafeteria was expanded to accommodate the growing number of students."
+      }
+    },
+    {
+      "id": "wf-06-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "inoculate",
+        "incorrectSpelling": "innoculate",
+        "sentenceContext": "Doctors inoculate children against dangerous diseases to keep communities healthy."
+      }
+    },
+    {
+      "id": "wf-06-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "fluorescent",
+        "incorrectSpelling": "flourescent",
+        "sentenceContext": "The science lab was lit by long fluorescent lights that hummed softly overhead."
+      }
+    },
+    {
+      "id": "wf-06-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "lieutenant",
+        "incorrectSpelling": "leutenant",
+        "sentenceContext": "The lieutenant gave orders to the platoon before they began their training exercise."
+      }
+    },
+    {
+      "id": "wf-06-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "sacrilegious",
+        "incorrectSpelling": "sacreligious",
+        "sentenceContext": "Some people considered it sacrilegious to build a shopping mall next to the historic church."
+      }
+    },
+    {
+      "id": "wf-06-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "supersede",
+        "incorrectSpelling": "supercede",
+        "sentenceContext": "The new safety regulations will supersede all previous guidelines starting next month."
+      }
+    },
+    {
+      "id": "wf-06-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "mischievous",
+        "incorrectSpelling": "mischievious",
+        "sentenceContext": "The mischievous kitten knocked over a vase while chasing a butterfly through the living room."
+      }
+    },
+    {
+      "id": "wf-06-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Ball lightning is a rare weather ___ that scientists still struggle to explain.",
+        "correctAnswer": "phenomenon",
+        "acceptableSpellings": ["phenomenon"],
+        "hint": "The middle contains '-nom-', not '-mon-'"
+      }
+    },
+    {
+      "id": "wf-06-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The new rules will ___ the old ones effective immediately.",
+        "correctAnswer": "supersede",
+        "acceptableSpellings": ["supersede"],
+        "hint": "Ends in '-sede', not '-cede'"
+      }
+    },
+    {
+      "id": "wf-06-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The classroom's ___ lights flickered during the thunderstorm.",
+        "correctAnswer": "fluorescent",
+        "acceptableSpellings": ["fluorescent"],
+        "hint": "Starts with 'flu-', not 'flou-'"
+      }
+    },
+    {
+      "id": "wf-06-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ puppy chewed through three pairs of shoes in one week.",
+        "correctAnswer": "mischievous",
+        "acceptableSpellings": ["mischievous"],
+        "hint": "Only three syllables: mis-chie-vous"
+      }
+    }
+  ]
+}

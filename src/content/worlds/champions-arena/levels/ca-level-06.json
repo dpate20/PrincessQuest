@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-06",
+  "worldId": "champions-arena",
+  "title": "The Crucible",
+  "order": 6,
+  "storySnippet": "Only the sharpest minds advance.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-05" },
+  "exercises": [
+    {
+      "id": "ca-06-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "government", "incorrectSpelling": "goverment", "sentenceContext": "The government passed a new law about recycling." }
+    },
+    {
+      "id": "ca-06-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "restaurant", "incorrectSpelling": "restaraunt", "sentenceContext": "We ate at a new Italian restaurant downtown." }
+    },
+    {
+      "id": "ca-06-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "Wednesday", "incorrectSpelling": "Wendsday", "sentenceContext": "The meeting is scheduled for Wednesday afternoon." }
+    },
+    {
+      "id": "ca-06-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ of the ancient ruins attracted tourists from around the world.", "choices": ["splendor", "splinter"], "correctChoice": "splendor", "definition": "Magnificent and impressive beauty or grandeur." }
+    },
+    {
+      "id": "ca-06-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The students formed a ___ to investigate the strange noise.", "choices": ["committee", "commodity"], "correctChoice": "committee", "definition": "A group of people appointed for a specific function." }
+    },
+    {
+      "id": "ca-06-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ between the book and the movie was interesting to analyze.", "choices": ["contrast", "contract"], "correctChoice": "contrast", "definition": "The state of being strikingly different from something else." }
+    },
+    {
+      "id": "ca-06-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Polar bears have black skin underneath their white-appearing fur. Each hair is actually a hollow, transparent tube that scatters light, making the bear look white. This coloring provides excellent camouflage against Arctic snow and ice, allowing polar bears to sneak up on seals, their primary prey.",
+        "passageTitle": "Polar Bear Secrets",
+        "questions": [
+          {
+            "id": "ca-06-rc-01-q1",
+            "question": "If polar bears lived in a forest instead of the Arctic, how might their survival be affected?",
+            "options": ["Their white appearance would make them visible to prey, reducing hunting success", "They would become brown automatically", "Their fur would become solid white", "Forests have more seals so they would thrive"],
+            "correctOption": "Their white appearance would make them visible to prey, reducing hunting success"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The Library of Alexandria, founded around 300 BC in Egypt, was the largest library of the ancient world. It aimed to collect a copy of every book ever written. Ships entering the harbor of Alexandria were required to surrender any scrolls they carried for copying. The library's destruction, which happened gradually over centuries, is considered one of history's greatest losses of knowledge.",
+        "passageTitle": "The Lost Library",
+        "questions": [
+          {
+            "id": "ca-06-rc-02-q1",
+            "question": "What does the policy of copying scrolls from ships reveal about how the library's founders viewed knowledge?",
+            "options": ["They believed collecting and preserving all knowledge was extremely important", "They wanted to steal from travelers", "They needed paper for other projects", "They did not trust foreign writers"],
+            "correctOption": "They believed collecting and preserving all knowledge was extremely important"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Bamboo is technically a grass, not a tree, yet some species can grow up to 91 centimeters in a single day. It is one of the strongest natural materials on Earth relative to its weight. In many Asian countries, bamboo is used for building scaffolding on skyscrapers because it is both lightweight and incredibly flexible.",
+        "passageTitle": "The Power of Bamboo",
+        "questions": [
+          {
+            "id": "ca-06-rc-03-q1",
+            "question": "Why is flexibility an important quality for scaffolding on tall buildings?",
+            "options": ["Flexible materials can absorb wind and movement without breaking", "Because workers prefer to bounce while working", "Because flexible materials are always cheaper", "Because skyscrapers are made entirely of bamboo"],
+            "correctOption": "Flexible materials can absorb wind and movement without breaking"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Nina opened the closet and pulled out the violin case. A layer of dust coated the top. She unlatched it carefully and ran her fingers over the strings. They were out of tune and one was broken. She stared at it for a long time, then whispered, 'Okay. It's time to start again.'",
+        "passageTitle": "The Violin",
+        "questions": [
+          {
+            "id": "ca-06-si-01-q1",
+            "question": "What can you infer about Nina's relationship with the violin?",
+            "acceptableAnswers": ["she used to play but stopped", "she gave up violin and wants to start again", "she quit playing a long time ago", "she is returning to something she left behind"],
+            "sampleAnswer": "Nina used to play the violin but stopped some time ago, as shown by the dust and broken string, and she has now decided to start playing again."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Every morning, Abuela braided Rosa's hair before school. She hummed the same song each time—a melody from a place Rosa had never been. 'What song is that?' Rosa asked one day. Abuela's hands paused. 'It's the song my mother sang to me when I was your age, back home.' She resumed braiding, humming a little softer.",
+        "passageTitle": "The Morning Song",
+        "questions": [
+          {
+            "id": "ca-06-si-02-q1",
+            "question": "Why does Abuela hum softer after answering Rosa's question?",
+            "acceptableAnswers": ["she feels emotional", "the memory makes her sad", "she misses her home and her mother", "thinking about the past moved her emotionally"],
+            "sampleAnswer": "Abuela hums softer because talking about the song brought up emotional memories of her mother and the home she left behind."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The two teams shook hands at the end of the game. Most players walked away quickly, but the goalkeeper from the losing team stayed behind. She found the striker who had scored the winning goal and said, 'That was an incredible shot. I couldn't have stopped it.' The striker looked surprised, then smiled. 'Thanks. Your saves in the first half were unreal.'",
+        "passageTitle": "After the Game",
+        "questions": [
+          {
+            "id": "ca-06-si-03-q1",
+            "question": "What does this exchange reveal about both players?",
+            "acceptableAnswers": ["they show good sportsmanship", "they respect each other's skill", "they are gracious and mature", "they value respect over rivalry"],
+            "sampleAnswer": "Both players show excellent sportsmanship by genuinely complimenting each other's abilities despite being on opposing sides."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-06-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A word that has the opposite meaning of another word is called an ___.", "correctAnswer": "antonym", "acceptableSpellings": ["antonym"] }
+    },
+    {
+      "id": "ca-06-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The three states of matter are solid, liquid, and ___.", "correctAnswer": "gas", "acceptableSpellings": ["gas"] }
+    },
+    {
+      "id": "ca-06-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A sentence that asks a question ends with a ___ mark.", "correctAnswer": "question", "acceptableSpellings": ["question"] }
+    }
+  ]
+}

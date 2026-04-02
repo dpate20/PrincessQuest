@@ -1,0 +1,35 @@
+{
+  "id": "st-level-06",
+  "worldId": "story-tower",
+  "title": "The Audition",
+  "order": 6,
+  "storySnippet": "Stage fright meets determination.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-05" },
+  "exercises": [
+    {
+      "id": "st-06-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Priya's knees shook as she waited backstage. Through the curtain she could hear the auditorium full of students. She was number fourteen on the audition list for the school musical. 'You're going to be great,' her older sister Diya texted. Priya typed back: 'I can't do this.' Her phone buzzed immediately. 'Remember what Dad always said—brave doesn't mean not scared.' Priya closed her eyes and pictured her father's face, the way he used to clap the loudest at every school event before he moved overseas for work. 'Number fourteen!' the stage manager called. Priya's legs felt like rubber, but she walked to center stage. The spotlight blinded her. She opened her mouth, and for one terrible second nothing came out. Then she thought of her father clapping, and the first note rang clear and strong through the auditorium.",
+        "passageTitle": "The Audition",
+        "questions": [
+          {
+            "id": "st-06-si-01-q1",
+            "question": "What role does the memory of Priya's father play in her audition?",
+            "acceptableAnswers": ["it gives her courage", "it motivates her to sing", "it helps her overcome her fear", "it inspires her", "thinking of him helps her perform"],
+            "sampleAnswer": "The memory of her father clapping at her events gives Priya the courage to push through her fear and begin singing."
+          },
+          {
+            "id": "st-06-si-01-q2",
+            "question": "What does Diya's quick response to Priya's text tell us about their relationship?",
+            "acceptableAnswers": ["they are close", "Diya is supportive", "Diya cares about Priya", "they have a strong bond", "Diya is encouraging"],
+            "sampleAnswer": "Diya's immediate and encouraging response shows they have a close, supportive relationship and that Diya understands Priya's anxiety."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -11,11 +11,11 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-[var(--color-primary)] hover:bg-[#6d28d9] text-white shadow-lg shadow-purple-200",
+    "bg-[var(--color-primary)] hover:bg-[var(--color-primary-light)] text-white shadow-lg shadow-slate-300",
   secondary:
-    "bg-white hover:bg-gray-50 text-[var(--color-primary)] border-2 border-[var(--color-primary-light)]",
-  ghost: "bg-transparent hover:bg-white/50 text-gray-600",
-  gold: "bg-gradient-to-r from-[var(--color-accent-light)] to-[var(--color-accent)] hover:from-[var(--color-accent)] hover:to-amber-600 text-white shadow-lg shadow-amber-200",
+    "bg-[var(--color-bg-parchment)] hover:bg-amber-50 text-[var(--color-primary)] border-2 border-[var(--color-primary)]/20",
+  ghost: "bg-transparent hover:bg-[var(--color-primary)]/5 text-[var(--color-primary)]",
+  gold: "bg-[var(--color-accent)] hover:brightness-110 text-white shadow-lg shadow-amber-200",
 };
 
 const sizes = {
@@ -37,7 +37,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={`
-        rounded-full font-semibold transition-all duration-200
+        rounded-lg font-semibold transition-all duration-200
         active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
         ${variants[variant]} ${sizes[size]} ${className}
       `}

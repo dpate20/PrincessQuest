@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-01",
+  "worldId": "champions-arena",
+  "title": "Arena Warm-Up",
+  "order": 1,
+  "storySnippet": "The champion's journey begins with a test of all skills.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "always" },
+  "exercises": [
+    {
+      "id": "ca-01-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "necessary", "incorrectSpelling": "neccessary", "sentenceContext": "It is necessary to study before the exam." }
+    },
+    {
+      "id": "ca-01-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "separate", "incorrectSpelling": "seperate", "sentenceContext": "Please separate the colored papers from the white ones." }
+    },
+    {
+      "id": "ca-01-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "occurrence", "incorrectSpelling": "occurence", "sentenceContext": "The occurrence of thunderstorms increased in spring." }
+    },
+    {
+      "id": "ca-01-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The scientist made a ___ discovery that changed the field.", "choices": ["remarkable", "removable"], "correctChoice": "remarkable", "definition": "Worthy of attention; striking or extraordinary." }
+    },
+    {
+      "id": "ca-01-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The explorers had to ___ through dense jungle to reach the village.", "choices": ["navigate", "nominate"], "correctChoice": "navigate", "definition": "To find one's way through a difficult or complex area." }
+    },
+    {
+      "id": "ca-01-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The teacher asked the students to ___ the main idea of the paragraph.", "choices": ["identify", "ignite"], "correctChoice": "identify", "definition": "To recognize or establish what something is." }
+    },
+    {
+      "id": "ca-01-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Honeybees communicate the location of food sources through a waggle dance. A bee returning to the hive performs a figure-eight pattern, waggling its body during the straight portion. The angle of the dance relative to the sun indicates direction, while the duration of the waggle indicates distance.",
+        "passageTitle": "The Waggle Dance",
+        "questions": [
+          {
+            "id": "ca-01-rc-01-q1",
+            "question": "What can you infer about how bees would communicate on a cloudy day when the sun is hidden?",
+            "options": ["They may have difficulty communicating direction accurately", "They would use a different type of dance", "They would stop collecting food entirely", "They would fly higher to see the sun"],
+            "correctOption": "They may have difficulty communicating direction accurately"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The Great Wall of China was not built all at once. Different dynasties constructed separate sections over more than two thousand years, starting around the 7th century BC. Many sections were built by forced laborers and soldiers, and conditions were so harsh that thousands died during construction.",
+        "passageTitle": "Building the Great Wall",
+        "questions": [
+          {
+            "id": "ca-01-rc-02-q1",
+            "question": "What does the long construction period tell us about the Wall's original purpose?",
+            "options": ["Defense was a persistent concern across many different Chinese rulers and eras", "The builders kept making mistakes and starting over", "One emperor planned the entire wall from the beginning", "The wall was built for tourism purposes"],
+            "correctOption": "Defense was a persistent concern across many different Chinese rulers and eras"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Octopuses have three hearts and blue blood. Two hearts pump blood to the gills, while the third pumps it to the rest of the body. Their blood contains copper-based hemocyanin instead of iron-based hemoglobin, which is more efficient at transporting oxygen in cold, low-oxygen environments.",
+        "passageTitle": "The Remarkable Octopus",
+        "questions": [
+          {
+            "id": "ca-01-rc-03-q1",
+            "question": "Why might octopuses be well-suited to deep ocean environments?",
+            "options": ["Their copper-based blood is efficient in cold, low-oxygen conditions found in deep water", "Because they have three hearts that make them swim faster", "Because blue blood is invisible in deep water", "Because they can breathe air when oxygen is low"],
+            "correctOption": "Their copper-based blood is efficient in cold, low-oxygen conditions found in deep water"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Emma set her alarm for 5 AM even though practice didn't start until 7. She laced up her running shoes in the dark kitchen, grabbed a banana, and slipped out the front door before anyone else was awake. The cold morning air hit her face as she started jogging down the empty street.",
+        "passageTitle": "Early Riser",
+        "questions": [
+          {
+            "id": "ca-01-si-01-q1",
+            "question": "What can you infer about Emma's attitude toward her sport?",
+            "acceptableAnswers": ["she is dedicated", "she is disciplined", "she takes it seriously", "she is committed", "she works hard"],
+            "sampleAnswer": "Emma is very dedicated to her sport because she wakes up two hours before practice to get in extra training."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Kai stared at the birthday invitation on his desk. It was from Ryan, the most popular kid in class. Every other student was talking about the party. Kai picked up the invitation, turned it over, then quietly slid it into his backpack without showing anyone.",
+        "passageTitle": "The Invitation",
+        "questions": [
+          {
+            "id": "ca-01-si-02-q1",
+            "question": "Why might Kai hide the invitation instead of showing it off like the other students?",
+            "acceptableAnswers": ["he is unsure if he wants to go", "he is shy", "he doesn't want attention", "he may not feel like he belongs", "he is uncertain about the friendship"],
+            "sampleAnswer": "Kai might feel unsure about whether he truly belongs with the popular group, so he hides the invitation rather than drawing attention to it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Mrs. Chen placed the graded tests face-down on each desk. When Aiden turned his over, his face went red. He quickly folded the paper and stuffed it in his bag. 'How'd you do?' his friend Leo whispered. 'Fine,' Aiden said, not meeting his eyes.",
+        "passageTitle": "Test Day",
+        "questions": [
+          {
+            "id": "ca-01-si-03-q1",
+            "question": "How did Aiden likely do on the test? What clues tell you this?",
+            "acceptableAnswers": ["he did poorly", "he got a bad grade", "he failed", "he did not do well"],
+            "sampleAnswer": "Aiden likely did poorly on the test because he turned red, quickly hid the paper, and lied to his friend about his score."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-01-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The sun rises in the ___ and sets in the west.", "correctAnswer": "east", "acceptableSpellings": ["east"] }
+    },
+    {
+      "id": "ca-01-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "Water freezes at zero degrees ___.", "correctAnswer": "Celsius", "acceptableSpellings": ["Celsius", "celsius"] }
+    },
+    {
+      "id": "ca-01-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The opposite of ancient is ___.", "correctAnswer": "modern", "acceptableSpellings": ["modern"] }
+    }
+  ]
+}

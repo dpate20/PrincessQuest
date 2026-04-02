@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-01",
+  "worldId": "knowledge-keep",
+  "title": "The Water Cycle",
+  "order": 1,
+  "storySnippet": "Understanding nature's recycling system.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "always" },
+  "exercises": [
+    {
+      "id": "kk-01-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The water cycle is one of the most important processes on Earth, yet most of the action happens invisibly. When the sun heats oceans, lakes, and rivers, water evaporates into the atmosphere as water vapor. As this vapor rises, it cools and condenses around tiny particles of dust or pollen, forming clouds. When cloud droplets combine and grow heavy enough, they fall as precipitation—rain, snow, sleet, or hail depending on temperature. Some precipitation soaks into the ground and becomes groundwater, slowly filtering through soil and rock to feed wells and springs. Some flows over the surface as runoff into streams and rivers, eventually returning to the ocean. Plants also play a role through transpiration, releasing water vapor from their leaves. Scientists estimate that a single water molecule may take thousands of years to complete one full cycle, meaning the water you drink today may have once been part of a glacier during the Ice Age.",
+        "passageTitle": "The Water Cycle",
+        "questions": [
+          {
+            "id": "kk-01-rc-01-q1",
+            "question": "Based on the passage, why might a drought in one region eventually affect water availability hundreds of miles away?",
+            "options": ["Because water cycles through connected systems like rivers and groundwater", "Because droughts cause earthquakes that break water pipes", "Because the sun stops heating water during droughts", "Because clouds cannot form without rain"],
+            "correctOption": "Because water cycles through connected systems like rivers and groundwater"
+          },
+          {
+            "id": "kk-01-rc-01-q2",
+            "question": "What can you infer about why the author mentions the Ice Age at the end of the passage?",
+            "options": ["To show that water molecules are recycled over extremely long time periods", "To prove that ice ages were caused by the water cycle", "To explain why glaciers no longer exist", "To argue that modern water is different from ancient water"],
+            "correctOption": "To show that water molecules are recycled over extremely long time periods"
+          },
+          {
+            "id": "kk-01-rc-01-q3",
+            "question": "Why does the author describe the water cycle as happening 'invisibly'?",
+            "options": ["Because evaporation and water vapor are not visible to the naked eye", "Because water cannot be seen in nature", "Because scientists have never observed the water cycle", "Because the water cycle only happens at night"],
+            "correctOption": "Because evaporation and water vapor are not visible to the naked eye"
+          }
+        ]
+      }
+    }
+  ]
+}

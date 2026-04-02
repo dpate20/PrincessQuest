@@ -4,7 +4,7 @@ export interface World {
   theme: string;
   description: string;
   storyIntro: string;
-  iconEmoji: string;
+  icon: string;
   levelIds: string[];
   unlockCondition: UnlockCondition;
 }
@@ -25,38 +25,65 @@ export interface Exercise {
   id: string;
   minigameType: MinigameType;
   prompt: string;
-  data: WordPictureData | ListenTapData | SentenceBuilderData;
+  data:
+    | SpellingPairsData
+    | VocabularyInContextData
+    | ReadingComprehensionData
+    | ShortStoryInferenceData
+    | FillInTheBlankData;
 }
 
 export type MinigameType =
-  | "word-picture-match"
-  | "listen-and-tap"
-  | "sentence-builder";
+  | "spelling-pairs"
+  | "vocabulary-in-context"
+  | "reading-comprehension"
+  | "short-story-inference"
+  | "fill-in-the-blank";
 
-export interface WordPictureData {
-  targetWord: string;
-  options: {
-    imageEmoji: string;
-    label: string;
-    isCorrect: boolean;
+export interface SpellingPairsData {
+  correctSpelling: string;
+  incorrectSpelling: string;
+  sentenceContext: string;
+}
+
+export interface VocabularyInContextData {
+  sentence: string;
+  choices: [string, string];
+  correctChoice: string;
+  definition: string;
+}
+
+export interface ReadingComprehensionData {
+  passage: string;
+  passageTitle: string;
+  questions: {
+    id: string;
+    question: string;
+    options: string[];
+    correctOption: string;
   }[];
 }
 
-export interface ListenTapData {
-  audioWord: string;
-  options: {
-    text: string;
-    isCorrect: boolean;
+export interface ShortStoryInferenceData {
+  passage: string;
+  passageTitle: string;
+  questions: {
+    id: string;
+    question: string;
+    acceptableAnswers: string[];
+    sampleAnswer: string;
   }[];
 }
 
-export interface SentenceBuilderData {
-  targetSentence: string;
-  scrambledWords: string[];
+export interface FillInTheBlankData {
+  sentence: string;
+  correctAnswer: string;
+  acceptableSpellings?: string[];
   hint?: string;
 }
 
 export type UnlockCondition =
   | { type: "always" }
   | { type: "level-complete"; levelId: string }
-  | { type: "stars-in-world"; worldId: string; minStars: number };
+  | { type: "stars-in-world"; worldId: string; minStars: number }
+  | { type: "levels-across-worlds"; worlds: { worldId: string; minLevels: number }[] };

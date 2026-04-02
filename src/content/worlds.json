@@ -1,55 +1,77 @@
 [
   {
-    "id": "castle-basics",
-    "name": "Castle Basics",
-    "theme": "castle",
-    "description": "Learn greetings, names, and simple words at the royal castle.",
-    "storyIntro": "Welcome, brave princess! The castle gates are open, and everyone is eager to meet you. Let us begin your journey with the most important words — the words of greeting and friendship.",
-    "iconEmoji": "🏰",
+    "id": "word-fortress",
+    "name": "Word Fortress",
+    "theme": "fortress",
+    "description": "Master the art of spelling through challenges and fill-in-the-blank quests.",
+    "storyIntro": "The ancient Word Fortress holds the kingdom's lexicon — every word ever written is carved into its walls. But the carvings have begun to fade, and only a scholar who can tell true spellings from false ones can restore them.",
+    "icon": "fortress",
     "levelIds": [
-      "cb-level-01", "cb-level-02", "cb-level-03", "cb-level-04",
-      "cb-level-05", "cb-level-06", "cb-level-07", "cb-level-08"
+      "wf-level-01", "wf-level-02", "wf-level-03", "wf-level-04",
+      "wf-level-05", "wf-level-06", "wf-level-07", "wf-level-08",
+      "wf-level-09", "wf-level-10", "wf-level-11", "wf-level-12",
+      "wf-level-13", "wf-level-14", "wf-level-15", "wf-level-16"
     ],
     "unlockCondition": { "type": "always" }
   },
   {
-    "id": "garden-of-words",
-    "name": "Garden of Words",
-    "theme": "garden",
-    "description": "Discover colors, animals, and the beauty of nature.",
-    "storyIntro": "Beyond the castle walls lies a magical garden filled with wonders...",
-    "iconEmoji": "🌸",
-    "levelIds": [],
-    "unlockCondition": { "type": "stars-in-world", "worldId": "castle-basics", "minStars": 12 }
+    "id": "context-courtyard",
+    "name": "Context Courtyard",
+    "theme": "courtyard",
+    "description": "Learn to wield vocabulary with precision and context.",
+    "storyIntro": "In the courtyard, scholars debate the meaning of words. Each word is a tool — but only the right word in the right place can unlock the courtyard's hidden passages.",
+    "icon": "courtyard",
+    "levelIds": [
+      "cc-level-01", "cc-level-02", "cc-level-03", "cc-level-04",
+      "cc-level-05", "cc-level-06", "cc-level-07", "cc-level-08"
+    ],
+    "unlockCondition": { "type": "always" }
   },
   {
-    "id": "village-voices",
-    "name": "Village Voices",
-    "theme": "village",
-    "description": "Meet the villagers and learn about family and daily life.",
-    "storyIntro": "The village below the castle is full of kind people...",
-    "iconEmoji": "🏘️",
-    "levelIds": [],
-    "unlockCondition": { "type": "stars-in-world", "worldId": "garden-of-words", "minStars": 12 }
+    "id": "story-tower",
+    "name": "Story Tower",
+    "theme": "tower",
+    "description": "Climb the tower of fiction and unlock the secrets within each story.",
+    "storyIntro": "Each floor of the tower contains a tale waiting to be understood. Read carefully — the characters will reveal their secrets only to those who pay attention to the details.",
+    "icon": "tower",
+    "levelIds": [
+      "st-level-01", "st-level-02", "st-level-03", "st-level-04",
+      "st-level-05", "st-level-06", "st-level-07", "st-level-08"
+    ],
+    "unlockCondition": { "type": "always" }
   },
   {
-    "id": "royal-market",
-    "name": "Royal Market",
-    "theme": "market",
-    "description": "Numbers, food, and the art of asking for things.",
-    "storyIntro": "The royal market is bustling with activity...",
-    "iconEmoji": "🛒",
-    "levelIds": [],
-    "unlockCondition": { "type": "stars-in-world", "worldId": "village-voices", "minStars": 12 }
+    "id": "knowledge-keep",
+    "name": "Knowledge Keep",
+    "theme": "keep",
+    "description": "Explore the keep's vast library of nonfiction and answer its riddles.",
+    "storyIntro": "The keep's shelves contain the sum of human knowledge — history, science, and discovery. But the librarian tests all who enter. Only those who can read between the lines will pass.",
+    "icon": "keep",
+    "levelIds": [
+      "kk-level-01", "kk-level-02", "kk-level-03", "kk-level-04",
+      "kk-level-05", "kk-level-06", "kk-level-07", "kk-level-08"
+    ],
+    "unlockCondition": { "type": "always" }
   },
   {
-    "id": "sky-kingdom",
-    "name": "Sky Kingdom",
-    "theme": "sky",
-    "description": "Build sentences and have your first conversations.",
-    "storyIntro": "High above the clouds, the Sky Kingdom awaits...",
-    "iconEmoji": "☁️",
-    "levelIds": [],
-    "unlockCondition": { "type": "stars-in-world", "worldId": "royal-market", "minStars": 12 }
+    "id": "champions-arena",
+    "name": "Champion's Arena",
+    "theme": "arena",
+    "description": "Prove your mastery with mixed challenges from every kingdom.",
+    "storyIntro": "Only those who have trained in all four kingdoms may enter the arena. Here, every skill is tested. The arena adapts to your weaknesses — conquer them, and the crown is yours.",
+    "icon": "arena",
+    "levelIds": [
+      "ca-level-01", "ca-level-02", "ca-level-03", "ca-level-04",
+      "ca-level-05", "ca-level-06", "ca-level-07", "ca-level-08"
+    ],
+    "unlockCondition": {
+      "type": "levels-across-worlds",
+      "worlds": [
+        { "worldId": "word-fortress", "minLevels": 4 },
+        { "worldId": "context-courtyard", "minLevels": 4 },
+        { "worldId": "story-tower", "minLevels": 4 },
+        { "worldId": "knowledge-keep", "minLevels": 4 }
+      ]
+    }
   }
 ]

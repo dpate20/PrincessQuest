@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-04",
+  "worldId": "champions-arena",
+  "title": "Gauntlet of Words",
+  "order": 4,
+  "storySnippet": "Words are your weapons in this arena round.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-03" },
+  "exercises": [
+    {
+      "id": "ca-04-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "maintenance", "incorrectSpelling": "maintainance", "sentenceContext": "The building requires regular maintenance to stay in good condition." }
+    },
+    {
+      "id": "ca-04-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "mischievous", "incorrectSpelling": "mischievious", "sentenceContext": "The mischievous kitten knocked the vase off the shelf." }
+    },
+    {
+      "id": "ca-04-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "independent", "incorrectSpelling": "independant", "sentenceContext": "She became more independent after moving to college." }
+    },
+    {
+      "id": "ca-04-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The magician's trick left the audience in complete ___.", "choices": ["astonishment", "assignment"], "correctChoice": "astonishment", "definition": "Great surprise or amazement." }
+    },
+    {
+      "id": "ca-04-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The hikers needed to ___ their energy for the final climb.", "choices": ["conserve", "converse"], "correctChoice": "conserve", "definition": "To use carefully to prevent waste." }
+    },
+    {
+      "id": "ca-04-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The newspaper published an ___ about the school's new policy.", "choices": ["article", "artifact"], "correctChoice": "article", "definition": "A piece of writing in a newspaper or magazine about a particular topic." }
+    },
+    {
+      "id": "ca-04-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Glass frogs have translucent skin on their bellies, allowing you to see their heart, liver, and intestines. Scientists believe this transparency helps camouflage the frogs against green leaves by reducing their visible outline, making them harder for predators to spot from below.",
+        "passageTitle": "See-Through Frogs",
+        "questions": [
+          {
+            "id": "ca-04-rc-01-q1",
+            "question": "Why would being see-through help a frog survive better than being solid green?",
+            "options": ["Transparency reduces the frog's visible outline against leaves, making it harder to detect", "Because predators are afraid of seeing organs", "Because green skin attracts more predators", "Because transparent frogs can fly"],
+            "correctOption": "Transparency reduces the frog's visible outline against leaves, making it harder to detect"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "In medieval Europe, spices like pepper, cinnamon, and cloves were worth more than gold by weight. They had to be transported thousands of miles from Asia along dangerous trade routes. Wealthy families displayed spices at feasts not just for flavor but as a symbol of status and power.",
+        "passageTitle": "Worth More Than Gold",
+        "questions": [
+          {
+            "id": "ca-04-rc-02-q1",
+            "question": "Why were spices so expensive in medieval Europe?",
+            "options": ["Because they had to travel enormous distances along dangerous routes, limiting supply", "Because Europeans did not like the taste of spices", "Because spices were illegal in most countries", "Because only kings were allowed to sell spices"],
+            "correctOption": "Because they had to travel enormous distances along dangerous routes, limiting supply"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Tardigrades, also known as water bears, are microscopic animals that can survive almost anything. They can endure temperatures from near absolute zero to above boiling, survive intense radiation, and even live in the vacuum of space. They do this by entering a dried-out state called a tun, suspending all biological processes until conditions improve.",
+        "passageTitle": "The Indestructible Tardigrade",
+        "questions": [
+          {
+            "id": "ca-04-rc-03-q1",
+            "question": "What makes the tun state key to tardigrade survival?",
+            "options": ["It allows them to pause all biological processes until the environment is safe again", "It makes them grow larger and stronger", "It gives them the ability to fly away from danger", "It turns them into a different species"],
+            "correctOption": "It allows them to pause all biological processes until the environment is safe again"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Maya checked the mailbox every day after school for two weeks. Each time, she flipped through the letters quickly, then slowly closed the mailbox and walked inside. On the fifteenth day, she pulled out a thick envelope and screamed so loudly that the neighbor's dog started barking.",
+        "passageTitle": "The Thick Envelope",
+        "questions": [
+          {
+            "id": "ca-04-si-01-q1",
+            "question": "What was Maya most likely waiting for, and was the news good or bad?",
+            "acceptableAnswers": ["an acceptance letter", "good news like a school acceptance", "she got accepted somewhere", "a positive response she had been hoping for"],
+            "sampleAnswer": "Maya was likely waiting for an acceptance letter, and the news was good because she screamed with excitement when she received the thick envelope."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Mr. Torres watched the moving truck pull away from the house next door. He stood on his porch holding a plate of cookies he had baked that morning. After a minute, he set the plate down on the porch railing and went back inside, closing the door quietly behind him.",
+        "passageTitle": "The Cookies",
+        "questions": [
+          {
+            "id": "ca-04-si-02-q1",
+            "question": "Why did Mr. Torres set down the cookies without giving them to anyone?",
+            "acceptableAnswers": ["the neighbors already left", "the new neighbors haven't arrived yet and the old ones are gone", "he missed his chance to say goodbye", "the people he baked them for drove away"],
+            "sampleAnswer": "Mr. Torres baked cookies to say goodbye to his departing neighbors but did not get the chance, as the moving truck was already leaving."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Zoe's painting teacher held up two canvases at the end of class. 'This one follows every rule perfectly,' she said, showing a neat landscape. Then she held up Zoe's wild, colorful abstract piece. 'And this one breaks every rule—brilliantly.' The class turned to look at Zoe, who was turning red.",
+        "passageTitle": "Breaking the Rules",
+        "questions": [
+          {
+            "id": "ca-04-si-03-q1",
+            "question": "Is the teacher criticizing or praising Zoe's work? How do you know?",
+            "acceptableAnswers": ["praising", "she is complimenting Zoe", "the teacher is praising her because she said brilliantly", "it is praise because brilliantly is a positive word"],
+            "sampleAnswer": "The teacher is praising Zoe's work because the word 'brilliantly' is a strong compliment, showing that breaking rules creatively can be impressive."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-04-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The plural of 'child' is ___.", "correctAnswer": "children", "acceptableSpellings": ["children"] }
+    },
+    {
+      "id": "ca-04-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A word that means the same as 'happy' is ___.", "correctAnswer": "joyful", "acceptableSpellings": ["joyful", "glad", "cheerful", "content", "delighted"] }
+    },
+    {
+      "id": "ca-04-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The ___ of gravity pulls objects toward the center of the Earth.", "correctAnswer": "force", "acceptableSpellings": ["force"] }
+    }
+  ]
+}

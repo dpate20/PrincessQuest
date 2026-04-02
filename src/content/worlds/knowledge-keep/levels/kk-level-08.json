@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-08",
+  "worldId": "knowledge-keep",
+  "title": "The Scientific Method",
+  "order": 8,
+  "storySnippet": "The foundation of all discovery.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-07" },
+  "exercises": [
+    {
+      "id": "kk-08-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The scientific method is a systematic approach to understanding the natural world that has been refined over centuries. It generally begins with observation—noticing something in the world that sparks a question. From that question, a scientist forms a hypothesis, which is a testable prediction about what might be true. The next step is experimentation: designing a controlled test where only one variable changes at a time so the results can be clearly interpreted. After collecting data, the scientist analyzes the results to determine whether they support or contradict the hypothesis. If the evidence contradicts the hypothesis, the scientist revises it and tests again. This cycle of testing and revision is what makes science self-correcting over time. Importantly, for results to be considered reliable, other scientists must be able to replicate the experiment and get similar findings. This process of peer review and replication prevents errors and biases from becoming accepted as fact. The scientific method is not limited to laboratories—it can be applied to any situation where careful observation, logical reasoning, and evidence-based conclusions are needed.",
+        "passageTitle": "The Scientific Method",
+        "questions": [
+          {
+            "id": "kk-08-rc-01-q1",
+            "question": "Why is it important that experiments change only one variable at a time?",
+            "options": ["So scientists can clearly identify what caused the results they observed", "Because experiments with multiple variables are illegal", "Because equipment can only measure one thing at a time", "So the experiment takes less time to complete"],
+            "correctOption": "So scientists can clearly identify what caused the results they observed"
+          },
+          {
+            "id": "kk-08-rc-01-q2",
+            "question": "What does the author mean by calling science self-correcting?",
+            "options": ["That incorrect ideas are eventually identified and revised through repeated testing", "That scientists never make mistakes in their experiments", "That science textbooks automatically update themselves", "That computers correct all scientific errors"],
+            "correctOption": "That incorrect ideas are eventually identified and revised through repeated testing"
+          },
+          {
+            "id": "kk-08-rc-01-q3",
+            "question": "Why does the author mention that the scientific method is not limited to laboratories?",
+            "options": ["To show that the principles of observation and evidence-based reasoning apply to everyday life", "To argue that laboratories are no longer useful for science", "To suggest that real scientists never work in laboratories", "To prove that outdoor experiments are always better"],
+            "correctOption": "To show that the principles of observation and evidence-based reasoning apply to everyday life"
+          }
+        ]
+      }
+    }
+  ]
+}

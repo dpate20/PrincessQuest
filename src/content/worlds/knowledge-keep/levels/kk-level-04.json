@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-04",
+  "worldId": "knowledge-keep",
+  "title": "The History of the Printing Press",
+  "order": 4,
+  "storySnippet": "How one invention changed the world forever.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-03" },
+  "exercises": [
+    {
+      "id": "kk-04-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Before Johannes Gutenberg introduced his printing press around 1440, books in Europe were copied by hand, a painstaking process that could take months for a single volume. Monks in monasteries were often the ones doing this work, and as a result, books were extremely expensive and rare—only the wealthy and the church could afford them. Gutenberg's key innovation was movable type: individual metal letters that could be arranged, inked, and pressed onto paper, then rearranged for the next page. His press could produce roughly 3,600 pages per day, compared to perhaps 40 by hand. The first major book he printed was the Gutenberg Bible in 1455. Within fifty years, an estimated twenty million volumes had been printed across Europe. The effects were revolutionary. Literacy rates climbed as books became affordable. Scientific ideas could spread rapidly, fueling the Renaissance and later the Scientific Revolution. Martin Luther's writings, printed and distributed widely, helped spark the Protestant Reformation. The printing press did not just reproduce words—it transformed how knowledge itself moved through society, making information accessible to ordinary people for the first time.",
+        "passageTitle": "The History of the Printing Press",
+        "questions": [
+          {
+            "id": "kk-04-rc-01-q1",
+            "question": "Why were books so expensive before the printing press?",
+            "options": ["Because each book had to be copied entirely by hand, which was slow and labor-intensive", "Because paper had not yet been invented in Europe", "Because the church banned the sale of affordable books", "Because only gold ink was used for writing"],
+            "correctOption": "Because each book had to be copied entirely by hand, which was slow and labor-intensive"
+          },
+          {
+            "id": "kk-04-rc-01-q2",
+            "question": "What can you infer about why the printing press helped fuel the Scientific Revolution?",
+            "options": ["Scientists could share discoveries more quickly and widely through printed works", "The printing press was used to build scientific instruments", "Gutenberg personally funded scientific research", "Printed books replaced the need for scientific experiments"],
+            "correctOption": "Scientists could share discoveries more quickly and widely through printed works"
+          },
+          {
+            "id": "kk-04-rc-01-q3",
+            "question": "Based on the passage, why does the author say the press transformed how knowledge moved through society?",
+            "options": ["Because information was no longer limited to the wealthy and powerful who could afford hand-copied books", "Because the press physically moved books from one country to another", "Because knowledge was no longer written down after the press was invented", "Because monks stopped reading after the press made their work unnecessary"],
+            "correctOption": "Because information was no longer limited to the wealthy and powerful who could afford hand-copied books"
+          }
+        ]
+      }
+    }
+  ]
+}

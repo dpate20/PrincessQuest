@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-05",
+  "worldId": "context-courtyard",
+  "title": "Shadows of Meaning",
+  "order": 5,
+  "storySnippet": "The courtyard grows dim as Lira faces words that twist and turn with subtle shades of meaning.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-04" },
+  "exercises": [
+    {
+      "id": "cc-05-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Rather than argue further, the student decided to ___ and follow the teacher's instructions.",
+        "choices": ["acquiesce", "acknowledge"],
+        "correctChoice": "acquiesce",
+        "definition": "Acquiesce: to accept something reluctantly but without protest; to go along with."
+      }
+    },
+    {
+      "id": "cc-05-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ending of the story was ___, leaving readers unsure whether the hero survived.",
+        "choices": ["ambiguous", "ambitious"],
+        "correctChoice": "ambiguous",
+        "definition": "Ambiguous: open to more than one interpretation; unclear or having a double meaning."
+      }
+    },
+    {
+      "id": "cc-05-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The old monastery had an ___ style, with plain stone walls and no decorations.",
+        "choices": ["austere", "authentic"],
+        "correctChoice": "austere",
+        "definition": "Austere: severe or strict in appearance or manner; plain and without luxury."
+      }
+    },
+    {
+      "id": "cc-05-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Spring weather can be ___, switching from warm sunshine to cold rain within an hour.",
+        "choices": ["capricious", "courageous"],
+        "correctChoice": "capricious",
+        "definition": "Capricious: given to sudden and unpredictable changes of mood or behavior."
+      }
+    },
+    {
+      "id": "cc-05-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The debater presented a ___ argument backed by strong evidence and clear reasoning.",
+        "choices": ["cogent", "common"],
+        "correctChoice": "cogent",
+        "definition": "Cogent: clear, logical, and convincing; powerfully persuasive."
+      }
+    },
+    {
+      "id": "cc-05-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "After winning several games in a row, the team grew ___ and stopped practicing as hard.",
+        "choices": ["complacent", "competent"],
+        "correctChoice": "complacent",
+        "definition": "Complacent: showing smug or uncritical satisfaction with oneself; self-satisfied to the point of not trying."
+      }
+    },
+    {
+      "id": "cc-05-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The young knight showed ___ to the queen by bowing respectfully before speaking.",
+        "choices": ["deference", "defiance"],
+        "correctChoice": "deference",
+        "definition": "Deference: humble respect and polite submission to the judgment or wishes of another."
+      }
+    },
+    {
+      "id": "cc-05-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The beauty of cherry blossoms is ___, lasting only a few days before the petals fall.",
+        "choices": ["ephemeral", "essential"],
+        "correctChoice": "ephemeral",
+        "definition": "Ephemeral: lasting for a very short time; fleeting and temporary."
+      }
+    },
+    {
+      "id": "cc-05-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The politician's ___ response left voters confused about where she actually stood on the issue.",
+        "choices": ["equivocal", "equivalent"],
+        "correctChoice": "equivocal",
+        "definition": "Equivocal: not clear in meaning; deliberately vague or open to two or more interpretations."
+      }
+    },
+    {
+      "id": "cc-05-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ chef insisted that every ingredient be measured precisely and every plate arranged perfectly.",
+        "choices": ["fastidious", "fantastic"],
+        "correctChoice": "fastidious",
+        "definition": "Fastidious: very attentive to detail and accuracy; excessively particular."
+      }
+    }
+  ]
+}

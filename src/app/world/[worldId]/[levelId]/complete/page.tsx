@@ -10,12 +10,12 @@ import StarRating from "@/components/ui/StarRating";
 import Sparkle from "@/components/ui/Sparkle";
 
 const encouragingMessages = [
-  "You did it! Your words are getting stronger.",
-  "Wonderful! The kingdom grows with every lesson.",
-  "Amazing work! You are a true princess of words.",
-  "Your voice matters. Keep going!",
-  "Brilliant! You are ready for the next gate.",
-  "The stars shine brighter because of you!",
+  "Well done! Your knowledge grows stronger.",
+  "Impressive work. The kingdom recognizes your skill.",
+  "Another challenge conquered. Keep pushing forward.",
+  "Your dedication is paying off. Onward!",
+  "Excellent. You are ready for the next trial.",
+  "The scholars speak highly of your progress!",
 ];
 
 export default function LevelCompletePage({
@@ -41,26 +41,22 @@ export default function LevelCompletePage({
     <div className="flex flex-col flex-1 items-center justify-center relative overflow-hidden px-4">
       <Sparkle count={16} />
 
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl max-w-sm w-full text-center animate-fade-in-up">
-        {/* Stars */}
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm w-full text-center animate-fade-in-up border border-amber-200/50">
         <div className="mb-4 flex justify-center">
           <StarRating stars={stars} size="lg" animated />
         </div>
 
-        {/* Score */}
-        <div className="text-5xl font-extrabold text-[var(--color-primary)] mb-2">
+        <div className="text-5xl font-extrabold font-[var(--font-heading)] text-[var(--color-primary)] mb-2">
           {score}%
         </div>
 
-        {/* Message */}
         <p className="text-gray-600 mb-6 leading-relaxed">{message}</p>
 
-        {/* Actions */}
         <div className="flex flex-col gap-3">
           {passed && nextLevelId && (
             <Link href={`/world/${worldId}/${nextLevelId}`}>
               <Button variant="gold" size="lg" className="w-full">
-                ✨ Next Level
+                Next Level
               </Button>
             </Link>
           )}

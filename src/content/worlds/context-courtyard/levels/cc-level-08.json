@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-08",
+  "worldId": "context-courtyard",
+  "title": "The Courtyard's Crown",
+  "order": 8,
+  "storySnippet": "At the heart of the courtyard, Lira faces the final challenge and claims the Crown of Context.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-07" },
+  "exercises": [
+    {
+      "id": "cc-08-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The march of time is ___, and no force on Earth can slow it down.",
+        "choices": ["inexorable", "inexplicable"],
+        "correctChoice": "inexorable",
+        "definition": "Inexorable: impossible to stop or prevent; continuing without any possibility of being changed."
+      }
+    },
+    {
+      "id": "cc-08-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ negotiator refused to change her position despite hours of discussion.",
+        "choices": ["intransigent", "intelligent"],
+        "correctChoice": "intransigent",
+        "definition": "Intransigent: unwilling or refusing to change one's views or to agree; stubbornly uncompromising."
+      }
+    },
+    {
+      "id": "cc-08-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ coach gave a simple nod instead of a long speech after the team's victory.",
+        "choices": ["laconic", "lenient"],
+        "correctChoice": "laconic",
+        "definition": "Laconic: using very few words to express something; brief and to the point."
+      }
+    },
+    {
+      "id": "cc-08-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ witness told lie after lie on the stand, contradicting every known fact.",
+        "choices": ["mendacious", "memorable"],
+        "correctChoice": "mendacious",
+        "definition": "Mendacious: not telling the truth; lying or habitually dishonest."
+      }
+    },
+    {
+      "id": "cc-08-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The spy tried to ___ the truth by mixing in false details with real ones.",
+        "choices": ["obfuscate", "obligate"],
+        "correctChoice": "obfuscate",
+        "definition": "Obfuscate: to make something unclear, confusing, or difficult to understand."
+      }
+    },
+    {
+      "id": "cc-08-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The security guard gave the badges only a ___ glance before waving everyone through.",
+        "choices": ["perfunctory", "perpetual"],
+        "correctChoice": "perfunctory",
+        "definition": "Perfunctory: carried out with minimal effort or care; done as a routine duty without real interest."
+      }
+    },
+    {
+      "id": "cc-08-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "His ___ dream of building a castle out of recycled bottles inspired the whole school.",
+        "choices": ["quixotic", "qualified"],
+        "correctChoice": "quixotic",
+        "definition": "Quixotic: exceedingly idealistic; unrealistic and impractical, yet admirably noble in intent."
+      }
+    },
+    {
+      "id": "cc-08-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ assistant constantly praised the director's ideas, even the bad ones.",
+        "choices": ["sycophantic", "sympathetic"],
+        "correctChoice": "sycophantic",
+        "definition": "Sycophantic: behaving in an excessively flattering way to gain advantage; fawning."
+      }
+    },
+    {
+      "id": "cc-08-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "A wave of ___ swept over the actor as she stepped onto the stage for her first performance.",
+        "choices": ["trepidation", "transformation"],
+        "correctChoice": "trepidation",
+        "definition": "Trepidation: a feeling of fear or anxiety about something that may happen."
+      }
+    },
+    {
+      "id": "cc-08-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ review of the film was so harsh that it discouraged people from seeing it.",
+        "choices": ["vituperative", "voluntary"],
+        "correctChoice": "vituperative",
+        "definition": "Vituperative: bitter and abusive in language; harshly critical."
+      }
+    }
+  ]
+}

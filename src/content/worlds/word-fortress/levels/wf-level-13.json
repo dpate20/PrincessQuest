@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-13",
+  "worldId": "word-fortress",
+  "title": "The Dragon's Riddle",
+  "order": 13,
+  "storySnippet": "A word-hoarding dragon blocks your path and will only let you pass if you can master its expert vocabulary.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-12" },
+  "exercises": [
+    {
+      "id": "wf-13-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "antediluvian",
+        "incorrectSpelling": "antideluvian",
+        "sentenceContext": "The antediluvian ruins predated every known civilization in the realm."
+      }
+    },
+    {
+      "id": "wf-13-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bourgeoisie",
+        "incorrectSpelling": "bourgeousie",
+        "sentenceContext": "The bourgeoisie controlled most of the trade routes through the kingdom."
+      }
+    },
+    {
+      "id": "wf-13-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "chrysanthemum",
+        "incorrectSpelling": "chrysanthamum",
+        "sentenceContext": "A golden chrysanthemum grew in the enchanted garden beside the tower."
+      }
+    },
+    {
+      "id": "wf-13-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "desiccate",
+        "incorrectSpelling": "dessicate",
+        "sentenceContext": "The desert sun would desiccate any plant that lacked deep roots."
+      }
+    },
+    {
+      "id": "wf-13-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "effervescent",
+        "incorrectSpelling": "effervesent",
+        "sentenceContext": "The wizard brewed an effervescent potion that bubbled and sparkled brightly."
+      }
+    },
+    {
+      "id": "wf-13-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "idiosyncrasy",
+        "incorrectSpelling": "idiosyncracy",
+        "sentenceContext": "Every castle has its own idiosyncrasy, from creaky doors to hidden passages."
+      }
+    },
+    {
+      "id": "wf-13-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "iridescent",
+        "incorrectSpelling": "irridescent",
+        "sentenceContext": "The dragon's iridescent scales shimmered with every color of the rainbow."
+      }
+    },
+    {
+      "id": "wf-13-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "labyrinthine",
+        "incorrectSpelling": "labrynthine",
+        "sentenceContext": "The labyrinthine tunnels beneath the fortress confused even the bravest explorers."
+      }
+    },
+    {
+      "id": "wf-13-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ artifacts in the museum were thousands of years old.",
+        "correctAnswer": "antediluvian",
+        "acceptableSpellings": ["antediluvian"],
+        "hint": "Extremely old or ancient"
+      }
+    },
+    {
+      "id": "wf-13-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "A beautiful ___ bloomed in the royal garden each autumn.",
+        "correctAnswer": "chrysanthemum",
+        "acceptableSpellings": ["chrysanthemum"],
+        "hint": "A colorful flower with many petals"
+      }
+    },
+    {
+      "id": "wf-13-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The hot sun will ___ the herbs if you leave them out too long.",
+        "correctAnswer": "desiccate",
+        "acceptableSpellings": ["desiccate"],
+        "hint": "To dry out completely"
+      }
+    },
+    {
+      "id": "wf-13-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ bubbles in the magical spring water tickled her nose.",
+        "correctAnswer": "effervescent",
+        "acceptableSpellings": ["effervescent"],
+        "hint": "Fizzy and bubbly"
+      }
+    }
+  ]
+}

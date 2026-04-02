@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-07",
+  "worldId": "champions-arena",
+  "title": "The Proving Ground",
+  "order": 7,
+  "storySnippet": "Near the summit, every challenge counts.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-06" },
+  "exercises": [
+    {
+      "id": "ca-07-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "acknowledge", "incorrectSpelling": "acknowlege", "sentenceContext": "The principal paused to acknowledge the student's achievement." }
+    },
+    {
+      "id": "ca-07-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "persuade", "incorrectSpelling": "pursuade", "sentenceContext": "She tried to persuade her parents to let her go camping." }
+    },
+    {
+      "id": "ca-07-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "suspicious", "incorrectSpelling": "suspicous", "sentenceContext": "The detective found the witness's story suspicious." }
+    },
+    {
+      "id": "ca-07-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The volcano had been ___ for centuries before it suddenly erupted.", "choices": ["dormant", "dominant"], "correctChoice": "dormant", "definition": "Temporarily inactive or sleeping." }
+    },
+    {
+      "id": "ca-07-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The charity's ___ was to provide clean water to every village.", "choices": ["mission", "missile"], "correctChoice": "mission", "definition": "An important goal or purpose that is accompanied by strong conviction." }
+    },
+    {
+      "id": "ca-07-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The scientist was ___ about the results and ran the experiment again.", "choices": ["skeptical", "skeletal"], "correctChoice": "skeptical", "definition": "Not easily convinced; having doubts." }
+    },
+    {
+      "id": "ca-07-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "In 1969, the Cuyahoga River in Cleveland, Ohio, was so polluted with oil and industrial waste that it caught fire. The image of a burning river shocked the nation and became a powerful symbol. Within a year, the United States created the Environmental Protection Agency and passed the Clean Water Act.",
+        "passageTitle": "The River That Caught Fire",
+        "questions": [
+          {
+            "id": "ca-07-rc-01-q1",
+            "question": "What does the rapid government response suggest about the power of dramatic events in creating change?",
+            "options": ["Shocking, visible events can motivate rapid political action that years of quiet advocacy could not", "The government always responds quickly to pollution", "Rivers catch fire regularly in the United States", "The EPA existed before the fire happened"],
+            "correctOption": "Shocking, visible events can motivate rapid political action that years of quiet advocacy could not"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Mushrooms are neither plants nor animals—they belong to their own kingdom called Fungi. Unlike plants, they cannot make their own food through photosynthesis. Instead, they absorb nutrients by breaking down dead organic matter. This decomposition process is vital to ecosystems because it recycles nutrients back into the soil, allowing new plants to grow.",
+        "passageTitle": "The Fungus Kingdom",
+        "questions": [
+          {
+            "id": "ca-07-rc-02-q1",
+            "question": "What might happen to a forest ecosystem if all fungi suddenly disappeared?",
+            "options": ["Dead matter would accumulate and nutrients would not be recycled, eventually harming plant growth", "The forest would grow faster without fungi", "Animals would replace fungi in breaking down matter", "Nothing would change because fungi are not important"],
+            "correctOption": "Dead matter would accumulate and nutrients would not be recycled, eventually harming plant growth"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The Braille writing system was invented by Louis Braille, who became blind after a childhood accident. At age 15, he adapted a military communication system of raised dots into a reading method for blind people. Today, Braille is used worldwide in nearly every language. Braille himself was a talented musician and became an organist at a church in Paris.",
+        "passageTitle": "Louis Braille's Legacy",
+        "questions": [
+          {
+            "id": "ca-07-rc-03-q1",
+            "question": "What does Braille's invention and musical career together suggest about the capabilities of blind individuals?",
+            "options": ["That blindness does not prevent remarkable intellectual and creative achievement", "That all blind people are good at music", "That Braille is only used for music", "That military systems are designed for blind people"],
+            "correctOption": "That blindness does not prevent remarkable intellectual and creative achievement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Coach Davis looked at the scoreboard: 48-47, with ten seconds left. He called a timeout. 'Give the ball to Jordan,' he said. Every player nodded except Marcus, who had been the team's leading scorer all season. Marcus clenched his jaw but said nothing. When play resumed, Marcus passed the ball to Jordan without hesitation. Jordan scored as the buzzer sounded.",
+        "passageTitle": "The Final Play",
+        "questions": [
+          {
+            "id": "ca-07-si-01-q1",
+            "question": "What does Marcus's reaction tell us about his feelings, and why does he pass the ball anyway?",
+            "acceptableAnswers": ["he is frustrated but puts the team first", "he disagrees but respects the coach's decision", "he wanted the shot but chose to be a team player", "he is upset but follows instructions for the team"],
+            "sampleAnswer": "Marcus is frustrated that the coach chose Jordan instead of him, as shown by his clenched jaw, but he passes without hesitation because he puts the team's success above his personal pride."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The lights went out during the storm. Mom lit candles and set them around the living room. 'No TV tonight,' she said. At first, the kids groaned. But then Dad pulled out a deck of cards, and Grandpa started telling stories about when he was young. By the time the power came back two hours later, nobody wanted to turn the TV on.",
+        "passageTitle": "The Power Outage",
+        "questions": [
+          {
+            "id": "ca-07-si-02-q1",
+            "question": "What did the family discover during the power outage?",
+            "acceptableAnswers": ["they enjoy spending time together without screens", "family time can be better than watching TV", "they had more fun talking and playing together", "they don't need technology to have a good time"],
+            "sampleAnswer": "The family discovered that spending quality time together—playing cards and sharing stories—was more enjoyable than watching television."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Every day after school, Amira walked three blocks out of her way to take the long route home. Her friends thought she was strange for doing this. But Amira knew that the elderly woman in the yellow house on Maple Street always sat by the window, and always waved. Amira waved back every single time.",
+        "passageTitle": "The Long Way Home",
+        "questions": [
+          {
+            "id": "ca-07-si-03-q1",
+            "question": "Why does Amira take the longer route home?",
+            "acceptableAnswers": ["to wave at the elderly woman", "because she cares about the old woman who might be lonely", "to brighten the elderly woman's day", "she knows the woman looks forward to seeing her"],
+            "sampleAnswer": "Amira takes the long way home because she knows the elderly woman looks forward to their daily wave, and she cares enough to make the extra effort."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-07-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A comparison using 'like' or 'as' is called a ___.", "correctAnswer": "simile", "acceptableSpellings": ["simile"] }
+    },
+    {
+      "id": "ca-07-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The chemical symbol for water is H2___.", "correctAnswer": "O", "acceptableSpellings": ["O", "o"] }
+    },
+    {
+      "id": "ca-07-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A story written about a real person's life by someone else is called a ___.", "correctAnswer": "biography", "acceptableSpellings": ["biography"] }
+    }
+  ]
+}

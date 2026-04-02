@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-12",
+  "worldId": "word-fortress",
+  "title": "The Sorcerer's Lexicon",
+  "order": 12,
+  "storySnippet": "The sorcerer's enchanted lexicon hurls tricky words at you -- only perfect spelling can break the curse.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-11" },
+  "exercises": [
+    {
+      "id": "wf-12-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "surreptitious",
+        "incorrectSpelling": "sureptitious",
+        "sentenceContext": "The thief made a surreptitious entry through the castle window at night."
+      }
+    },
+    {
+      "id": "wf-12-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "tyrannical",
+        "incorrectSpelling": "tyranical",
+        "sentenceContext": "The villagers rebelled against the tyrannical ruler who taxed them unfairly."
+      }
+    },
+    {
+      "id": "wf-12-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "Mediterranean",
+        "incorrectSpelling": "Mediterranian",
+        "sentenceContext": "Mediterranean cuisine features olive oil, fresh herbs, and seafood."
+      }
+    },
+    {
+      "id": "wf-12-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "pharmaceutical",
+        "incorrectSpelling": "pharmaseutical",
+        "sentenceContext": "The pharmaceutical company developed a new medicine for the plague."
+      }
+    },
+    {
+      "id": "wf-12-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rendezvous",
+        "incorrectSpelling": "rendevous",
+        "sentenceContext": "The allies planned their rendezvous at the abandoned watchtower."
+      }
+    },
+    {
+      "id": "wf-12-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "sacrilegious",
+        "incorrectSpelling": "sacriligious",
+        "sentenceContext": "Removing the sacred stone was deemed sacrilegious by the high priestess."
+      }
+    },
+    {
+      "id": "wf-12-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rheumatism",
+        "incorrectSpelling": "rheumatizm",
+        "sentenceContext": "Cold, damp weather often worsens rheumatism in those who suffer from it."
+      }
+    },
+    {
+      "id": "wf-12-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "questionnaire",
+        "incorrectSpelling": "questionairre",
+        "sentenceContext": "The census questionnaire asked about each household's crops and livestock."
+      }
+    },
+    {
+      "id": "wf-12-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "She cast a ___ glance at the forbidden scroll when no one was watching.",
+        "correctAnswer": "surreptitious",
+        "acceptableSpellings": ["surreptitious"],
+        "hint": "Done secretly or stealthily"
+      }
+    },
+    {
+      "id": "wf-12-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ king silenced anyone who dared to disagree with him.",
+        "correctAnswer": "tyrannical",
+        "acceptableSpellings": ["tyrannical"],
+        "hint": "Exercising power in a cruel or oppressive way"
+      }
+    },
+    {
+      "id": "wf-12-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The apothecary studied ___ ingredients to create healing potions.",
+        "correctAnswer": "pharmaceutical",
+        "acceptableSpellings": ["pharmaceutical"],
+        "hint": "Related to the preparation of medicines"
+      }
+    },
+    {
+      "id": "wf-12-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The two scouts agreed on a ___ point near the river at dawn.",
+        "correctAnswer": "rendezvous",
+        "acceptableSpellings": ["rendezvous"],
+        "hint": "A planned meeting at a specific time and place"
+      }
+    }
+  ]
+}

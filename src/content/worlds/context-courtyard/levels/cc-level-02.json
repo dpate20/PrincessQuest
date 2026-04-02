@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-02",
+  "worldId": "context-courtyard",
+  "title": "Building Blocks",
+  "order": 2,
+  "storySnippet": "Deeper in the courtyard, Princess Lira discovers that strong ideas are built from strong words.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-01" },
+  "exercises": [
+    {
+      "id": "cc-02-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Solar panels ___ electricity from sunlight, making them useful for powering homes.",
+        "choices": ["generate", "tolerate"],
+        "correctChoice": "generate",
+        "definition": "Generate: to produce or create something, especially energy, ideas, or results."
+      }
+    },
+    {
+      "id": "cc-02-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Every student can ___ to the class garden by planting seeds or pulling weeds.",
+        "choices": ["contribute", "continue"],
+        "correctChoice": "contribute",
+        "definition": "Contribute: to give something, such as time, effort, or resources, to help achieve a goal."
+      }
+    },
+    {
+      "id": "cc-02-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The diagram will ___ how the water cycle works from evaporation to rainfall.",
+        "choices": ["illustrate", "intimidate"],
+        "correctChoice": "illustrate",
+        "definition": "Illustrate: to explain or make something clear by using examples, pictures, or diagrams."
+      }
+    },
+    {
+      "id": "cc-02-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Understanding fractions is a ___ skill needed for success in higher-level math.",
+        "choices": ["fundamental", "fictional"],
+        "correctChoice": "fundamental",
+        "definition": "Fundamental: forming the base or foundation; essential and important."
+      }
+    },
+    {
+      "id": "cc-02-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The team made ___ progress over the season, winning twice as many games as last year.",
+        "choices": ["substantial", "superficial"],
+        "correctChoice": "substantial",
+        "definition": "Substantial: large in size, amount, or importance; considerable."
+      }
+    },
+    {
+      "id": "cc-02-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Over time, fallen leaves ___ on the forest floor and become rich soil.",
+        "choices": ["accumulate", "accompany"],
+        "correctChoice": "accumulate",
+        "definition": "Accumulate: to gather or collect gradually over a period of time."
+      }
+    },
+    {
+      "id": "cc-02-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Homework assignments ___ a large part of the final grade in this class.",
+        "choices": ["constitute", "construct"],
+        "correctChoice": "constitute",
+        "definition": "Constitute: to make up or form a whole; to be a component or part of something."
+      }
+    },
+    {
+      "id": "cc-02-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Reading books from different cultures gives you a wider ___ on the world.",
+        "choices": ["perspective", "percentage"],
+        "correctChoice": "perspective",
+        "definition": "Perspective: a particular way of viewing or thinking about something; a point of view."
+      }
+    },
+    {
+      "id": "cc-02-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "In the ___ weeks after the volcano erupted, scientists closely monitored the area.",
+        "choices": ["subsequent", "sufficient"],
+        "correctChoice": "subsequent",
+        "definition": "Subsequent: coming after something in time or order; following."
+      }
+    },
+    {
+      "id": "cc-02-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Oak trees are the ___ species in this forest, outnumbering all other types.",
+        "choices": ["predominant", "permanent"],
+        "correctChoice": "predominant",
+        "definition": "Predominant: most common, widespread, or having the greatest influence."
+      }
+    }
+  ]
+}

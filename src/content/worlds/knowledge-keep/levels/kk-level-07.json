@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-07",
+  "worldId": "knowledge-keep",
+  "title": "Ocean Currents",
+  "order": 7,
+  "storySnippet": "The invisible rivers that shape our climate.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-06" },
+  "exercises": [
+    {
+      "id": "kk-07-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Ocean currents are large-scale movements of water that flow in predictable patterns across the world's oceans. They are driven by several forces, including wind, differences in water temperature and salinity, and the rotation of the Earth. Surface currents, which affect the upper 400 meters of the ocean, are primarily caused by wind patterns. Deep ocean currents, also called thermohaline circulation, are driven by differences in water density—cold, salty water is denser and sinks, while warm, less salty water rises. Together, surface and deep currents form a global system sometimes called the ocean conveyor belt that circulates water around the planet over roughly a thousand-year cycle. Ocean currents have an enormous impact on climate. The Gulf Stream, for example, carries warm water from the Gulf of Mexico northeastward across the Atlantic, which is why western Europe enjoys much milder winters than regions at similar latitudes in North America. Without the Gulf Stream, cities like London and Paris would experience winters similar to those in Labrador, Canada. Scientists are concerned that climate change could weaken these currents by adding freshwater from melting ice caps, potentially disrupting weather patterns worldwide.",
+        "passageTitle": "Ocean Currents",
+        "questions": [
+          {
+            "id": "kk-07-rc-01-q1",
+            "question": "Based on the passage, why might melting ice caps affect ocean currents?",
+            "options": ["Because the added freshwater reduces salinity, which changes water density and disrupts circulation", "Because melting ice physically blocks the path of ocean currents", "Because ice caps generate the wind that drives surface currents", "Because melting ice makes the ocean too warm for currents to flow"],
+            "correctOption": "Because the added freshwater reduces salinity, which changes water density and disrupts circulation"
+          },
+          {
+            "id": "kk-07-rc-01-q2",
+            "question": "What can you infer about why London has milder winters than Labrador, even though they are at similar latitudes?",
+            "options": ["The Gulf Stream carries warm water near Europe, raising temperatures there", "London is closer to the equator than Labrador", "Europe has more factories that produce heat", "Labrador is surrounded by mountains that trap cold air"],
+            "correctOption": "The Gulf Stream carries warm water near Europe, raising temperatures there"
+          },
+          {
+            "id": "kk-07-rc-01-q3",
+            "question": "Why does the author use the term ocean conveyor belt?",
+            "options": ["To illustrate how ocean currents continuously move water in a loop around the globe", "To suggest that the ocean is an industrial machine", "To explain that ocean currents only move in straight lines", "To argue that humans built the current system"],
+            "correctOption": "To illustrate how ocean currents continuously move water in a loop around the globe"
+          }
+        ]
+      }
+    }
+  ]
+}

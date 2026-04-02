@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-08",
+  "worldId": "champions-arena",
+  "title": "Champion's Final Stand",
+  "order": 8,
+  "storySnippet": "The ultimate test of all you have learned.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-07" },
+  "exercises": [
+    {
+      "id": "ca-08-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "laboratory", "incorrectSpelling": "labratory", "sentenceContext": "The scientists conducted experiments in the laboratory." }
+    },
+    {
+      "id": "ca-08-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "particularly", "incorrectSpelling": "particuarly", "sentenceContext": "She was particularly interested in marine biology." }
+    },
+    {
+      "id": "ca-08-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "recommend", "incorrectSpelling": "reccommend", "sentenceContext": "I would recommend this book to anyone who loves adventure." }
+    },
+    {
+      "id": "ca-08-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The politician gave a ___ speech that moved the entire audience to tears.", "choices": ["compelling", "competing"], "correctChoice": "compelling", "definition": "Evoking interest or attention in a powerfully irresistible way." }
+    },
+    {
+      "id": "ca-08-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ancient castle had fallen into ___  after centuries of neglect.", "choices": ["disrepair", "disappear"], "correctChoice": "disrepair", "definition": "Poor condition of a building due to neglect." }
+    },
+    {
+      "id": "ca-08-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ of the rare butterfly made the discovery even more exciting.", "choices": ["scarcity", "scenery"], "correctChoice": "scarcity", "definition": "The state of being in short supply; rarity." }
+    },
+    {
+      "id": "ca-08-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "In the 1850s, doctor John Snow mapped cholera cases in London and noticed they clustered around a single water pump on Broad Street. He convinced authorities to remove the pump handle, and the outbreak slowed dramatically. This was decades before germ theory was widely accepted—most doctors still believed diseases were caused by bad air.",
+        "passageTitle": "The Father of Epidemiology",
+        "questions": [
+          {
+            "id": "ca-08-rc-01-q1",
+            "question": "What made Snow's approach revolutionary for his time?",
+            "options": ["He used data and evidence to trace disease to its source rather than relying on popular belief", "He invented the first water pump", "He proved that bad air causes cholera", "He was the first doctor in London"],
+            "correctOption": "He used data and evidence to trace disease to its source rather than relying on popular belief"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The International Space Station orbits Earth at about 28,000 kilometers per hour, completing one full orbit every 90 minutes. Astronauts aboard experience sixteen sunrises and sunsets every day. In the microgravity environment, muscles and bones weaken quickly, so astronauts must exercise at least two hours daily to maintain their health.",
+        "passageTitle": "Life in Orbit",
+        "questions": [
+          {
+            "id": "ca-08-rc-02-q1",
+            "question": "Why would returning to Earth after months in space be physically challenging for astronauts?",
+            "options": ["Because their muscles and bones have weakened in microgravity despite exercise", "Because Earth's air is different from the station's", "Because they forget how to walk after 90 minutes", "Because the station moves too fast to slow down"],
+            "correctOption": "Because their muscles and bones have weakened in microgravity despite exercise"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Fireflies produce light through a chemical reaction in their abdomens involving a substance called luciferin. Unlike a light bulb, which wastes most of its energy as heat, a firefly's light is nearly 100 percent efficient—almost no energy is lost as heat. Scientists are studying this process to develop more efficient lighting technology for human use.",
+        "passageTitle": "Nature's Light",
+        "questions": [
+          {
+            "id": "ca-08-rc-03-q1",
+            "question": "Why would studying firefly light be useful for developing human technology?",
+            "options": ["Because firefly light is nearly 100 percent efficient, which could inspire more energy-efficient lighting", "Because fireflies are easier to catch than other insects", "Because human light bulbs use luciferin", "Because firefly light is brighter than any human invention"],
+            "correctOption": "Because firefly light is nearly 100 percent efficient, which could inspire more energy-efficient lighting"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The judge announced the winner of the spelling bee. Everyone clapped for Maria. In the back row, her older brother David clapped the hardest, even though he had lost in the first round of the same competition five years ago. He had been the one quizzing Maria with flashcards every night for three months.",
+        "passageTitle": "The Spelling Bee",
+        "questions": [
+          {
+            "id": "ca-08-si-01-q1",
+            "question": "Why is David's reaction especially meaningful given his own history with the spelling bee?",
+            "acceptableAnswers": ["he turned his own failure into his sister's success", "he used his experience to help Maria win", "instead of being bitter about losing he helped his sister", "his loss motivated him to help Maria succeed"],
+            "sampleAnswer": "David's reaction is meaningful because rather than being bitter about his own first-round loss, he channeled that experience into helping his sister succeed by studying with her for months."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The moving boxes were finally unpacked. Twelve-year-old Omar stood in his new room staring at blank walls. He reached into the last box and pulled out a framed photo of four smiling kids standing in front of a school. He hung it on the wall directly above his bed and stepped back. The room felt a little less empty.",
+        "passageTitle": "The New Room",
+        "questions": [
+          {
+            "id": "ca-08-si-02-q1",
+            "question": "What does Omar's choice of what to hang first reveal about what he misses most?",
+            "acceptableAnswers": ["he misses his friends", "his friends are the most important thing to him", "he values his friendships from his old school", "he misses the people from his previous home"],
+            "sampleAnswer": "Omar's choice to hang the photo of his friends first shows that he misses his friendships most of all, and their image makes his new room feel more like home."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Grandmother sat in her rocking chair, eyes closed, listening to the rain. 'This is the same sound,' she said. 'Sixty years ago, on my wedding day, it rained just like this. Everyone said it was bad luck.' She opened her eyes and smiled. 'They were wrong about that.'",
+        "passageTitle": "The Rain",
+        "questions": [
+          {
+            "id": "ca-08-si-03-q1",
+            "question": "What does Grandmother mean when she says 'They were wrong about that'?",
+            "acceptableAnswers": ["her marriage was happy despite the rain", "the rain was not bad luck after all", "she had a good life with her spouse", "the superstition about rain on a wedding day was wrong for her"],
+            "sampleAnswer": "Grandmother means that despite the superstition about rain being bad luck, her marriage turned out to be a happy one, proving that the rain was not an omen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-08-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A figure of speech that gives human qualities to non-human things is called ___.", "correctAnswer": "personification", "acceptableSpellings": ["personification"] }
+    },
+    {
+      "id": "ca-08-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The main character in a story is called the ___.", "correctAnswer": "protagonist", "acceptableSpellings": ["protagonist"] }
+    },
+    {
+      "id": "ca-08-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The study of living organisms is called ___.", "correctAnswer": "biology", "acceptableSpellings": ["biology"] }
+    }
+  ]
+}

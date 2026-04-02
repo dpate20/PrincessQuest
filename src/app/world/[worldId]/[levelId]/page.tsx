@@ -6,6 +6,7 @@ import { getLevel } from "@/lib/content-loader";
 import { useGameStore } from "@/stores/useGameStore";
 import GameHeader from "@/components/layout/GameHeader";
 import MinigameShell from "@/components/minigame/MinigameShell";
+import type { AnswerResult } from "@/types/minigame";
 
 export default function MinigamePlayPage({
   params,
@@ -20,15 +21,15 @@ export default function MinigamePlayPage({
   const level = getLevel(levelId);
 
   const handleComplete = useCallback(
-    (score: number, starCount: number) => {
+    (score: number, starCount: number, results: AnswerResult[]) => {
       if (completed) return;
       setCompleted(true);
-      completeLevel(levelId, worldId, score, starCount, level?.exercises.length ?? 0);
+      completeLevel(levelId, worldId, score, starCount, results);
       router.push(
         `/world/${worldId}/${levelId}/complete?score=${score}&stars=${starCount}`
       );
     },
-    [completed, completeLevel, levelId, worldId, level, router]
+    [completed, completeLevel, levelId, worldId, router]
   );
 
   if (!level) {
@@ -43,9 +44,8 @@ export default function MinigamePlayPage({
     <div className="flex flex-col flex-1">
       <GameHeader backHref={`/world/${worldId}`} title={level.title} />
 
-      {/* Story snippet */}
-      <div className="px-4 py-3 bg-purple-50/50">
-        <p className="text-sm text-gray-500 italic text-center">
+      <div className="px-4 py-3 bg-[var(--color-bg-panel)]/50">
+        <p className="text-sm text-gray-500 italic text-center font-[var(--font-heading)]">
           {level.storySnippet}
         </p>
       </div>

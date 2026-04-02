@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-01",
+  "worldId": "context-courtyard",
+  "title": "Words That Matter",
+  "order": 1,
+  "storySnippet": "Princess Lira enters the Courtyard of Context, where words reveal their true meaning through the sentences they inhabit.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "always" },
+  "exercises": [
+    {
+      "id": "cc-01-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The teacher asked the student to ___ good sportsmanship by shaking hands after the game.",
+        "choices": ["exemplify", "excuse"],
+        "correctChoice": "exemplify",
+        "definition": "Exemplify: to serve as a typical example of something; to illustrate by being a model."
+      }
+    },
+    {
+      "id": "cc-01-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "During the debate, Maria was able to ___ her ideas clearly and persuasively.",
+        "choices": ["articulate", "decorate"],
+        "correctChoice": "articulate",
+        "definition": "Articulate: to express thoughts, ideas, or feelings clearly and effectively in words."
+      }
+    },
+    {
+      "id": "cc-01-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Getting enough sleep before the test is ___ for performing well.",
+        "choices": ["crucial", "casual"],
+        "correctChoice": "crucial",
+        "definition": "Crucial: extremely important; essential to the success of something."
+      }
+    },
+    {
+      "id": "cc-01-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The coach checked that there was ___ water for all the players during practice.",
+        "choices": ["adequate", "absolute"],
+        "correctChoice": "adequate",
+        "definition": "Adequate: enough in quantity or quality to meet a need; sufficient."
+      }
+    },
+    {
+      "id": "cc-01-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The discovery of a new species of frog was a ___ event for the science community.",
+        "choices": ["significant", "standard"],
+        "correctChoice": "significant",
+        "definition": "Significant: important or large enough to have an effect or be noticed."
+      }
+    },
+    {
+      "id": "cc-01-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The science fair project will ___ how magnets attract certain metals.",
+        "choices": ["demonstrate", "distribute"],
+        "correctChoice": "demonstrate",
+        "definition": "Demonstrate: to show clearly by giving proof or evidence; to explain by performing an example."
+      }
+    },
+    {
+      "id": "cc-01-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The teacher asked the class to ___ the poem and explain what it meant to them.",
+        "choices": ["evaluate", "eliminate"],
+        "correctChoice": "evaluate",
+        "definition": "Evaluate: to judge or assess the value, quality, or importance of something."
+      }
+    },
+    {
+      "id": "cc-01-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Historians ___ ancient artifacts to understand how people lived long ago.",
+        "choices": ["interpret", "interrupt"],
+        "correctChoice": "interpret",
+        "definition": "Interpret: to explain or understand the meaning of something."
+      }
+    },
+    {
+      "id": "cc-01-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The principal worked hard to ___ a safe and welcoming environment at the school.",
+        "choices": ["establish", "estimate"],
+        "correctChoice": "establish",
+        "definition": "Establish: to set up or create something on a firm or permanent basis."
+      }
+    },
+    {
+      "id": "cc-01-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Dark clouds on the horizon ___ that a storm may be approaching.",
+        "choices": ["indicate", "imitate"],
+        "correctChoice": "indicate",
+        "definition": "Indicate: to point out or show; to serve as a sign or signal of something."
+      }
+    }
+  ]
+}

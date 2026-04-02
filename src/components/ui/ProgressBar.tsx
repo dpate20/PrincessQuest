@@ -14,12 +14,12 @@ export default function ProgressBar({
   const pct = max > 0 ? Math.round((value / max) * 100) : 0;
 
   return (
-    <div className={`w-full h-3 bg-white/60 rounded-full overflow-hidden ${className}`}>
+    <div className={`w-full h-2.5 bg-amber-100 rounded-full overflow-hidden ${className}`}>
       <div
         className="h-full rounded-full transition-all duration-500 ease-out"
         style={{
           width: `${pct}%`,
-          background: "var(--gradient-magic)",
+          background: "var(--gradient-gold)",
         }}
       />
     </div>

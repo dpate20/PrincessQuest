@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-02",
+  "worldId": "knowledge-keep",
+  "title": "Ancient Egyptian Pyramids",
+  "order": 2,
+  "storySnippet": "Monuments that have stood for millennia.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-01" },
+  "exercises": [
+    {
+      "id": "kk-02-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The Great Pyramid of Giza, built around 2560 BCE for Pharaoh Khufu, remains one of the most impressive structures ever created. Standing at 481 feet tall, it held the record as the tallest human-made structure for nearly 4,000 years. Historians estimate that roughly 20,000 workers spent about 20 years constructing it from over two million limestone blocks, each weighing an average of 2.5 tons. Contrary to popular belief, most scholars now agree the builders were not enslaved people but rather skilled laborers and farmers who worked during the Nile's annual flood season when farming was impossible. Workers were organized into teams and lived in a nearby village with bakeries, breweries, and medical facilities. The precision of the pyramid's construction is astonishing—its base is level to within just 2.1 centimeters across its entire 756-foot length. The pyramids served as royal tombs, designed to protect the pharaoh's body and belongings for the afterlife, reflecting the ancient Egyptians' deep beliefs about death and resurrection.",
+        "passageTitle": "Ancient Egyptian Pyramids",
+        "questions": [
+          {
+            "id": "kk-02-rc-01-q1",
+            "question": "What can you infer about why construction happened during the Nile's flood season?",
+            "options": ["Farmers were available to work because they could not tend their fields", "The floods provided water to mix with cement for the blocks", "The pharaoh only allowed building during the summer months", "The limestone blocks could be transported by flood waters alone"],
+            "correctOption": "Farmers were available to work because they could not tend their fields"
+          },
+          {
+            "id": "kk-02-rc-01-q2",
+            "question": "Based on the passage, what does the workers' village with bakeries and medical facilities suggest about how they were treated?",
+            "options": ["They were provided for and relatively well cared for", "They were prisoners forced to work against their will", "They were only allowed to eat bread and drink beer", "They built the village themselves without any help"],
+            "correctOption": "They were provided for and relatively well cared for"
+          },
+          {
+            "id": "kk-02-rc-01-q3",
+            "question": "Why does the author mention the base being level to within 2.1 centimeters?",
+            "options": ["To emphasize the extraordinary precision and skill of the ancient builders", "To show that the pyramid was built incorrectly", "To prove that modern tools were used in construction", "To explain why the pyramid eventually started leaning"],
+            "correctOption": "To emphasize the extraordinary precision and skill of the ancient builders"
+          }
+        ]
+      }
+    }
+  ]
+}

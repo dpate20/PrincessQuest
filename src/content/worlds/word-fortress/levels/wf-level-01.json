@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-01",
+  "worldId": "word-fortress",
+  "title": "The Gate of Common Words",
+  "order": 1,
+  "storySnippet": "You approach the towering gates of the Word Fortress, where only those who can spell the common words of the realm may enter.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "always" },
+  "exercises": [
+    {
+      "id": "wf-01-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "separate",
+        "incorrectSpelling": "seperate",
+        "sentenceContext": "The teacher asked us to separate into two groups for the science experiment."
+      }
+    },
+    {
+      "id": "wf-01-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "definitely",
+        "incorrectSpelling": "definately",
+        "sentenceContext": "She will definitely finish her homework before dinner tonight."
+      }
+    },
+    {
+      "id": "wf-01-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "necessary",
+        "incorrectSpelling": "neccessary",
+        "sentenceContext": "It is necessary to study regularly if you want to do well on the test."
+      }
+    },
+    {
+      "id": "wf-01-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "receive",
+        "incorrectSpelling": "recieve",
+        "sentenceContext": "You will receive your report card at the end of the semester."
+      }
+    },
+    {
+      "id": "wf-01-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "believe",
+        "incorrectSpelling": "beleive",
+        "sentenceContext": "I believe that practice makes perfect when learning a new skill."
+      }
+    },
+    {
+      "id": "wf-01-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "achieve",
+        "incorrectSpelling": "acheive",
+        "sentenceContext": "With hard work and determination, you can achieve any goal you set."
+      }
+    },
+    {
+      "id": "wf-01-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "apparently",
+        "incorrectSpelling": "apparantly",
+        "sentenceContext": "Apparently, the library will be closed for renovations next week."
+      }
+    },
+    {
+      "id": "wf-01-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "embarrass",
+        "incorrectSpelling": "embarass",
+        "sentenceContext": "Please don't embarrass your classmates by laughing at their mistakes."
+      }
+    },
+    {
+      "id": "wf-01-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "It is ___ to wear a helmet when riding a bicycle.",
+        "correctAnswer": "necessary",
+        "acceptableSpellings": ["necessary"],
+        "hint": "Think: one 'c' and two 's's"
+      }
+    },
+    {
+      "id": "wf-01-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "I ___ that everyone deserves a chance to succeed.",
+        "correctAnswer": "believe",
+        "acceptableSpellings": ["believe"],
+        "hint": "Remember: 'i' before 'e' in this word"
+      }
+    },
+    {
+      "id": "wf-01-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "She will ___ finish the project by Friday.",
+        "correctAnswer": "definitely",
+        "acceptableSpellings": ["definitely"],
+        "hint": "It contains the word 'finite'"
+      }
+    },
+    {
+      "id": "wf-01-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Please ___ the recycling from the regular trash.",
+        "correctAnswer": "separate",
+        "acceptableSpellings": ["separate"],
+        "hint": "There's 'a rat' hiding in this word"
+      }
+    }
+  ]
+}

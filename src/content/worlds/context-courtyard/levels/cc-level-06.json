@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-06",
+  "worldId": "context-courtyard",
+  "title": "The Whispering Walls",
+  "order": 6,
+  "storySnippet": "Ancient walls whisper forgotten words to Lira, each one a key to unlocking the courtyard's deeper secrets.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-05" },
+  "exercises": [
+    {
+      "id": "cc-06-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Finding the lost puppy on the same day it went missing was a ___ coincidence.",
+        "choices": ["fortuitous", "fortunate"],
+        "correctChoice": "fortuitous",
+        "definition": "Fortuitous: happening by chance, especially in a lucky or unexpected way."
+      }
+    },
+    {
+      "id": "cc-06-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ captain demanded that every crew member follow orders without question.",
+        "choices": ["imperious", "imperfect"],
+        "correctChoice": "imperious",
+        "definition": "Imperious: assuming power or authority in a domineering way; arrogant and commanding."
+      }
+    },
+    {
+      "id": "cc-06-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ spread of the invasive plant species threatened the entire native ecosystem.",
+        "choices": ["insidious", "invisible"],
+        "correctChoice": "insidious",
+        "definition": "Insidious: proceeding in a gradual, subtle way but with harmful effects."
+      }
+    },
+    {
+      "id": "cc-06-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "My ___ uncle can talk for hours about any subject, from history to cooking.",
+        "choices": ["loquacious", "logical"],
+        "correctChoice": "loquacious",
+        "definition": "Loquacious: tending to talk a great deal; very talkative."
+      }
+    },
+    {
+      "id": "cc-06-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "In a ___ gesture, the winner shared her prize money with the runner-up.",
+        "choices": ["magnanimous", "magnificent"],
+        "correctChoice": "magnanimous",
+        "definition": "Magnanimous: very generous or forgiving, especially toward a rival or less powerful person."
+      }
+    },
+    {
+      "id": "cc-06-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ servant always agreed with the king, bowing and flattering at every turn.",
+        "choices": ["obsequious", "observant"],
+        "correctChoice": "obsequious",
+        "definition": "Obsequious: excessively eager to please or obey; overly submissive and flattering."
+      }
+    },
+    {
+      "id": "cc-06-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Lack of sleep can have ___ effects on a student's ability to concentrate in class.",
+        "choices": ["pernicious", "personal"],
+        "correctChoice": "pernicious",
+        "definition": "Pernicious: having a harmful effect, especially in a gradual or subtle way."
+      }
+    },
+    {
+      "id": "cc-06-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ toddler refused to put on his shoes no matter how much his parents asked.",
+        "choices": ["recalcitrant", "remarkable"],
+        "correctChoice": "recalcitrant",
+        "definition": "Recalcitrant: stubbornly resistant to authority or control; uncooperative."
+      }
+    },
+    {
+      "id": "cc-06-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ elder of the village was known for giving wise advice to anyone who asked.",
+        "choices": ["sagacious", "serious"],
+        "correctChoice": "sagacious",
+        "definition": "Sagacious: having or showing keen mental discernment and good judgment; wise."
+      }
+    },
+    {
+      "id": "cc-06-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Smartphones have become so ___ that it is rare to meet someone who does not own one.",
+        "choices": ["ubiquitous", "uncertain"],
+        "correctChoice": "ubiquitous",
+        "definition": "Ubiquitous: present, appearing, or found everywhere; extremely widespread."
+      }
+    }
+  ]
+}

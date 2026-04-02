@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-02",
+  "worldId": "champions-arena",
+  "title": "Rising Challenge",
+  "order": 2,
+  "storySnippet": "The arena tests grow stronger.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-01" },
+  "exercises": [
+    {
+      "id": "ca-02-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "accommodate", "incorrectSpelling": "accomodate", "sentenceContext": "The hotel can accommodate up to two hundred guests." }
+    },
+    {
+      "id": "ca-02-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "definitely", "incorrectSpelling": "definately", "sentenceContext": "She will definitely attend the concert tomorrow." }
+    },
+    {
+      "id": "ca-02-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "embarrass", "incorrectSpelling": "embarass", "sentenceContext": "Please don't embarrass me in front of my friends." }
+    },
+    {
+      "id": "ca-02-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The old bridge was no longer ___ and had to be closed.", "choices": ["stable", "stale"], "correctChoice": "stable", "definition": "Firmly fixed; not likely to give way or change." }
+    },
+    {
+      "id": "ca-02-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The detective found a ___ clue hidden behind the painting.", "choices": ["crucial", "casual"], "correctChoice": "crucial", "definition": "Of great importance; decisive or critical." }
+    },
+    {
+      "id": "ca-02-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ between the two countries lasted for decades.", "choices": ["conflict", "concert"], "correctChoice": "conflict", "definition": "A serious disagreement or argument, often prolonged." }
+    },
+    {
+      "id": "ca-02-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "In 1928, Alexander Fleming noticed that mold growing on a petri dish had killed the bacteria around it. He identified the mold as Penicillium and realized it produced a substance that could fight infections. It took over a decade before penicillin was mass-produced, saving millions of lives during World War II.",
+        "passageTitle": "The Discovery of Penicillin",
+        "questions": [
+          {
+            "id": "ca-02-rc-01-q1",
+            "question": "What does this discovery suggest about the relationship between accidents and scientific progress?",
+            "options": ["Important discoveries can come from unexpected observations if scientists pay attention", "All scientific discoveries happen by accident", "Fleming was not a real scientist because it was accidental", "Mold is always beneficial to humans"],
+            "correctOption": "Important discoveries can come from unexpected observations if scientists pay attention"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Unlike most fish, seahorses are poor swimmers. They have tiny fins that beat up to fifty times per second but produce very little thrust. To avoid being swept away by currents, seahorses wrap their tails around seagrass or coral. Remarkably, it is the male seahorse that carries and gives birth to the young.",
+        "passageTitle": "Seahorse Secrets",
+        "questions": [
+          {
+            "id": "ca-02-rc-02-q1",
+            "question": "Why would living near seagrass or coral be essential for seahorse survival?",
+            "options": ["Because they need something to anchor to since they are weak swimmers", "Because seagrass provides oxygen for breathing", "Because coral changes color to match the seahorse", "Because seahorses eat only coral"],
+            "correctOption": "Because they need something to anchor to since they are weak swimmers"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The Sahara Desert was not always a barren wasteland. Around 10,000 years ago, the region received regular rainfall and was covered in grasslands, lakes, and rivers. Ancient rock paintings found in the Sahara depict people swimming, fishing, and herding cattle in areas that are now nothing but sand dunes.",
+        "passageTitle": "The Green Sahara",
+        "questions": [
+          {
+            "id": "ca-02-rc-03-q1",
+            "question": "What do the rock paintings reveal about how climate change can transform an environment?",
+            "options": ["That dramatic climate shifts can completely change a landscape and the life it supports over thousands of years", "That ancient people were bad at painting", "That the Sahara will become green again next year", "That rock paintings cause deserts to form"],
+            "correctOption": "That dramatic climate shifts can completely change a landscape and the life it supports over thousands of years"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Grandma placed the worn recipe card on the counter. The edges were soft and stained with years of cooking splatters. 'This was your great-grandmother's,' she said. 'She brought it from the old country.' Her hands shook slightly as she measured the flour.",
+        "passageTitle": "The Recipe Card",
+        "questions": [
+          {
+            "id": "ca-02-si-01-q1",
+            "question": "Why is the recipe card important to Grandma beyond just the recipe itself?",
+            "acceptableAnswers": ["it connects her to her family history", "it has sentimental value", "it reminds her of her mother or grandmother", "it represents family tradition", "it is a family heirloom"],
+            "sampleAnswer": "The recipe card is important because it is a family heirloom that connects Grandma to her grandmother and her family's cultural heritage."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The new student sat alone at lunch for the third day in a row. Mia noticed him from across the cafeteria. She looked at her group of friends, then back at the boy. She picked up her tray. 'Where are you going?' her friend asked. 'I'll be right back,' Mia said, walking toward the empty table.",
+        "passageTitle": "The Empty Table",
+        "questions": [
+          {
+            "id": "ca-02-si-02-q1",
+            "question": "What does Mia's action reveal about her character?",
+            "acceptableAnswers": ["she is kind", "she is empathetic", "she is compassionate", "she cares about others", "she is brave enough to be kind"],
+            "sampleAnswer": "Mia's action shows she is empathetic and kind, willing to step away from her own group to make a lonely new student feel welcome."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Dad parked the car and stared at the house. The paint was peeling and the yard was overgrown, but he smiled. 'I grew up here,' he said quietly. 'Right there is where I broke my arm falling out of that tree.' He laughed, but his eyes looked sad.",
+        "passageTitle": "The Old House",
+        "questions": [
+          {
+            "id": "ca-02-si-03-q1",
+            "question": "Why does Dad laugh but look sad at the same time?",
+            "acceptableAnswers": ["he has happy memories but the house has changed", "he is nostalgic", "he misses the past", "the happy memory reminds him that time has passed", "he feels bittersweet"],
+            "sampleAnswer": "Dad feels bittersweet because the house brings back happy childhood memories, but seeing it run-down reminds him that those times are gone."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-02-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A group of wolves is called a ___.", "correctAnswer": "pack", "acceptableSpellings": ["pack"] }
+    },
+    {
+      "id": "ca-02-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The Earth revolves around the ___.", "correctAnswer": "sun", "acceptableSpellings": ["sun", "Sun"] }
+    },
+    {
+      "id": "ca-02-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "A person who studies the stars and planets is called an ___.", "correctAnswer": "astronomer", "acceptableSpellings": ["astronomer"] }
+    }
+  ]
+}

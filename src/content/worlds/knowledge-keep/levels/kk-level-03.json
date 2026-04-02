@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-03",
+  "worldId": "knowledge-keep",
+  "title": "How Volcanoes Form",
+  "order": 3,
+  "storySnippet": "The fiery forces beneath our feet.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-02" },
+  "exercises": [
+    {
+      "id": "kk-03-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Beneath Earth's solid crust lies the mantle, a layer of semi-molten rock called magma that reaches temperatures over 1,000 degrees Celsius. Volcanoes form when this magma finds a path to the surface. Most volcanoes occur along tectonic plate boundaries, where enormous slabs of Earth's crust meet. At convergent boundaries, one plate slides beneath another in a process called subduction. As the sinking plate descends into the hot mantle, it releases water that lowers the melting point of surrounding rock, creating magma that rises to form volcanic mountains. The Pacific Ring of Fire, home to about 75 percent of the world's active volcanoes, follows these subduction zones around the Pacific Ocean. However, some volcanoes form far from plate boundaries over hot spots—plumes of exceptionally hot mantle material that burn through the crust above. The Hawaiian Islands were created this way, as the Pacific Plate slowly drifted over a stationary hot spot, producing a chain of volcanic islands over millions of years. When magma reaches the surface, it is called lava, and its behavior determines a volcano's shape and eruption style.",
+        "passageTitle": "How Volcanoes Form",
+        "questions": [
+          {
+            "id": "kk-03-rc-01-q1",
+            "question": "Based on the passage, why are the Hawaiian Islands arranged in a chain rather than a cluster?",
+            "options": ["Because the Pacific Plate moved over a fixed hot spot, creating islands one after another", "Because underwater earthquakes pushed the islands into a line", "Because volcanic eruptions always produce island chains", "Because ocean currents arranged the islands in a row"],
+            "correctOption": "Because the Pacific Plate moved over a fixed hot spot, creating islands one after another"
+          },
+          {
+            "id": "kk-03-rc-01-q2",
+            "question": "What role does water play in volcano formation at convergent boundaries?",
+            "options": ["It lowers the melting point of rock, helping create magma", "It cools the magma so it erupts less violently", "It pushes the tectonic plates apart", "It fills the volcano's crater to form a lake"],
+            "correctOption": "It lowers the melting point of rock, helping create magma"
+          },
+          {
+            "id": "kk-03-rc-01-q3",
+            "question": "Why does the author mention that 75 percent of active volcanoes are in the Ring of Fire?",
+            "options": ["To show how strongly volcanic activity is linked to subduction zones", "To prove that volcanoes only occur near the Pacific Ocean", "To explain why hot spots are more important than plate boundaries", "To argue that the Ring of Fire is the most dangerous place on Earth"],
+            "correctOption": "To show how strongly volcanic activity is linked to subduction zones"
+          }
+        ]
+      }
+    }
+  ]
+}

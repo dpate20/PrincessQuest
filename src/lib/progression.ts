@@ -21,6 +21,15 @@ export function isUnlocked(
       return totalStars >= condition.minStars;
     }
 
+    case "levels-across-worlds": {
+      return condition.worlds.every(({ worldId, minLevels }) => {
+        const completedInWorld = Object.values(progress).filter(
+          (p) => p.worldId === worldId && p.completed
+        ).length;
+        return completedInWorld >= minLevels;
+      });
+    }
+
     default:
       return false;
   }

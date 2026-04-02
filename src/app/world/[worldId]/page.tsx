@@ -7,6 +7,7 @@ import { isUnlocked } from "@/lib/progression";
 import { useGameStore } from "@/stores/useGameStore";
 import GameHeader from "@/components/layout/GameHeader";
 import StarRating from "@/components/ui/StarRating";
+import Icon from "@/components/ui/Icon";
 
 export default function LevelSelectPage({
   params,
@@ -32,8 +33,8 @@ export default function LevelSelectPage({
 
       <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Story intro */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 mb-6 border border-purple-100">
-          <p className="text-sm text-gray-600 italic leading-relaxed">
+        <div className="bg-[var(--color-bg-panel)] backdrop-blur-sm rounded-xl p-4 mb-6 border border-amber-200/50">
+          <p className="text-sm text-gray-600 italic leading-relaxed font-[var(--font-heading)]">
             &ldquo;{world.storyIntro}&rdquo;
           </p>
         </div>
@@ -47,21 +48,20 @@ export default function LevelSelectPage({
 
             return (
               <div key={level.id} className="flex flex-col items-center">
-                {/* Connector line */}
                 {level.order > 1 && (
-                  <div className="w-0.5 h-6 bg-purple-200" />
+                  <div className="w-0.5 h-6 bg-amber-200" />
                 )}
 
                 {unlocked ? (
                   <Link href={`/world/${worldId}/${level.id}`}>
                     <div
                       className={`
-                        w-16 h-16 rounded-full flex flex-col items-center justify-center
+                        w-14 h-14 rounded-xl flex flex-col items-center justify-center
                         transition-all hover:scale-110 active:scale-95
                         ${
                           completed
-                            ? "bg-gradient-to-br from-amber-300 to-amber-500 text-white shadow-lg shadow-amber-200"
-                            : "bg-gradient-to-br from-purple-400 to-purple-600 text-white shadow-lg shadow-purple-200 animate-glow-pulse"
+                            ? "bg-[var(--color-accent)] text-white shadow-lg shadow-amber-200"
+                            : "bg-[var(--color-primary)] text-white shadow-lg shadow-slate-300 animate-glow-pulse"
                         }
                       `}
                     >
@@ -76,8 +76,8 @@ export default function LevelSelectPage({
                   </Link>
                 ) : (
                   <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-xl">
-                      🔒
+                    <div className="w-14 h-14 rounded-xl bg-gray-200 flex items-center justify-center text-gray-400">
+                      <Icon name="lock" size={20} />
                     </div>
                     <span className="text-xs text-gray-400 mt-1">
                       {level.title}

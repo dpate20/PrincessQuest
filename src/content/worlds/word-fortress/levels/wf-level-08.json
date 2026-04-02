@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-08",
+  "worldId": "word-fortress",
+  "title": "The Throne Room Challenge",
+  "order": 8,
+  "storySnippet": "You stand before the throne of the Word Fortress. Only a true master of spelling can claim victory and earn the kingdom's seal.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-07" },
+  "exercises": [
+    {
+      "id": "wf-08-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "onomatopoeia",
+        "incorrectSpelling": "onomatapoeia",
+        "sentenceContext": "Words like 'buzz' and 'hiss' are examples of onomatopoeia in the English language."
+      }
+    },
+    {
+      "id": "wf-08-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "pharaoh",
+        "incorrectSpelling": "pharoah",
+        "sentenceContext": "The pharaoh of ancient Egypt commanded the construction of magnificent pyramids."
+      }
+    },
+    {
+      "id": "wf-08-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "rhythm",
+        "incorrectSpelling": "rythm",
+        "sentenceContext": "The drummer kept a steady rhythm that made everyone in the audience want to dance."
+      }
+    },
+    {
+      "id": "wf-08-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "hierarchy",
+        "incorrectSpelling": "heirarchy",
+        "sentenceContext": "In the animal kingdom, wolves establish a clear hierarchy within the pack."
+      }
+    },
+    {
+      "id": "wf-08-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "pneumonia",
+        "incorrectSpelling": "pnuemonia",
+        "sentenceContext": "The doctor diagnosed the patient with pneumonia and prescribed antibiotics immediately."
+      }
+    },
+    {
+      "id": "wf-08-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "archaeological",
+        "incorrectSpelling": "archeaological",
+        "sentenceContext": "The archaeological dig uncovered pottery fragments that were over three thousand years old."
+      }
+    },
+    {
+      "id": "wf-08-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "conscientious",
+        "incorrectSpelling": "concientious",
+        "sentenceContext": "The conscientious student always submitted her assignments ahead of the deadline."
+      }
+    },
+    {
+      "id": "wf-08-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "Renaissance",
+        "incorrectSpelling": "Renaisance",
+        "sentenceContext": "The Renaissance was a period of great cultural and artistic achievement in Europe."
+      }
+    },
+    {
+      "id": "wf-08-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The poem used ___ to imitate the sound of rain falling on a tin roof.",
+        "correctAnswer": "onomatopoeia",
+        "acceptableSpellings": ["onomatopoeia"],
+        "hint": "Sounds like 'on-oh-mat-oh-pee-ah'"
+      }
+    },
+    {
+      "id": "wf-08-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "A good song needs a strong ___ to keep listeners engaged.",
+        "correctAnswer": "rhythm",
+        "acceptableSpellings": ["rhythm"],
+        "hint": "No regular vowels in this word — just 'y'"
+      }
+    },
+    {
+      "id": "wf-08-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The company has a strict ___ where managers report to directors.",
+        "correctAnswer": "hierarchy",
+        "acceptableSpellings": ["hierarchy"],
+        "hint": "Starts with 'hier-', not 'heir-'"
+      }
+    },
+    {
+      "id": "wf-08-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ site revealed artifacts from an ancient civilization.",
+        "correctAnswer": "archaeological",
+        "acceptableSpellings": ["archaeological"],
+        "hint": "Contains '-aeo-' in the middle"
+      }
+    }
+  ]
+}

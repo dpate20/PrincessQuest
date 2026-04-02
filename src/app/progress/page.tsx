@@ -5,12 +5,23 @@ import { getWorlds } from "@/lib/content-loader";
 import GameHeader from "@/components/layout/GameHeader";
 import BottomNav from "@/components/layout/BottomNav";
 import ProgressBar from "@/components/ui/ProgressBar";
+import Icon, { type IconName } from "@/components/ui/Icon";
+import type { MinigameType } from "@/types/content";
+
+const EXERCISE_TYPE_LABELS: Record<MinigameType, string> = {
+  "spelling-pairs": "Spelling",
+  "vocabulary-in-context": "Vocabulary",
+  "reading-comprehension": "Reading Comprehension",
+  "short-story-inference": "Story Inference",
+  "fill-in-the-blank": "Fill in the Blank",
+};
 
 export default function ProgressPage() {
   const totalStars = useGameStore((s) => s.totalStars);
   const streak = useGameStore((s) => s.streak);
   const totalExercises = useGameStore((s) => s.totalExercisesCompleted);
   const levelProgress = useGameStore((s) => s.levelProgress);
+  const exerciseTypeStats = useGameStore((s) => s.exerciseTypeStats);
   const worlds = getWorlds();
 
   return (
@@ -20,20 +31,20 @@ export default function ProgressPage() {
       <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Stats cards */}
         <div className="grid grid-cols-3 gap-3 mb-8">
-          <div className="bg-white/70 rounded-2xl p-4 text-center border border-amber-100">
-            <div className="text-3xl mb-1">⭐</div>
-            <div className="text-2xl font-bold text-amber-500">{totalStars}</div>
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-amber-100">
+            <Icon name="star" size={28} className="text-[var(--color-accent)] mx-auto mb-1" />
+            <div className="text-2xl font-bold text-[var(--color-accent)]">{totalStars}</div>
             <div className="text-xs text-gray-400">Stars</div>
           </div>
-          <div className="bg-white/70 rounded-2xl p-4 text-center border border-orange-100">
-            <div className="text-3xl mb-1">🔥</div>
-            <div className="text-2xl font-bold text-orange-500">
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-orange-100">
+            <Icon name="flame" size={28} className="text-orange-600 mx-auto mb-1" />
+            <div className="text-2xl font-bold text-orange-600">
               {streak.currentStreak}
             </div>
             <div className="text-xs text-gray-400">Day Streak</div>
           </div>
-          <div className="bg-white/70 rounded-2xl p-4 text-center border border-purple-100">
-            <div className="text-3xl mb-1">📝</div>
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-slate-200">
+            <Icon name="quill" size={28} className="text-[var(--color-primary)] mx-auto mb-1" />
             <div className="text-2xl font-bold text-[var(--color-primary)]">
               {totalExercises}
             </div>
@@ -41,17 +52,50 @@ export default function ProgressPage() {
           </div>
         </div>
 
-        {/* Longest streak */}
         {streak.longestStreak > 0 && (
-          <div className="bg-white/50 rounded-xl p-3 mb-6 text-center">
+          <div className="bg-white/50 rounded-lg p-3 mb-6 text-center">
             <span className="text-sm text-gray-500">
               Longest streak: <strong>{streak.longestStreak} days</strong>
             </span>
           </div>
         )}
 
+        {/* Skills Breakdown */}
+        <h2 className="text-lg font-bold font-[var(--font-heading)] text-[var(--color-primary)] mb-4">
+          Skills Breakdown
+        </h2>
+        <div className="flex flex-col gap-3 mb-8">
+          {(Object.entries(EXERCISE_TYPE_LABELS) as [MinigameType, string][]).map(
+            ([type, label]) => {
+              const stats = exerciseTypeStats[type];
+              const accuracy =
+                stats.totalAttempted > 0
+                  ? Math.round((stats.totalCorrect / stats.totalAttempted) * 100)
+                  : 0;
+              return (
+                <div
+                  key={type}
+                  className="bg-white/60 rounded-lg p-3 border border-amber-50"
+                >
+                  <div className="flex justify-between items-center mb-1.5">
+                    <span className="text-sm font-medium text-gray-700">
+                      {label}
+                    </span>
+                    <span className="text-xs text-gray-400">
+                      {stats.totalAttempted > 0
+                        ? `${accuracy}% (${stats.totalCorrect}/${stats.totalAttempted})`
+                        : "No data yet"}
+                    </span>
+                  </div>
+                  <ProgressBar value={accuracy} max={100} />
+                </div>
+              );
+            }
+          )}
+        </div>
+
         {/* Per-world progress */}
-        <h2 className="text-lg font-bold text-[var(--color-primary)] mb-4">
+        <h2 className="text-lg font-bold font-[var(--font-heading)] text-[var(--color-primary)] mb-4">
           Kingdom Progress
         </h2>
         <div className="flex flex-col gap-4">
@@ -68,10 +112,16 @@ export default function ProgressPage() {
             return (
               <div
                 key={world.id}
-                className="bg-white/60 rounded-xl p-4 border border-purple-50"
+                className="bg-white/60 rounded-xl p-4 border border-amber-50"
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-2xl">{world.iconEmoji}</span>
+                  <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] flex items-center justify-center shrink-0">
+                    <Icon
+                      name={world.icon as IconName}
+                      size={16}
+                      className="text-[var(--color-accent)]"
+                    />
+                  </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-gray-700">
@@ -79,7 +129,9 @@ export default function ProgressPage() {
                       </span>
                       {total > 0 && (
                         <span className="text-xs text-gray-400">
-                          {completed}/{total} levels · ⭐ {worldStars}
+                          {completed}/{total} levels &middot;{" "}
+                          <Icon name="star" size={10} className="inline text-[var(--color-accent)]" />{" "}
+                          {worldStars}
                         </span>
                       )}
                     </div>

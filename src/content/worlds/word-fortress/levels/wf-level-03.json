@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-03",
+  "worldId": "word-fortress",
+  "title": "The Scholar's Library",
+  "order": 3,
+  "storySnippet": "You enter the fortress library, where ancient scrolls hold the academic words that scholars must master.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-02" },
+  "exercises": [
+    {
+      "id": "wf-03-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "acknowledgment",
+        "incorrectSpelling": "acknowlegment",
+        "sentenceContext": "The author included an acknowledgment page to thank everyone who helped with the book."
+      }
+    },
+    {
+      "id": "wf-03-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "acquaintance",
+        "incorrectSpelling": "acquantance",
+        "sentenceContext": "She is not a close friend, but rather a casual acquaintance from summer camp."
+      }
+    },
+    {
+      "id": "wf-03-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bureaucracy",
+        "incorrectSpelling": "beaurocracy",
+        "sentenceContext": "The school's bureaucracy made it difficult to change classes after the first week."
+      }
+    },
+    {
+      "id": "wf-03-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "conscientious",
+        "incorrectSpelling": "consciencious",
+        "sentenceContext": "A conscientious student always double-checks their work before turning it in."
+      }
+    },
+    {
+      "id": "wf-03-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "curriculum",
+        "incorrectSpelling": "cirriculum",
+        "sentenceContext": "The school board voted to update the science curriculum for the new academic year."
+      }
+    },
+    {
+      "id": "wf-03-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "exaggerate",
+        "incorrectSpelling": "exagerate",
+        "sentenceContext": "Try not to exaggerate when telling stories, or people may stop trusting you."
+      }
+    },
+    {
+      "id": "wf-03-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "guarantee",
+        "incorrectSpelling": "gaurantee",
+        "sentenceContext": "The manufacturer offers a one-year guarantee on all of their products."
+      }
+    },
+    {
+      "id": "wf-03-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "harassment",
+        "incorrectSpelling": "harrassment",
+        "sentenceContext": "The school has a strict policy against harassment and bullying of any kind."
+      }
+    },
+    {
+      "id": "wf-03-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The math ___ this year includes algebra and geometry.",
+        "correctAnswer": "curriculum",
+        "acceptableSpellings": ["curriculum"],
+        "hint": "Starts with 'cur-', not 'cir-'"
+      }
+    },
+    {
+      "id": "wf-03-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Don't ___ the size of the fish you caught!",
+        "correctAnswer": "exaggerate",
+        "acceptableSpellings": ["exaggerate"],
+        "hint": "Double 'g' in the middle"
+      }
+    },
+    {
+      "id": "wf-03-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "I can ___ that this recipe will turn out delicious.",
+        "correctAnswer": "guarantee",
+        "acceptableSpellings": ["guarantee"],
+        "hint": "Starts with 'gua-', not 'gau-'"
+      }
+    },
+    {
+      "id": "wf-03-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "A ___ worker pays attention to every detail of their assignment.",
+        "correctAnswer": "conscientious",
+        "acceptableSpellings": ["conscientious"],
+        "hint": "Contains 'science' with a 'tious' ending"
+      }
+    }
+  ]
+}

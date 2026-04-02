@@ -1,0 +1,41 @@
+{
+  "id": "kk-level-06",
+  "worldId": "knowledge-keep",
+  "title": "The Underground Railroad",
+  "order": 6,
+  "storySnippet": "A network of courage and freedom.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "kk-level-05" },
+  "exercises": [
+    {
+      "id": "kk-06-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The Underground Railroad was not a railroad at all, nor was it underground. It was a secret network of routes, safe houses, and brave individuals who helped enslaved African Americans escape to freedom in the northern United States and Canada during the early to mid-1800s. The network used railroad terminology as code: safe houses were called stations, the people who hid escapees were stationmasters, and guides who led people to freedom were conductors. One of the most famous conductors was Harriet Tubman, who escaped slavery herself in 1849 and then made approximately thirteen return trips to the South, personally guiding around seventy people to freedom. She never lost a single person she was leading. The journey was extremely dangerous. Escaped individuals traveled mostly at night, using the North Star for navigation, and faced the constant threat of capture by slave catchers who were legally empowered by the Fugitive Slave Act of 1850 to pursue escapees even into free states. Despite these risks, historians estimate that between 25,000 and 100,000 people reached freedom through the network before the Civil War ended slavery in 1865.",
+        "passageTitle": "The Underground Railroad",
+        "questions": [
+          {
+            "id": "kk-06-rc-01-q1",
+            "question": "Why did the Underground Railroad use railroad terminology as code words?",
+            "options": ["To disguise the true nature of their activities and protect everyone involved", "Because the network actually used old railroad tunnels for travel", "Because Harriet Tubman had previously worked for a railroad company", "Because the government required all organizations to use railroad terms"],
+            "correctOption": "To disguise the true nature of their activities and protect everyone involved"
+          },
+          {
+            "id": "kk-06-rc-01-q2",
+            "question": "What can you infer about Harriet Tubman's character from the passage?",
+            "options": ["She was extraordinarily brave and deeply committed to helping others gain freedom", "She was mainly motivated by the money she earned as a conductor", "She only helped people she personally knew from her plantation", "She preferred working alone and refused help from stationmasters"],
+            "correctOption": "She was extraordinarily brave and deeply committed to helping others gain freedom"
+          },
+          {
+            "id": "kk-06-rc-01-q3",
+            "question": "Why did the Fugitive Slave Act of 1850 make the journey more dangerous?",
+            "options": ["Because it allowed slave catchers to pursue escapees even in states where slavery was illegal", "Because it required all escaped people to travel only during the daytime", "Because it shut down every safe house along the Underground Railroad", "Because it made Harriet Tubman stop leading trips to the South"],
+            "correctOption": "Because it allowed slave catchers to pursue escapees even in states where slavery was illegal"
+          }
+        ]
+      }
+    }
+  ]
+}

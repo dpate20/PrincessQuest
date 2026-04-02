@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-14",
+  "worldId": "word-fortress",
+  "title": "The Crystal Vault",
+  "order": 14,
+  "storySnippet": "Within the crystal vault, shimmering words float in the air, and only an expert speller can capture them.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-13" },
+  "exercises": [
+    {
+      "id": "wf-14-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "serendipitous",
+        "incorrectSpelling": "serendipitious",
+        "sentenceContext": "Their serendipitous discovery of the hidden map changed the course of the quest."
+      }
+    },
+    {
+      "id": "wf-14-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "verisimilitude",
+        "incorrectSpelling": "verisimiltude",
+        "sentenceContext": "The storyteller's tale had such verisimilitude that everyone believed it was true."
+      }
+    },
+    {
+      "id": "wf-14-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "idiosyncrasy",
+        "incorrectSpelling": "idiosynchrasy",
+        "sentenceContext": "The queen's idiosyncrasy of always wearing purple amused the court."
+      }
+    },
+    {
+      "id": "wf-14-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "iridescent",
+        "incorrectSpelling": "iridesent",
+        "sentenceContext": "The iridescent butterfly wings caught the sunlight as it flew over the meadow."
+      }
+    },
+    {
+      "id": "wf-14-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "labyrinthine",
+        "incorrectSpelling": "labyrinthene",
+        "sentenceContext": "The labyrinthine palace corridors took hours to navigate without a guide."
+      }
+    },
+    {
+      "id": "wf-14-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bourgeoisie",
+        "incorrectSpelling": "bourgoisie",
+        "sentenceContext": "The bourgeoisie gathered in the town square to discuss the new trade laws."
+      }
+    },
+    {
+      "id": "wf-14-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "chrysanthemum",
+        "incorrectSpelling": "crysanthemum",
+        "sentenceContext": "She placed a white chrysanthemum on the memorial as a sign of respect."
+      }
+    },
+    {
+      "id": "wf-14-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "antediluvian",
+        "incorrectSpelling": "antidiluvian",
+        "sentenceContext": "The antediluvian forest was said to have existed since before the great flood."
+      }
+    },
+    {
+      "id": "wf-14-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "It was a ___ meeting -- they both happened to be at the same market.",
+        "correctAnswer": "serendipitous",
+        "acceptableSpellings": ["serendipitous"],
+        "hint": "Occurring by happy chance"
+      }
+    },
+    {
+      "id": "wf-14-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The novel's ___ made readers feel as if the events had truly happened.",
+        "correctAnswer": "verisimilitude",
+        "acceptableSpellings": ["verisimilitude"],
+        "hint": "The appearance of being true or real"
+      }
+    },
+    {
+      "id": "wf-14-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "His habit of humming during meals was a harmless ___.",
+        "correctAnswer": "idiosyncrasy",
+        "acceptableSpellings": ["idiosyncrasy"],
+        "hint": "A peculiar habit or characteristic"
+      }
+    },
+    {
+      "id": "wf-14-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ glow of the gemstone shifted between green and violet.",
+        "correctAnswer": "iridescent",
+        "acceptableSpellings": ["iridescent"],
+        "hint": "Showing rainbow-like colors that shift and change"
+      }
+    }
+  ]
+}

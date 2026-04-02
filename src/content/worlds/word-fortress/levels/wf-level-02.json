@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-02",
+  "worldId": "word-fortress",
+  "title": "The Courtyard of Everyday Words",
+  "order": 2,
+  "storySnippet": "Inside the courtyard, stone tablets display words that travelers frequently stumble over. Prove your mastery to advance.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-01" },
+  "exercises": [
+    {
+      "id": "wf-02-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "accommodate",
+        "incorrectSpelling": "accomodate",
+        "sentenceContext": "The hotel can accommodate up to three hundred guests during the conference."
+      }
+    },
+    {
+      "id": "wf-02-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "occurrence",
+        "incorrectSpelling": "occurence",
+        "sentenceContext": "A solar eclipse is a rare occurrence that scientists study carefully."
+      }
+    },
+    {
+      "id": "wf-02-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "environment",
+        "incorrectSpelling": "enviroment",
+        "sentenceContext": "Protecting the environment is one of the most important challenges of our time."
+      }
+    },
+    {
+      "id": "wf-02-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "government",
+        "incorrectSpelling": "goverment",
+        "sentenceContext": "The government announced new funding for public schools across the state."
+      }
+    },
+    {
+      "id": "wf-02-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "immediately",
+        "incorrectSpelling": "immediatly",
+        "sentenceContext": "The firefighters responded immediately when the alarm sounded at the station."
+      }
+    },
+    {
+      "id": "wf-02-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "occasionally",
+        "incorrectSpelling": "occassionally",
+        "sentenceContext": "We occasionally visit the natural history museum on weekends."
+      }
+    },
+    {
+      "id": "wf-02-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "recommend",
+        "incorrectSpelling": "reccommend",
+        "sentenceContext": "I would recommend this book to anyone who enjoys mystery stories."
+      }
+    },
+    {
+      "id": "wf-02-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "beginning",
+        "incorrectSpelling": "begining",
+        "sentenceContext": "The beginning of the novel introduces the main character and her quest."
+      }
+    },
+    {
+      "id": "wf-02-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The new dormitory can ___ two hundred students.",
+        "correctAnswer": "accommodate",
+        "acceptableSpellings": ["accommodate"],
+        "hint": "Double 'c' and double 'm'"
+      }
+    },
+    {
+      "id": "wf-02-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "We must protect the ___ by reducing pollution.",
+        "correctAnswer": "environment",
+        "acceptableSpellings": ["environment"],
+        "hint": "Don't forget the 'n' before the 'm'"
+      }
+    },
+    {
+      "id": "wf-02-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The doctor said to call ___ if the symptoms get worse.",
+        "correctAnswer": "immediately",
+        "acceptableSpellings": ["immediately"],
+        "hint": "Ends in '-ately', not '-atly'"
+      }
+    },
+    {
+      "id": "wf-02-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "I ___ trying the new restaurant on Main Street.",
+        "correctAnswer": "recommend",
+        "acceptableSpellings": ["recommend"],
+        "hint": "One 'c' and one 'm'"
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "ca-level-05",
+  "worldId": "champions-arena",
+  "title": "Battle of Wits",
+  "order": 5,
+  "storySnippet": "Quick thinking wins the day.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "ca-level-04" },
+  "exercises": [
+    {
+      "id": "ca-05-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "exaggerate", "incorrectSpelling": "exagerate", "sentenceContext": "Don't exaggerate the size of the fish you caught." }
+    },
+    {
+      "id": "ca-05-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "occasionally", "incorrectSpelling": "occassionally", "sentenceContext": "She occasionally visits her grandparents on weekends." }
+    },
+    {
+      "id": "ca-05-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Choose the correct spelling.",
+      "data": { "correctSpelling": "temperature", "incorrectSpelling": "temperture", "sentenceContext": "The temperature dropped below freezing last night." }
+    },
+    {
+      "id": "ca-05-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The ___ landscape stretched for miles without a single tree.", "choices": ["barren", "barrier"], "correctChoice": "barren", "definition": "Too poor to produce much vegetation; empty and lifeless." }
+    },
+    {
+      "id": "ca-05-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The judge asked the witness to ___ exactly what happened.", "choices": ["describe", "prescribe"], "correctChoice": "describe", "definition": "To give a detailed account in words of something." }
+    },
+    {
+      "id": "ca-05-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best fits the sentence.",
+      "data": { "sentence": "The team showed great ___ by never giving up during the final quarter.", "choices": ["perseverance", "performance"], "correctChoice": "perseverance", "definition": "Persistence in doing something despite difficulty or delay." }
+    },
+    {
+      "id": "ca-05-rc-01",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Crows can recognize individual human faces and remember whether a specific person was kind or threatening to them. In one experiment, researchers wore masks while trapping crows. Years later, crows still scolded people wearing those same masks, even though the original crows had taught the behavior to their offspring.",
+        "passageTitle": "Clever Crows",
+        "questions": [
+          {
+            "id": "ca-05-rc-01-q1",
+            "question": "What does the fact that young crows learned to fear the masks suggest about crow intelligence?",
+            "options": ["Crows can teach and pass knowledge to the next generation", "Young crows are born afraid of all masks", "The masks were made of a material crows dislike", "Crows cannot actually recognize faces"],
+            "correctOption": "Crows can teach and pass knowledge to the next generation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-rc-02",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Before clocks existed, ancient civilizations used sundials to track time by measuring the shadow cast by a vertical stick. However, sundials had a major limitation: they only worked when the sun was shining. This drove the invention of water clocks, which measured time by the steady drip of water from one container to another.",
+        "passageTitle": "Telling Time",
+        "questions": [
+          {
+            "id": "ca-05-rc-02-q1",
+            "question": "What does the progression from sundials to water clocks illustrate about human invention?",
+            "options": ["New inventions often arise from the limitations of existing technology", "Water clocks were less accurate than sundials", "Ancient people preferred water to sunlight", "Sundials were invented after water clocks"],
+            "correctOption": "New inventions often arise from the limitations of existing technology"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-rc-03",
+      "minigameType": "reading-comprehension",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "In Japan, there is a practice called 'forest bathing' or shinrin-yoku, which involves spending quiet time in a forest to improve health. Studies have shown that spending just two hours in a forest lowers blood pressure, reduces stress hormones, and boosts the immune system. Trees release chemicals called phytoncides that appear to have natural healing effects.",
+        "passageTitle": "Forest Bathing",
+        "questions": [
+          {
+            "id": "ca-05-rc-03-q1",
+            "question": "Based on the passage, why might people in cities experience more stress-related health problems?",
+            "options": ["Because they have less access to forests and the natural health benefits trees provide", "Because city people do not exercise", "Because trees only grow in Japan", "Because forest bathing requires swimming"],
+            "correctOption": "Because they have less access to forests and the natural health benefits trees provide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The old man sat on the park bench feeding pigeons every morning at exactly 7 AM. One morning, a little girl sat down next to him. 'Why do you come here every day?' she asked. He smiled and said, 'My wife and I used to come here together.' He paused. 'I like to keep our tradition alive.'",
+        "passageTitle": "The Park Bench",
+        "questions": [
+          {
+            "id": "ca-05-si-01-q1",
+            "question": "What has likely happened to the old man's wife?",
+            "acceptableAnswers": ["she passed away", "she died", "she is no longer alive", "she is gone"],
+            "sampleAnswer": "The old man's wife has likely passed away, which is why he says he likes to keep their tradition alive by continuing to visit the bench alone."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-si-02",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "Tyler handed his little sister the bigger piece of cake without being asked. At the store, he put back the comic book he wanted and picked up the coloring book she had been looking at instead. On the walk home, he carried both bags even though his arms ached.",
+        "passageTitle": "Big Brother",
+        "questions": [
+          {
+            "id": "ca-05-si-02-q1",
+            "question": "What kind of person is Tyler based on his actions?",
+            "acceptableAnswers": ["selfless", "caring", "generous", "kind", "a good brother", "thoughtful"],
+            "sampleAnswer": "Tyler is a selfless and caring older brother who consistently puts his sister's needs and happiness before his own."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-si-03",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the question.",
+      "data": {
+        "passage": "The teacher announced the field trip would cost fifteen dollars. Most students cheered. Jasmine smiled along with everyone else, but after class she walked to the office and asked for a fee waiver form. The secretary handed it to her with a kind nod. Jasmine folded it quickly and tucked it into her notebook before anyone saw.",
+        "passageTitle": "The Field Trip",
+        "questions": [
+          {
+            "id": "ca-05-si-03-q1",
+            "question": "Why does Jasmine hide the fee waiver form?",
+            "acceptableAnswers": ["she is embarrassed about not being able to afford it", "she doesn't want others to know her family can't pay", "she is self-conscious about needing financial help", "she wants to keep it private"],
+            "sampleAnswer": "Jasmine hides the form because she is embarrassed that her family cannot afford the fee and does not want her classmates to know."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca-05-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The past tense of 'run' is ___.", "correctAnswer": "ran", "acceptableSpellings": ["ran"] }
+    },
+    {
+      "id": "ca-05-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "An animal that eats only plants is called a ___.", "correctAnswer": "herbivore", "acceptableSpellings": ["herbivore"] }
+    },
+    {
+      "id": "ca-05-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Fill in the blank with the correct word.",
+      "data": { "sentence": "The largest organ of the human body is the ___.", "correctAnswer": "skin", "acceptableSpellings": ["skin"] }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-03",
+  "worldId": "context-courtyard",
+  "title": "Hidden Meanings",
+  "order": 3,
+  "storySnippet": "A mysterious fountain in the courtyard tests Lira with words that carry hidden depth.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-02" },
+  "exercises": [
+    {
+      "id": "cc-03-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The famous author wrote under a ___ to keep her real identity a secret.",
+        "choices": ["pseudonym", "synonym"],
+        "correctChoice": "pseudonym",
+        "definition": "Pseudonym: a fake name used by a writer or other person to hide their true identity."
+      }
+    },
+    {
+      "id": "cc-03-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The northern lights are a natural ___ that attracts visitors from around the world.",
+        "choices": ["phenomenon", "philosophy"],
+        "correctChoice": "phenomenon",
+        "definition": "Phenomenon: a remarkable event or fact that can be observed, especially one whose cause is not fully understood."
+      }
+    },
+    {
+      "id": "cc-03-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The friendly ___ between the teammates kept everyone laughing during the bus ride.",
+        "choices": ["banter", "barrier"],
+        "correctChoice": "banter",
+        "definition": "Banter: playful and friendly exchange of teasing remarks."
+      }
+    },
+    {
+      "id": "cc-03-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The school library was ___ enough to hold thousands of books and a reading lounge.",
+        "choices": ["capacious", "cautious"],
+        "correctChoice": "capacious",
+        "definition": "Capacious: having a lot of space inside; roomy and spacious."
+      }
+    },
+    {
+      "id": "cc-03-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The new student seemed ___ at first, standing apart from the group at recess.",
+        "choices": ["aloof", "amused"],
+        "correctChoice": "aloof",
+        "definition": "Aloof: distant and uninvolved; not friendly or interested in others."
+      }
+    },
+    {
+      "id": "cc-03-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Jake is an ___ reader who finishes at least two books every week.",
+        "choices": ["avid", "awful"],
+        "correctChoice": "avid",
+        "definition": "Avid: showing great enthusiasm and eagerness for something."
+      }
+    },
+    {
+      "id": "cc-03-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ neighbor spent her weekends volunteering at the animal shelter.",
+        "choices": ["benevolent", "bewildered"],
+        "correctChoice": "benevolent",
+        "definition": "Benevolent: kind, generous, and caring about the well-being of others."
+      }
+    },
+    {
+      "id": "cc-03-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The reporter appreciated the mayor's ___ response instead of the usual rehearsed answers.",
+        "choices": ["candid", "capable"],
+        "correctChoice": "candid",
+        "definition": "Candid: truthful and straightforward; honest and open."
+      }
+    },
+    {
+      "id": "cc-03-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ student reviewed her notes every evening and never missed an assignment.",
+        "choices": ["diligent", "difficult"],
+        "correctChoice": "diligent",
+        "definition": "Diligent: showing careful and persistent effort in one's work or duties."
+      }
+    },
+    {
+      "id": "cc-03-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The speaker gave an ___ speech that moved the entire audience to applause.",
+        "choices": ["eloquent", "elaborate"],
+        "correctChoice": "eloquent",
+        "definition": "Eloquent: fluent, persuasive, and expressive in speaking or writing."
+      }
+    }
+  ]
+}

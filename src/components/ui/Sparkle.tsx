@@ -1,49 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 interface SparkleProps {
   count?: number;
 }
 
-interface Particle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  delay: number;
-}
-
 export default function Sparkle({ count = 12 }: SparkleProps) {
-  const [particles, setParticles] = useState<Particle[]>([]);
-
-  useEffect(() => {
-    setParticles(
+  const particles = useMemo(
+    () =>
       Array.from({ length: count }, (_, i) => ({
         id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: 8 + Math.random() * 16,
-        delay: Math.random() * 2,
-      }))
-    );
-  }, [count]);
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        size: Math.random() * 4 + 2,
+        delay: `${Math.random() * 4}s`,
+      })),
+    [count]
+  );
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {particles.map((p) => (
         <span
           key={p.id}
-          className="absolute animate-sparkle"
+          className="absolute rounded-full bg-[var(--color-accent)] animate-sparkle"
           style={{
-            left: `${p.x}%`,
-            top: `${p.y}%`,
-            fontSize: `${p.size}px`,
-            animationDelay: `${p.delay}s`,
+            left: p.left,
+            top: p.top,
+            width: p.size,
+            height: p.size,
+            animationDelay: p.delay,
+            opacity: 0,
           }}
-        >
-          ✨
-        </span>
+        />
       ))}
     </div>
   );

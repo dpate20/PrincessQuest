@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-15",
+  "worldId": "word-fortress",
+  "title": "The Grand Review",
+  "order": 15,
+  "storySnippet": "The fortress guardian tests your mastery of every word you have learned on your journey so far.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-14" },
+  "exercises": [
+    {
+      "id": "wf-15-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "abbreviation",
+        "incorrectSpelling": "abbrevation",
+        "sentenceContext": "The teacher asked the class to write the full word instead of the abbreviation."
+      }
+    },
+    {
+      "id": "wf-15-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "Mediterranean",
+        "incorrectSpelling": "Meditteranean",
+        "sentenceContext": "They dreamed of sailing the Mediterranean and visiting ancient ports."
+      }
+    },
+    {
+      "id": "wf-15-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "chrysanthemum",
+        "incorrectSpelling": "chrisanthemum",
+        "sentenceContext": "The prize-winning chrysanthemum was the largest flower at the harvest fair."
+      }
+    },
+    {
+      "id": "wf-15-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "surreptitious",
+        "incorrectSpelling": "surrepticious",
+        "sentenceContext": "He took a surreptitious peek at the answer sheet when the teacher turned away."
+      }
+    },
+    {
+      "id": "wf-15-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "correspondence",
+        "incorrectSpelling": "correspondense",
+        "sentenceContext": "Years of correspondence between the two scholars filled an entire bookshelf."
+      }
+    },
+    {
+      "id": "wf-15-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "verisimilitude",
+        "incorrectSpelling": "verisimilatude",
+        "sentenceContext": "Good historical fiction relies on verisimilitude to transport readers to another era."
+      }
+    },
+    {
+      "id": "wf-15-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "sacrilegious",
+        "incorrectSpelling": "sacreligous",
+        "sentenceContext": "Many considered it sacrilegious to disturb the ancient burial ground."
+      }
+    },
+    {
+      "id": "wf-15-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "effervescent",
+        "incorrectSpelling": "effervescant",
+        "sentenceContext": "Her effervescent personality brightened every room she entered."
+      }
+    },
+    {
+      "id": "wf-15-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ network of caves stretched for miles beneath the mountain.",
+        "correctAnswer": "labyrinthine",
+        "acceptableSpellings": ["labyrinthine"],
+        "hint": "Like a maze; extremely complex and winding"
+      }
+    },
+    {
+      "id": "wf-15-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ ruler demanded absolute obedience from everyone in the land.",
+        "correctAnswer": "tyrannical",
+        "acceptableSpellings": ["tyrannical"],
+        "hint": "Ruling with cruel and absolute power"
+      }
+    },
+    {
+      "id": "wf-15-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "Without rain, the soil will ___ and the crops will fail.",
+        "correctAnswer": "desiccate",
+        "acceptableSpellings": ["desiccate"],
+        "hint": "To remove all moisture; to dry out completely"
+      }
+    },
+    {
+      "id": "wf-15-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The ___ celebration included fireworks, feasts, and golden decorations.",
+        "correctAnswer": "extravagant",
+        "acceptableSpellings": ["extravagant"],
+        "hint": "Exceeding what is reasonable; lavish and costly"
+      }
+    }
+  ]
+}

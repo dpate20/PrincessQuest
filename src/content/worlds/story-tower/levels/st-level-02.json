@@ -1,0 +1,35 @@
+{
+  "id": "st-level-02",
+  "worldId": "story-tower",
+  "title": "The Broken Promise",
+  "order": 2,
+  "storySnippet": "Trust is tested between two old friends.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-01" },
+  "exercises": [
+    {
+      "id": "st-02-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Jaden stared at the trophy case in the school hallway. His best friend Carlos walked up beside him. 'I heard Coach picked you for team captain,' Carlos said quietly. Jaden didn't turn around. 'Yeah. He told me this morning.' There was a long silence. 'You know I've been working for that spot all year,' Carlos said, his voice tight. 'I stayed after practice every single day.' Jaden finally looked at him. 'I know. I told Coach you deserved it more.' Carlos blinked. 'You did?' 'He said he'd already made up his mind. I'm sorry, Carlos.' Carlos shoved his hands in his pockets and walked away without another word. Jaden watched him go, then turned back to the empty trophy case.",
+        "passageTitle": "The Broken Promise",
+        "questions": [
+          {
+            "id": "st-02-si-01-q1",
+            "question": "Why is Carlos upset with the situation?",
+            "acceptableAnswers": ["he worked hard for captain but didn't get it", "he wanted to be team captain", "he practiced every day and still wasn't chosen", "he feels he deserved the captain spot"],
+            "sampleAnswer": "Carlos is upset because he worked hard all year to become team captain but was not chosen despite his extra effort."
+          },
+          {
+            "id": "st-02-si-01-q2",
+            "question": "What does Jaden's action of telling the coach about Carlos reveal about his character?",
+            "acceptableAnswers": ["he is loyal", "he is a good friend", "he cares about fairness", "he values his friendship with Carlos", "he is honest"],
+            "sampleAnswer": "Jaden's action shows he is a loyal friend who values fairness and tried to advocate for Carlos even though it might have cost him the position."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "st-level-03",
+  "worldId": "story-tower",
+  "title": "The Last Boat",
+  "order": 3,
+  "storySnippet": "A difficult choice on the riverbank.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-02" },
+  "exercises": [
+    {
+      "id": "st-03-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The river was rising fast. Amara stood on the bank holding her little brother's hand while their grandmother sat on a wooden crate behind them. The last rescue boat was pulling up, but the volunteer shook his head. 'Room for two more. That's it.' Amara looked at her grandmother, then at her brother. Grandmother stood slowly and placed her hand on Amara's shoulder. 'Take Kofi and go,' she said firmly. 'But Nana—' Amara started. 'The water won't reach the hill. I'll climb to the Osei house. Now go.' Amara searched her grandmother's face for any sign of fear, but the old woman's eyes were steady and calm. Amara lifted Kofi into the boat and climbed in after him, never taking her eyes off her grandmother's figure on the bank.",
+        "passageTitle": "The Last Boat",
+        "questions": [
+          {
+            "id": "st-03-si-01-q1",
+            "question": "Why does the grandmother insist that Amara and Kofi take the boat?",
+            "acceptableAnswers": ["she wants to protect the children", "she is selfless", "she puts her grandchildren's safety first", "the children are more vulnerable"],
+            "sampleAnswer": "The grandmother insists because she is selfless and wants to protect her grandchildren, putting their safety above her own."
+          },
+          {
+            "id": "st-03-si-01-q2",
+            "question": "How does Amara feel as the boat pulls away?",
+            "acceptableAnswers": ["worried", "torn", "guilty", "scared for her grandmother", "anxious", "conflicted"],
+            "sampleAnswer": "Amara feels worried and conflicted because she never takes her eyes off her grandmother, showing she is anxious about leaving her behind."
+          }
+        ]
+      }
+    }
+  ]
+}

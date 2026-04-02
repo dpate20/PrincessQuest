@@ -1,0 +1,35 @@
+{
+  "id": "st-level-07",
+  "worldId": "story-tower",
+  "title": "The Treehouse",
+  "order": 7,
+  "storySnippet": "Growing up means leaving some things behind.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-06" },
+  "exercises": [
+    {
+      "id": "st-07-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "The treehouse looked smaller than Elijah remembered. He climbed the ladder carefully, testing each rung. Inside, crayon drawings still covered the walls—dragons and spaceships he and his twin sister Zara had drawn years ago. Tomorrow the old oak was being cut down because of disease, and the treehouse would go with it. Zara appeared at the trapdoor. 'Thought I'd find you here,' she said, pulling herself up. They sat in silence looking at the drawings. 'Remember the space mission?' Elijah asked. 'Captain Zara and First Officer Elijah,' she laughed, but her eyes glistened. 'We were going to fly to Jupiter.' Elijah carefully peeled one drawing off the wall—a crayon rocket with two stick figures inside, both smiling. 'I'm keeping this one,' he said. Zara nodded. 'Me too,' she said, reaching for a drawing of a dragon with two riders.",
+        "passageTitle": "The Treehouse",
+        "questions": [
+          {
+            "id": "st-07-si-01-q1",
+            "question": "Why does the treehouse look smaller to Elijah than he remembered?",
+            "acceptableAnswers": ["he has grown up", "he is bigger now", "he was a child when he last used it", "things seem smaller when you grow older"],
+            "sampleAnswer": "The treehouse looks smaller because Elijah has physically grown since childhood, making the space feel much smaller than it did when he was young."
+          },
+          {
+            "id": "st-07-si-01-q2",
+            "question": "Why do both Elijah and Zara choose to take a drawing from the wall?",
+            "acceptableAnswers": ["to preserve memories", "they want to remember their childhood", "the treehouse is being destroyed", "they want keepsakes", "to hold onto their shared past"],
+            "sampleAnswer": "They each take a drawing to preserve a piece of their shared childhood memories before the treehouse is destroyed with the tree."
+          }
+        ]
+      }
+    }
+  ]
+}

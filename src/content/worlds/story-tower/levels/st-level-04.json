@@ -1,0 +1,35 @@
+{
+  "id": "st-level-04",
+  "worldId": "story-tower",
+  "title": "The Science Fair Secret",
+  "order": 4,
+  "storySnippet": "Not every victory feels like winning.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "st-level-03" },
+  "exercises": [
+    {
+      "id": "st-04-si-01",
+      "minigameType": "short-story-inference",
+      "prompt": "Read the passage and answer the questions.",
+      "data": {
+        "passage": "Lena held the blue ribbon in her hand, but she couldn't bring herself to smile. Around her, parents clapped and students cheered. Her science project on solar energy had won first place at the district fair. 'Congratulations!' said Mr. Patel, her science teacher. Lena mumbled a thank-you. She glanced across the gymnasium to where her lab partner, Sophie, stood by their display board—alone. Sophie had done most of the research and built the model while Lena had been busy with soccer practice. When judges had asked questions, Lena had answered confidently using Sophie's notes. Now Sophie was packing up the display without looking in Lena's direction. Lena walked over slowly. 'Sophie, this ribbon is yours too. Actually, it's mostly yours.' Sophie paused and looked up. 'I know,' she said quietly. 'But thanks for saying it.'",
+        "passageTitle": "The Science Fair Secret",
+        "questions": [
+          {
+            "id": "st-04-si-01-q1",
+            "question": "Why can't Lena bring herself to smile after winning?",
+            "acceptableAnswers": ["she feels guilty", "she knows Sophie did most of the work", "she doesn't feel she earned it", "she feels bad about taking credit"],
+            "sampleAnswer": "Lena feels guilty because she knows Sophie did most of the work on the project while she was at soccer practice."
+          },
+          {
+            "id": "st-04-si-01-q2",
+            "question": "What does Sophie's response 'I know. But thanks for saying it.' tell us about how she feels?",
+            "acceptableAnswers": ["she already knew she did most of the work", "she appreciates Lena's honesty", "she is hurt but forgiving", "she values Lena admitting the truth"],
+            "sampleAnswer": "Sophie's response shows she was already aware of the unfairness but appreciates that Lena had the honesty to acknowledge her contribution."
+          }
+        ]
+      }
+    }
+  ]
+}

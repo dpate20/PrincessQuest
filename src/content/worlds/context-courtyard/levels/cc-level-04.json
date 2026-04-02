@@ -1,0 +1,122 @@
+{
+  "id": "cc-level-04",
+  "worldId": "context-courtyard",
+  "title": "The Word Garden",
+  "order": 4,
+  "storySnippet": "Lira wanders into an enchanted garden where words bloom like flowers, each with its own meaning.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "cc-level-03" },
+  "exercises": [
+    {
+      "id": "cc-04-vc-01",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Building a bridge out of paper clips seemed unlikely, but the plan was actually ___.",
+        "choices": ["feasible", "fearsome"],
+        "correctChoice": "feasible",
+        "definition": "Feasible: possible and practical to accomplish; capable of being done."
+      }
+    },
+    {
+      "id": "cc-04-vc-02",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "Leo is so ___ that he makes friends wherever he goes and loves group activities.",
+        "choices": ["gregarious", "gracious"],
+        "correctChoice": "gregarious",
+        "definition": "Gregarious: fond of company; sociable and enjoying being with other people."
+      }
+    },
+    {
+      "id": "cc-04-vc-03",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The science class discussed a ___ situation in which gravity suddenly disappeared.",
+        "choices": ["hypothetical", "historical"],
+        "correctChoice": "hypothetical",
+        "definition": "Hypothetical: based on an imagined situation rather than something real; theoretical."
+      }
+    },
+    {
+      "id": "cc-04-vc-04",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ rain kept the soccer team indoors for the entire week of practice.",
+        "choices": ["incessant", "incorrect"],
+        "correctChoice": "incessant",
+        "definition": "Incessant: continuing without pause or interruption; constant and unending."
+      }
+    },
+    {
+      "id": "cc-04-vc-05",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The crowd was ___ when the home team scored the winning goal in the final seconds.",
+        "choices": ["jubilant", "justified"],
+        "correctChoice": "jubilant",
+        "definition": "Jubilant: feeling or expressing great happiness and triumph."
+      }
+    },
+    {
+      "id": "cc-04-vc-06",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The ___ artist spent hours perfecting every tiny detail of her painting.",
+        "choices": ["meticulous", "mysterious"],
+        "correctChoice": "meticulous",
+        "definition": "Meticulous: showing great attention to detail; very careful and precise."
+      }
+    },
+    {
+      "id": "cc-04-vc-07",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "As a ___ at chess, Sam was still learning the basic moves and strategies.",
+        "choices": ["novice", "native"],
+        "correctChoice": "novice",
+        "definition": "Novice: a person who is new to and lacks experience in a skill or activity; a beginner."
+      }
+    },
+    {
+      "id": "cc-04-vc-08",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The dark, ___ clouds rolling over the mountains warned the hikers to turn back.",
+        "choices": ["ominous", "obvious"],
+        "correctChoice": "ominous",
+        "definition": "Ominous: giving the impression that something bad is going to happen; threatening."
+      }
+    },
+    {
+      "id": "cc-04-vc-09",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "The lake water was so ___ that you could see fish swimming near the bottom.",
+        "choices": ["pristine", "precise"],
+        "correctChoice": "pristine",
+        "definition": "Pristine: in its original, clean, and unspoiled condition."
+      }
+    },
+    {
+      "id": "cc-04-vc-10",
+      "minigameType": "vocabulary-in-context",
+      "prompt": "Choose the word that best completes the sentence.",
+      "data": {
+        "sentence": "After losing the championship, the ___ team came back stronger the following year.",
+        "choices": ["resilient", "reluctant"],
+        "correctChoice": "resilient",
+        "definition": "Resilient: able to recover quickly from difficulties or setbacks; tough and adaptable."
+      }
+    }
+  ]
+}

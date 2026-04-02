@@ -1,0 +1,136 @@
+{
+  "id": "wf-level-05",
+  "worldId": "word-fortress",
+  "title": "The Tower of Advanced Words",
+  "order": 5,
+  "storySnippet": "You climb the spiraling staircase of the fortress tower, where the walls are inscribed with words that challenge even seasoned scholars.",
+  "passingScore": 70,
+  "starThresholds": [70, 85, 95],
+  "unlockCondition": { "type": "level-complete", "levelId": "wf-level-04" },
+  "exercises": [
+    {
+      "id": "wf-05-sp-01",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "acquiesce",
+        "incorrectSpelling": "acquiese",
+        "sentenceContext": "After a long debate, the committee decided to acquiesce to the students' request for longer lunch breaks."
+      }
+    },
+    {
+      "id": "wf-05-sp-02",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "bourgeois",
+        "incorrectSpelling": "bourgoise",
+        "sentenceContext": "The novel explores the bourgeois lifestyle of wealthy families in nineteenth-century France."
+      }
+    },
+    {
+      "id": "wf-05-sp-03",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "camouflage",
+        "incorrectSpelling": "camoflage",
+        "sentenceContext": "The chameleon uses camouflage to blend in with its surroundings and avoid predators."
+      }
+    },
+    {
+      "id": "wf-05-sp-04",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "catastrophe",
+        "incorrectSpelling": "catastrophy",
+        "sentenceContext": "The oil spill was an environmental catastrophe that affected marine life for years."
+      }
+    },
+    {
+      "id": "wf-05-sp-05",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "entrepreneur",
+        "incorrectSpelling": "entrepeneur",
+        "sentenceContext": "The young entrepreneur started her own business selling handmade jewelry online."
+      }
+    },
+    {
+      "id": "wf-05-sp-06",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "hemorrhage",
+        "incorrectSpelling": "hemorhage",
+        "sentenceContext": "The doctors worked quickly to stop the hemorrhage and stabilize the patient."
+      }
+    },
+    {
+      "id": "wf-05-sp-07",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "idiosyncrasy",
+        "incorrectSpelling": "idiosyncracy",
+        "sentenceContext": "One idiosyncrasy of the old professor was that he always wore mismatched socks."
+      }
+    },
+    {
+      "id": "wf-05-sp-08",
+      "minigameType": "spelling-pairs",
+      "prompt": "Which spelling is correct?",
+      "data": {
+        "correctSpelling": "miscellaneous",
+        "incorrectSpelling": "miscellanious",
+        "sentenceContext": "The drawer was full of miscellaneous items like batteries, rubber bands, and old keys."
+      }
+    },
+    {
+      "id": "wf-05-fb-01",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The soldiers wore ___ uniforms to blend into the forest.",
+        "correctAnswer": "camouflage",
+        "acceptableSpellings": ["camouflage"],
+        "hint": "Contains '-ou-' after the 'cam'"
+      }
+    },
+    {
+      "id": "wf-05-fb-02",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The earthquake was a ___ that destroyed hundreds of buildings.",
+        "correctAnswer": "catastrophe",
+        "acceptableSpellings": ["catastrophe"],
+        "hint": "Ends in '-phe', not '-phy'"
+      }
+    },
+    {
+      "id": "wf-05-fb-03",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "She dreams of becoming an ___ and starting her own tech company.",
+        "correctAnswer": "entrepreneur",
+        "acceptableSpellings": ["entrepreneur"],
+        "hint": "Contains '-pre-' in the middle, not '-pe-'"
+      }
+    },
+    {
+      "id": "wf-05-fb-04",
+      "minigameType": "fill-in-the-blank",
+      "prompt": "Complete the sentence with the correct word.",
+      "data": {
+        "sentence": "The junk drawer held ___ odds and ends collected over the years.",
+        "correctAnswer": "miscellaneous",
+        "acceptableSpellings": ["miscellaneous"],
+        "hint": "Contains '-eous' at the end, not '-ious'"
+      }
+    }
+  ]
+}
