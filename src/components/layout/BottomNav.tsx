@@ -15,7 +15,7 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-[var(--color-bg-panel)]/95 backdrop-blur-sm border-t border-amber-200/50 z-50">
+    <nav className="fixed bottom-0 left-0 right-0 border-t border-purple-900 z-50" style={{ background: 'linear-gradient(180deg, #4A3B6B 0%, #3D2E5C 40%, #332650 100%)' }}>
       <div className="flex items-center justify-around max-w-lg mx-auto">
         {navItems.map(({ href, label, icon }) => {
           const isActive = pathname === href;
@@ -25,10 +25,11 @@ export default function BottomNav() {
               href={href}
               className={`flex flex-col items-center gap-0.5 py-2 px-4 min-h-14 justify-center transition-colors ${
                 isActive
-                  ? "text-[var(--color-accent)]"
-                  : "text-gray-400 hover:text-[var(--color-primary)]"
+                  ? "text-yellow-300"
+                  : "text-purple-300 hover:text-purple-100"
               }`}
             >
+              {isActive && <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_6px_rgba(251,191,36,0.6)] mb-0.5" />}
               <Icon name={icon} size={20} />
               <span className="text-xs font-medium">{label}</span>
             </Link>

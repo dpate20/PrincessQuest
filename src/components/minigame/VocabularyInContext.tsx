@@ -32,7 +32,7 @@ export default function VocabularyInContext({
 
   return (
     <div className="flex flex-col items-center gap-6 w-full max-w-lg">
-      <div className="bg-[var(--color-bg-panel)] rounded-xl p-5 w-full border border-amber-200/50">
+      <div className="bg-[var(--color-bg-panel)] rounded-xl p-5 w-full border border-purple-200/50">
         <p className="text-lg text-[var(--color-primary)] leading-relaxed text-center">
           {sentenceParts[0]}
           <span className="inline-block min-w-[80px] border-b-2 border-[var(--color-accent)] mx-1 text-center font-bold">
@@ -51,7 +51,7 @@ export default function VocabularyInContext({
 
           if (!selected) {
             btnClass +=
-              "bg-white border-[var(--color-primary)]/20 hover:border-[var(--color-accent)] hover:shadow-md active:scale-95";
+              "bg-gradient-to-b from-[#FFFAF0] to-[#F7EEDD] border-amber-300/60 shadow-md shadow-amber-100/30 hover:border-[var(--color-accent)] hover:shadow-lg hover:-translate-y-0.5 active:scale-95";
           } else if (isSelected && isCorrect) {
             btnClass +=
               "bg-green-50 border-[var(--color-success)] text-[var(--color-success)]";
@@ -79,7 +79,7 @@ export default function VocabularyInContext({
       </div>
 
       {showDefinition && (
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 w-full animate-fade-in-up">
+        <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 w-full animate-fade-in-up">
           <p className="text-sm text-gray-500 font-medium mb-1">Definition:</p>
           <p className="text-[var(--color-primary)] font-[var(--font-heading)]">
             <strong>{data.correctChoice}</strong> &mdash; {data.definition}

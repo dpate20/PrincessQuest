@@ -81,12 +81,12 @@ export default function MinigameShell({
         {Array.from({ length: total }, (_, i) => (
           <div
             key={i}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+            className={`rounded-full transition-colors ${
               i < currentIndex
-                ? "bg-[var(--color-success)]"
+                ? "w-2.5 h-2.5 bg-yellow-400 shadow-[0_0_4px_rgba(251,191,36,0.4)]"
                 : i === currentIndex
-                  ? "bg-[var(--color-accent)]"
-                  : "bg-gray-200"
+                  ? "w-3.5 h-3.5 bg-[var(--color-accent)]"
+                  : "w-2.5 h-2.5 bg-purple-200"
             }`}
           />
         ))}

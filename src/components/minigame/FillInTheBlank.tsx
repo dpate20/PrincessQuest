@@ -40,7 +40,7 @@ export default function FillInTheBlank({ exercise, onAnswer }: MinigameProps) {
 
   return (
     <div className="flex flex-col items-center gap-6 w-full max-w-lg">
-      <div className="bg-[var(--color-bg-panel)] rounded-xl p-5 w-full border border-amber-200/50">
+      <div className="bg-[var(--color-bg-panel)] rounded-xl p-5 w-full border border-purple-200/50">
         <p className="text-lg text-[var(--color-primary)] leading-relaxed text-center">
           {sentenceParts[0]}
           <span className="inline-block mx-1">
@@ -70,7 +70,7 @@ export default function FillInTheBlank({ exercise, onAnswer }: MinigameProps) {
       )}
 
       {submitted && !isCorrect && (
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 w-full text-center animate-fade-in-up">
+        <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 w-full text-center animate-fade-in-up">
           <p className="text-sm text-gray-600">
             Correct answer: <strong>{data.correctAnswer}</strong>
           </p>

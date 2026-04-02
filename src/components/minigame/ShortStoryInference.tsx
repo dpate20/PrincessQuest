@@ -86,7 +86,7 @@ export default function ShortStoryInference({
         />
 
         {showSample && (
-          <div className="mt-3 bg-amber-50 border border-amber-200 rounded-lg p-3 animate-fade-in-up">
+          <div className="mt-3 bg-purple-50 border border-purple-200 rounded-lg p-3 animate-fade-in-up">
             <p className="text-xs text-gray-500 mb-1">Sample answer:</p>
             <p className="text-sm text-[var(--color-primary)]">
               {currentQ.sampleAnswer}

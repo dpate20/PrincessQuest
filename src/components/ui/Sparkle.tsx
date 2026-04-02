@@ -24,7 +24,7 @@ export default function Sparkle({ count = 12 }: SparkleProps) {
       {particles.map((p) => (
         <span
           key={p.id}
-          className="absolute rounded-full bg-[var(--color-accent)] animate-sparkle"
+          className={`absolute rounded-full animate-sparkle ${p.id % 2 === 0 ? "bg-yellow-300" : "bg-purple-300"}`}
           style={{
             left: p.left,
             top: p.top,
@@ -32,6 +32,7 @@ export default function Sparkle({ count = 12 }: SparkleProps) {
             height: p.size,
             animationDelay: p.delay,
             opacity: 0,
+            ...(p.id % 3 === 0 ? { clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' } : {}),
           }}
         />
       ))}

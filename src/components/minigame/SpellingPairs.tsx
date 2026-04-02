@@ -32,7 +32,7 @@ export default function SpellingPairs({ exercise, onAnswer }: MinigameProps) {
 
   return (
     <div className="flex flex-col items-center gap-6 w-full max-w-lg">
-      <div className="bg-[var(--color-bg-panel)] rounded-xl p-4 w-full text-center border border-amber-200/50">
+      <div className="bg-[var(--color-bg-panel)] rounded-xl p-4 w-full text-center border border-purple-200/50">
         <p className="text-[var(--color-primary)] italic font-[var(--font-heading)]">
           &ldquo;{data.sentenceContext}&rdquo;
         </p>
@@ -51,7 +51,7 @@ export default function SpellingPairs({ exercise, onAnswer }: MinigameProps) {
 
           if (!selected) {
             cardClass +=
-              "bg-white border-[var(--color-primary)]/20 hover:border-[var(--color-accent)] hover:shadow-md active:scale-95";
+              "bg-gradient-to-b from-[#FFFAF0] to-[#F7EEDD] border-amber-300/60 shadow-md shadow-amber-100/30 hover:border-[var(--color-accent)] hover:shadow-lg hover:-translate-y-0.5 active:scale-95";
           } else if (isSelected && isCorrect) {
             cardClass +=
               "bg-green-50 border-[var(--color-success)] text-[var(--color-success)] scale-105";

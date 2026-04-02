@@ -30,11 +30,11 @@ export default function SettingsPage() {
 
   return (
     <div className="flex flex-col flex-1 pb-20">
-      <GameHeader title="Settings" />
+      <GameHeader title="Royal Chambers" />
 
       <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Display Name */}
-        <div className="bg-white/70 rounded-xl p-5 border border-amber-100 mb-4">
+        <div className="bg-white/70 rounded-xl p-5 border border-purple-100 mb-4">
           <label className="block text-sm font-semibold text-[var(--color-primary)] mb-2">
             Display Name
           </label>
@@ -58,7 +58,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Sound Effects */}
-        <div className="bg-white/70 rounded-xl p-5 border border-amber-100 mb-4">
+        <div className="bg-white/70 rounded-xl p-5 border border-purple-100 mb-4">
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold text-[var(--color-primary)]">
               Sound Effects

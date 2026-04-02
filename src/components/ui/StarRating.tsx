@@ -32,7 +32,7 @@ export default function StarRating({
             <Icon
               name={filled ? "star" : "star-outline"}
               size={iconSize}
-              className={filled ? "text-[var(--color-accent)]" : "text-gray-300"}
+              className={filled ? "text-yellow-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.5)]" : "text-purple-200"}
             />
           </span>
         );

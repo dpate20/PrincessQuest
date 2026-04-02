@@ -31,19 +31,19 @@ export default function ProgressPage() {
       <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Stats cards */}
         <div className="grid grid-cols-3 gap-3 mb-8">
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-amber-100">
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-purple-100">
             <Icon name="star" size={28} className="text-[var(--color-accent)] mx-auto mb-1" />
             <div className="text-2xl font-bold text-[var(--color-accent)]">{totalStars}</div>
             <div className="text-xs text-gray-400">Stars</div>
           </div>
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-orange-100">
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-orange-200">
             <Icon name="flame" size={28} className="text-orange-600 mx-auto mb-1" />
             <div className="text-2xl font-bold text-orange-600">
               {streak.currentStreak}
             </div>
             <div className="text-xs text-gray-400">Day Streak</div>
           </div>
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-slate-200">
+          <div className="bg-white/70 rounded-xl p-4 text-center border border-purple-200">
             <Icon name="quill" size={28} className="text-[var(--color-primary)] mx-auto mb-1" />
             <div className="text-2xl font-bold text-[var(--color-primary)]">
               {totalExercises}
@@ -75,7 +75,7 @@ export default function ProgressPage() {
               return (
                 <div
                   key={type}
-                  className="bg-white/60 rounded-lg p-3 border border-amber-50"
+                  className="bg-white/60 rounded-lg p-3 border border-purple-50"
                 >
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="text-sm font-medium text-gray-700">
@@ -112,7 +112,7 @@ export default function ProgressPage() {
             return (
               <div
                 key={world.id}
-                className="bg-white/60 rounded-xl p-4 border border-amber-50"
+                className="bg-white/60 rounded-xl p-4 border border-purple-50"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] flex items-center justify-center shrink-0">

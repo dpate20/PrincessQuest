@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #1e293b;
-  --color-primary-light: #334155;
-  --color-accent: #d97706;
-  --color-accent-light: #f59e0b;
-  --color-success: #16a34a;
-  --color-error: #dc2626;
-  --color-bg-parchment: #faf5e8;
-  --color-bg-panel: #f8f4eb;
-  --color-burgundy: #7c2d12;
-  --gradient-royal: linear-gradient(135deg, #1e293b, #334155);
-  --gradient-gold: linear-gradient(135deg, #f59e0b, #d97706);
-  --gradient-parchment: linear-gradient(180deg, #faf5e8 0%, #f5edd6 100%);
+  --color-primary: #6B46C1;
+  --color-primary-light: #805AD5;
+  --color-accent: #F6AD55;
+  --color-accent-light: #FBD38D;
+  --color-success: #38A169;
+  --color-error: #FC8181;
+  --color-bg-parchment: #FAF5FF;
+  --color-bg-panel: #FFFAF0;
+  --color-burgundy: #553C9A;
+  --gradient-royal: linear-gradient(135deg, #6B46C1, #805AD5);
+  --gradient-gold: linear-gradient(135deg, #FBD38D, #F6AD55);
+  --gradient-parchment: linear-gradient(180deg, #FAF5FF 0%, #F3E8FF 100%);
+  --color-kingdom-fortress: #4299E1;
+  --color-kingdom-courtyard: #48BB78;
+  --color-kingdom-tower: #ED8936;
+  --color-kingdom-keep: #319795;
+  --color-kingdom-arena: #805AD5;
 }
 
 @theme inline {
@@ -25,14 +30,14 @@
   --color-bg-parchment: var(--color-bg-parchment);
   --color-bg-panel: var(--color-bg-panel);
   --color-burgundy: var(--color-burgundy);
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-heading: "Crimson Text", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-heading: "Cinzel", Georgia, serif;
 }
 
 body {
   background: var(--gradient-parchment);
   min-height: 100dvh;
-  color: #1e293b;
+  color: #2D3748;
   font-family: var(--font-sans);
 }
 
@@ -59,8 +64,42 @@ body {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(217, 119, 6, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(217, 119, 6, 0.5); }
+  0%, 100% { box-shadow: 0 0 8px rgba(107, 70, 193, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(107, 70, 193, 0.5); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes fire-flicker {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  25% { transform: scale(1.1) rotate(-2deg); opacity: 0.9; }
+  50% { transform: scale(0.95); opacity: 1; }
+  75% { transform: scale(1.05) rotate(2deg); opacity: 0.85; }
+}
+
+@keyframes star-burst {
+  0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+  60% { transform: scale(1.4) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .animate-star-fill { animation: star-fill 0.5s ease-out forwards; }
@@ -68,3 +107,7 @@ body {
 .animate-gentle-float { animation: gentle-float 3s ease-in-out infinite; }
 .animate-fade-in-up { animation: fade-in-up 0.4s ease-out forwards; }
 .animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+.animate-shake { animation: shake 0.5s ease-in-out; }
+.animate-breathe { animation: breathe 3s ease-in-out infinite; }
+.animate-fire-flicker { animation: fire-flicker 0.8s ease-in-out infinite; }
+.animate-star-burst { animation: star-burst 0.6s ease-out forwards; }

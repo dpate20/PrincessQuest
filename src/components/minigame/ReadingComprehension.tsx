@@ -73,7 +73,7 @@ export default function ReadingComprehension({
 
             if (!selectedOption) {
               cls +=
-                "bg-white border-gray-200 hover:border-[var(--color-accent)] active:scale-[0.98]";
+                "bg-white border-gray-200 hover:border-[var(--color-accent)] hover:-translate-y-0.5 active:scale-[0.98]";
             } else if (isSelected && isCorrect) {
               cls += "bg-green-50 border-[var(--color-success)] text-[var(--color-success)]";
             } else if (isSelected && !isCorrect) {
