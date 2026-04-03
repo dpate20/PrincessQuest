@@ -15,23 +15,24 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 border-t border-purple-900 z-50" style={{ background: 'linear-gradient(180deg, #4A3B6B 0%, #3D2E5C 40%, #332650 100%)' }}>
-      <div className="flex items-center justify-around max-w-lg mx-auto">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 py-3 px-4" style={{ background: "linear-gradient(180deg, rgba(88,28,135,0.95) 0%, rgba(107,70,193,0.98) 100%)" }}>
+      <div className="flex gap-8 items-center justify-center max-w-lg mx-auto">
         {navItems.map(({ href, label, icon }) => {
           const isActive = pathname === href;
           return (
             <Link
               key={href}
               href={href}
-              className={`flex flex-col items-center gap-0.5 py-2 px-4 min-h-14 justify-center transition-colors ${
-                isActive
-                  ? "text-yellow-300"
-                  : "text-purple-300 hover:text-purple-100"
+              className={`flex flex-col items-center gap-2 transition-colors ${
+                isActive ? "text-yellow-300" : "text-white hover:text-yellow-300"
               }`}
             >
-              {isActive && <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_6px_rgba(251,191,36,0.6)] mb-0.5" />}
-              <Icon name={icon} size={20} />
-              <span className="text-xs font-medium">{label}</span>
+              <div className={`w-14 h-14 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/30 ${
+                isActive ? "bg-yellow-400/80" : "bg-purple-700/50"
+              }`}>
+                <Icon name={icon} size={28} className={isActive ? "text-purple-900" : ""} />
+              </div>
+              <span className="text-sm font-medium drop-shadow">{label}</span>
             </Link>
           );
         })}

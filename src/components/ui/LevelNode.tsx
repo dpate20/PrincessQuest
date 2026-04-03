@@ -36,7 +36,7 @@ export default function LevelNode({
         <div className="w-14 h-14 rounded-full bg-gray-200 border-2 border-gray-300 flex items-center justify-center shadow-inner">
           <Icon name="lock" size={18} className="text-gray-400" />
         </div>
-        <span className="text-xs text-gray-400 mt-1.5 text-center max-w-20 line-clamp-1">
+        <span className="text-xs text-white/60 mt-1.5 text-center max-w-20 line-clamp-1 drop-shadow">
           {level.title}
         </span>
       </div>
@@ -83,7 +83,7 @@ export default function LevelNode({
         </div>
       )}
 
-      <span className="text-xs text-gray-500 mt-1 text-center max-w-20 line-clamp-1 font-medium">
+      <span className="text-xs text-white/80 mt-1 text-center max-w-20 line-clamp-1 font-medium drop-shadow">
         {level.title}
       </span>
     </Link>

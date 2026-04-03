@@ -41,11 +41,11 @@ export default function MinigamePlayPage({
   }
 
   return (
-    <div className="flex flex-col flex-1">
+    <div className="min-h-screen w-full flex flex-col" style={{ background: "linear-gradient(180deg, #F3E8FF 0%, #FAF5FF 40%, #FFFAF0 100%)" }}>
       <GameHeader backHref={`/world/${worldId}`} title={level.title} />
 
-      <div className="px-4 py-3 bg-[var(--color-bg-panel)]/50">
-        <p className="text-sm text-gray-500 italic text-center font-[var(--font-heading)]">
+      <div className="px-4 py-3 bg-white/60 backdrop-blur-sm">
+        <p className="text-sm text-purple-700 italic text-center font-[var(--font-heading)]">
           {level.storySnippet}
         </p>
       </div>

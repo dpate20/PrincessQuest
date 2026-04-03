@@ -16,6 +16,14 @@ const EXERCISE_TYPE_LABELS: Record<MinigameType, string> = {
   "fill-in-the-blank": "Fill in the Blank",
 };
 
+const KINGDOM_ACCENT: Record<string, string> = {
+  "word-fortress": "#4299E1",
+  "context-courtyard": "#48BB78",
+  "story-tower": "#ED8936",
+  "knowledge-keep": "#319795",
+  "champions-arena": "#805AD5",
+};
+
 export default function ProgressPage() {
   const totalStars = useGameStore((s) => s.totalStars);
   const streak = useGameStore((s) => s.streak);
@@ -25,43 +33,43 @@ export default function ProgressPage() {
   const worlds = getWorlds();
 
   return (
-    <div className="flex flex-col flex-1 pb-20">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-24">
       <GameHeader title="Your Journey" />
 
-      <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+      <div className="relative z-10 flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Stats cards */}
         <div className="grid grid-cols-3 gap-3 mb-8">
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-purple-100">
-            <Icon name="star" size={28} className="text-[var(--color-accent)] mx-auto mb-1" />
-            <div className="text-2xl font-bold text-[var(--color-accent)]">{totalStars}</div>
-            <div className="text-xs text-gray-400">Stars</div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 text-center shadow-lg border-2 border-yellow-200">
+            <Icon name="star" size={28} className="text-yellow-500 mx-auto mb-1" />
+            <div className="text-2xl font-bold text-purple-800">{totalStars}</div>
+            <div className="text-xs text-gray-500 font-medium">Stars</div>
           </div>
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-orange-200">
-            <Icon name="flame" size={28} className="text-orange-600 mx-auto mb-1" />
-            <div className="text-2xl font-bold text-orange-600">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 text-center shadow-lg border-2 border-orange-200">
+            <Icon name="flame" size={28} className="text-orange-500 mx-auto mb-1" />
+            <div className="text-2xl font-bold text-purple-800">
               {streak.currentStreak}
             </div>
-            <div className="text-xs text-gray-400">Day Streak</div>
+            <div className="text-xs text-gray-500 font-medium">Day Streak</div>
           </div>
-          <div className="bg-white/70 rounded-xl p-4 text-center border border-purple-200">
-            <Icon name="quill" size={28} className="text-[var(--color-primary)] mx-auto mb-1" />
-            <div className="text-2xl font-bold text-[var(--color-primary)]">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 text-center shadow-lg border-2 border-purple-200">
+            <Icon name="quill" size={28} className="text-purple-600 mx-auto mb-1" />
+            <div className="text-2xl font-bold text-purple-800">
               {totalExercises}
             </div>
-            <div className="text-xs text-gray-400">Exercises</div>
+            <div className="text-xs text-gray-500 font-medium">Exercises</div>
           </div>
         </div>
 
         {streak.longestStreak > 0 && (
-          <div className="bg-white/50 rounded-lg p-3 mb-6 text-center">
-            <span className="text-sm text-gray-500">
+          <div className="bg-white/80 backdrop-blur-sm rounded-full px-5 py-2.5 mb-6 text-center shadow-md">
+            <span className="text-sm text-purple-800 font-medium">
               Longest streak: <strong>{streak.longestStreak} days</strong>
             </span>
           </div>
         )}
 
         {/* Skills Breakdown */}
-        <h2 className="text-lg font-bold font-[var(--font-heading)] text-[var(--color-primary)] mb-4">
+        <h2 className="text-lg font-bold font-[var(--font-heading)] text-white drop-shadow mb-4">
           Skills Breakdown
         </h2>
         <div className="flex flex-col gap-3 mb-8">
@@ -75,13 +83,13 @@ export default function ProgressPage() {
               return (
                 <div
                   key={type}
-                  className="bg-white/60 rounded-lg p-3 border border-purple-50"
+                  className="bg-white/85 backdrop-blur-sm rounded-xl p-3 shadow-md border border-white/30"
                 >
                   <div className="flex justify-between items-center mb-1.5">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-semibold text-purple-800">
                       {label}
                     </span>
-                    <span className="text-xs text-gray-400">
+                    <span className="text-xs text-gray-500">
                       {stats.totalAttempted > 0
                         ? `${accuracy}% (${stats.totalCorrect}/${stats.totalAttempted})`
                         : "No data yet"}
@@ -95,7 +103,7 @@ export default function ProgressPage() {
         </div>
 
         {/* Per-world progress */}
-        <h2 className="text-lg font-bold font-[var(--font-heading)] text-[var(--color-primary)] mb-4">
+        <h2 className="text-lg font-bold font-[var(--font-heading)] text-white drop-shadow mb-4">
           Kingdom Progress
         </h2>
         <div className="flex flex-col gap-4">
@@ -108,29 +116,34 @@ export default function ProgressPage() {
               (sum, id) => sum + (levelProgress[id]?.stars ?? 0),
               0
             );
+            const accentColor = KINGDOM_ACCENT[world.id] ?? "#805AD5";
 
             return (
               <div
                 key={world.id}
-                className="bg-white/60 rounded-xl p-4 border border-purple-50"
+                className="bg-white/85 backdrop-blur-sm rounded-xl p-4 shadow-md overflow-hidden"
+                style={{ borderLeft: `4px solid ${accentColor}` }}
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] flex items-center justify-center shrink-0">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ background: accentColor }}
+                  >
                     <Icon
                       name={world.icon as IconName}
                       size={16}
-                      className="text-[var(--color-accent)]"
+                      className="text-white"
                     />
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center">
-                      <span className="font-semibold text-gray-700">
+                      <span className="font-semibold text-purple-800">
                         {world.name}
                       </span>
                       {total > 0 && (
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-500">
                           {completed}/{total} levels &middot;{" "}
-                          <Icon name="star" size={10} className="inline text-[var(--color-accent)]" />{" "}
+                          <Icon name="star" size={10} className="inline text-yellow-500" />{" "}
                           {worldStars}
                         </span>
                       )}

@@ -29,13 +29,13 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="flex flex-col flex-1 pb-20">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-24">
       <GameHeader title="Royal Chambers" />
 
-      <div className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+      <div className="relative z-10 flex-1 px-4 py-6 max-w-lg mx-auto w-full">
         {/* Display Name */}
-        <div className="bg-white/70 rounded-xl p-5 border border-purple-100 mb-4">
-          <label className="block text-sm font-semibold text-[var(--color-primary)] mb-2">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-white/30 shadow-lg mb-4">
+          <label className="block text-sm font-semibold text-purple-800 mb-2">
             Display Name
           </label>
           <div className="flex gap-2">
@@ -44,7 +44,7 @@ export default function SettingsPage() {
               value={nameInput}
               onChange={(e) => setNameInput(e.target.value)}
               maxLength={20}
-              className="flex-1 rounded-lg border-2 border-gray-200 px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)] transition-colors"
+              className="flex-1 rounded-full border-2 border-purple-200 px-4 py-2 text-sm outline-none focus:border-yellow-400 transition-colors bg-white"
             />
             <Button
               variant="gold"
@@ -58,31 +58,46 @@ export default function SettingsPage() {
         </div>
 
         {/* Sound Effects */}
-        <div className="bg-white/70 rounded-xl p-5 border border-purple-100 mb-4">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-white/30 shadow-lg mb-4">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-[var(--color-primary)]">
+            <span className="text-sm font-semibold text-purple-800">
               Sound Effects
             </span>
             <button
               onClick={toggleSoundEffects}
-              className={`relative w-12 h-7 rounded-full transition-colors ${
-                soundEffectsEnabled
-                  ? "bg-[var(--color-success)]"
-                  : "bg-gray-300"
-              }`}
+              style={{
+                position: "relative",
+                width: 48,
+                height: 28,
+                borderRadius: 9999,
+                backgroundColor: soundEffectsEnabled ? "#38A169" : "#CBD5E0",
+                transition: "background-color 0.2s",
+                border: "none",
+                cursor: "pointer",
+                padding: 0,
+              }}
             >
               <span
-                className={`absolute top-0.5 w-6 h-6 rounded-full bg-white shadow transition-transform ${
-                  soundEffectsEnabled ? "translate-x-5" : "translate-x-0.5"
-                }`}
+                style={{
+                  position: "absolute",
+                  top: 2,
+                  left: 2,
+                  width: 24,
+                  height: 24,
+                  borderRadius: 9999,
+                  backgroundColor: "white",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+                  transition: "transform 0.2s",
+                  transform: soundEffectsEnabled ? "translateX(20px)" : "translateX(0px)",
+                }}
               />
             </button>
           </div>
         </div>
 
         {/* Reset Progress */}
-        <div className="bg-white/70 rounded-xl p-5 border border-red-100">
-          <h3 className="text-sm font-semibold text-[var(--color-primary)] mb-2">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-red-200/50 shadow-lg">
+          <h3 className="text-sm font-semibold text-purple-800 mb-2">
             Reset Progress
           </h3>
           <p className="text-xs text-gray-500 mb-3">
@@ -96,7 +111,7 @@ export default function SettingsPage() {
               </Button>
               <button
                 onClick={handleReset}
-                className="px-4 py-2 text-sm font-semibold rounded-lg bg-[var(--color-error)] text-white hover:brightness-110 active:scale-95 transition-all"
+                className="px-4 py-2 text-sm font-semibold rounded-full bg-[var(--color-error)] text-white hover:brightness-110 active:scale-95 transition-all"
               >
                 Confirm Reset
               </button>

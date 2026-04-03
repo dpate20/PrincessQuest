@@ -14,33 +14,33 @@ export default function GameHeader({ backHref, title }: GameHeaderProps) {
   const streak = useGameStore((s) => s.streak);
 
   return (
-    <header className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-purple-700 to-purple-800 border-b border-purple-900">
+    <header className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-3 flex justify-between items-center shadow-xl z-20">
       <div className="flex items-center gap-3">
         {backHref && (
           <Link
             href={backHref}
-            className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full font-bold shadow-lg transition-all"
           >
             <Icon name="arrow-left" size={18} />
           </Link>
         )}
         {title && (
-          <h1 className="text-lg font-bold font-[var(--font-heading)] text-white">
+          <span className="bg-purple-500 text-white px-5 py-2 rounded-full font-bold shadow-lg text-sm">
             {title}
-          </h1>
-        )}
-      </div>
-      <div className="flex items-center gap-4 text-sm font-semibold">
-        {streak.currentStreak > 0 && (
-          <span className="flex items-center gap-1 text-orange-300">
-            <span className="animate-fire-flicker"><Icon name="flame" size={16} /></span>
-            {streak.currentStreak}
           </span>
         )}
-        <span className="flex items-center gap-1 text-yellow-300">
-          <Icon name="star" size={16} />
-          {totalStars}
-        </span>
+      </div>
+      <div className="flex items-center gap-3">
+        {streak.currentStreak > 0 && (
+          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full">
+            <span className="animate-fire-flicker"><Icon name="flame" size={18} className="text-orange-500" /></span>
+            <span className="font-bold text-purple-800">{streak.currentStreak}</span>
+          </div>
+        )}
+        <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full">
+          <Icon name="star" size={18} className="text-yellow-400" />
+          <span className="font-bold text-purple-800">{totalStars}</span>
+        </div>
       </div>
     </header>
   );

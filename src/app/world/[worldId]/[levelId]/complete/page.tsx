@@ -49,7 +49,7 @@ export default function LevelCompletePage({
   }, [stars]);
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center relative overflow-hidden px-4">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-600 via-purple-500 to-pink-400 relative overflow-hidden flex flex-col items-center justify-center px-4">
       <Confetti count={50} />
       <Sparkle count={16} />
 
@@ -61,7 +61,7 @@ export default function LevelCompletePage({
         />
       </div>
 
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm w-full text-center animate-fade-in-up border-2 border-purple-200/50">
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm w-full text-center animate-fade-in-up border-4 border-white/30">
         <div className="mb-4 flex justify-center">
           <StarRating stars={stars} size="lg" animated />
         </div>
