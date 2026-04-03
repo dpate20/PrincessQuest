@@ -9,7 +9,7 @@ const cinzel = Cinzel({
 });
 
 const nunito = Nunito({
-  variable: "--font-body",
+  variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cinzel.variable} ${nunito.variable} h-full`}>
-      <body className="min-h-dvh flex flex-col font-[var(--font-body)]">
+      <body className="min-h-dvh flex flex-col font-[var(--font-sans)]">
         {children}
       </body>
     </html>

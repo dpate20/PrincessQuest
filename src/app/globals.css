@@ -35,7 +35,7 @@
 }
 
 body {
-  background: var(--gradient-parchment);
+  background: #1a0533;
   min-height: 100dvh;
   color: #2D3748;
   font-family: var(--font-sans);

@@ -6,6 +6,9 @@ import { useSettingsStore } from "@/stores/useSettingsStore";
 import GameHeader from "@/components/layout/GameHeader";
 import BottomNav from "@/components/layout/BottomNav";
 import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
+import PrincessSara from "@/components/characters/PrincessSara";
+import { SpeechBubble } from "@/components/characters/NPCGuide";
 
 export default function SettingsPage() {
   const displayName = useGameStore((s) => s.displayName);
@@ -29,10 +32,33 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-24">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-32">
       <GameHeader title="Royal Chambers" />
 
+      {/* Decorative stars */}
+      {Array.from({ length: 10 }, (_, i) => (
+        <div
+          key={i}
+          className="absolute text-yellow-200 animate-pulse"
+          style={{
+            top: `${12 + (i * 43) % 80}%`,
+            left: `${4 + (i * 51) % 92}%`,
+            animationDelay: `${(i * 0.3) % 2}s`,
+          }}
+        >
+          <Icon name="star" size={4 + (i % 3) * 3} />
+        </div>
+      ))}
+
       <div className="relative z-10 flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+        {/* Princess Sara guide */}
+        <div className="flex items-end gap-3 mb-6 animate-fade-in-up">
+          <PrincessSara expression="happy" size="sm" />
+          <SpeechBubble className="flex-1">
+            Customize your quest settings here!
+          </SpeechBubble>
+        </div>
+
         {/* Display Name */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-white/30 shadow-lg mb-4">
           <label className="block text-sm font-semibold text-purple-800 mb-2">
@@ -67,15 +93,22 @@ export default function SettingsPage() {
               onClick={toggleSoundEffects}
               style={{
                 position: "relative",
+                display: "inline-block",
                 width: 48,
                 height: 28,
                 borderRadius: 9999,
                 backgroundColor: soundEffectsEnabled ? "#38A169" : "#CBD5E0",
                 transition: "background-color 0.2s",
                 border: "none",
+                borderWidth: 0,
+                outline: "none",
                 cursor: "pointer",
                 padding: 0,
-              }}
+                margin: 0,
+                boxSizing: "border-box",
+                WebkitAppearance: "none",
+                appearance: "none",
+              } as React.CSSProperties}
             >
               <span
                 style={{
@@ -89,6 +122,7 @@ export default function SettingsPage() {
                   boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
                   transition: "transform 0.2s",
                   transform: soundEffectsEnabled ? "translateX(20px)" : "translateX(0px)",
+                  display: "block",
                 }}
               />
             </button>

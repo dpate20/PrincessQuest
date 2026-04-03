@@ -33,7 +33,7 @@ export default function ProgressPage() {
   const worlds = getWorlds();
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-24">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-32">
       <GameHeader title="Your Journey" />
 
       <div className="relative z-10 flex-1 px-4 py-6 max-w-lg mx-auto w-full">

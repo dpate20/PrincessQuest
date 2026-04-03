@@ -19,7 +19,7 @@ export default function HomePage() {
   const lastPlayed = progressEntries[0];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-600 via-purple-500 to-pink-400 relative overflow-hidden">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-600 via-purple-500 to-pink-400 relative overflow-hidden pb-32">
       {/* Decorative stars */}
       <div className="absolute top-8 left-12 text-yellow-300 animate-pulse">
         <Icon name="star" size={32} />

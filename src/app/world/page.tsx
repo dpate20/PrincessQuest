@@ -15,7 +15,7 @@ export default function WorldMapPage() {
   const worlds = getWorlds();
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-24">
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-32">
       <GameHeader title="World Map" />
 
       {/* Animated stars background */}
