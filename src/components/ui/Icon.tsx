@@ -23,7 +23,14 @@ export type IconName =
   | "shield"
   | "crown"
   | "treasure-chest"
-  | "gem";
+  | "gem"
+  | "menu"
+  | "shop"
+  | "chevron-down"
+  | "crown-shop"
+  | "dress"
+  | "accessory"
+  | "sparkle";
 
 interface IconProps {
   name: IconName;
@@ -124,6 +131,34 @@ const ICON_PATHS: Record<IconName, { viewBox: string; d: string | string[] }> = 
   gem: {
     viewBox: "0 0 24 24",
     d: "M12 22l-8-10 4-8h8l4 8-8 10zM4 12h16M8 4l4 8 4-8",
+  },
+  menu: {
+    viewBox: "0 0 24 24",
+    d: "M4 6h16M4 12h16M4 18h16",
+  },
+  shop: {
+    viewBox: "0 0 24 24",
+    d: ["M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"],
+  },
+  "chevron-down": {
+    viewBox: "0 0 24 24",
+    d: "M19 9l-7 7-7-7",
+  },
+  "crown-shop": {
+    viewBox: "0 0 24 24",
+    d: "M5 16l2-8 5 4 5-4 2 8H5zM4 18h16v2H4v-2zM12 4l-1.5 3L12 8l1.5-1L12 4z",
+  },
+  dress: {
+    viewBox: "0 0 24 24",
+    d: ["M12 2a3 3 0 00-3 3v2l-4 12h14L15 7V5a3 3 0 00-3-3z", "M9 7h6"],
+  },
+  accessory: {
+    viewBox: "0 0 24 24",
+    d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4a2 2 0 110 4 2 2 0 010-4zm-4 8a2 2 0 110 4 2 2 0 010-4zm8 0a2 2 0 110 4 2 2 0 010-4z",
+  },
+  sparkle: {
+    viewBox: "0 0 24 24",
+    d: "M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z",
   },
 };
 

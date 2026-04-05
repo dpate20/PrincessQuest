@@ -6,16 +6,28 @@ interface SparkleProps {
   count?: number;
 }
 
+function seededFloat(seed: number): number {
+  const value = Math.sin(seed * 7919.431) * 21562.119;
+  return value - Math.floor(value);
+}
+
 export default function Sparkle({ count = 12 }: SparkleProps) {
   const particles = useMemo(
     () =>
-      Array.from({ length: count }, (_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        size: Math.random() * 4 + 2,
-        delay: `${Math.random() * 4}s`,
-      })),
+      Array.from({ length: count }, (_, i) => {
+        const leftSeed = seededFloat(i + 1);
+        const topSeed = seededFloat((i + 1) * 2);
+        const sizeSeed = seededFloat((i + 1) * 3);
+        const delaySeed = seededFloat((i + 1) * 4);
+
+        return {
+          id: i,
+          left: `${leftSeed * 100}%`,
+          top: `${topSeed * 100}%`,
+          size: sizeSeed * 4 + 2,
+          delay: `${delaySeed * 4}s`,
+        };
+      }),
     [count]
   );
 
@@ -32,7 +44,12 @@ export default function Sparkle({ count = 12 }: SparkleProps) {
             height: p.size,
             animationDelay: p.delay,
             opacity: 0,
-            ...(p.id % 3 === 0 ? { clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' } : {}),
+            ...(p.id % 3 === 0
+              ? {
+                  clipPath:
+                    "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+                }
+              : {}),
           }}
         />
       ))}

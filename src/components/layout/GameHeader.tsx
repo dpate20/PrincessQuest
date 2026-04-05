@@ -10,7 +10,7 @@ interface GameHeaderProps {
 }
 
 export default function GameHeader({ backHref, title }: GameHeaderProps) {
-  const totalStars = useGameStore((s) => s.totalStars);
+  const coins = useGameStore((s) => s.coins);
   const streak = useGameStore((s) => s.streak);
 
   return (
@@ -39,7 +39,7 @@ export default function GameHeader({ backHref, title }: GameHeaderProps) {
         )}
         <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full">
           <Icon name="star" size={18} className="text-yellow-400" />
-          <span className="font-bold text-purple-800">{totalStars}</span>
+          <span className="font-bold text-purple-800">{coins}</span>
         </div>
       </div>
     </header>

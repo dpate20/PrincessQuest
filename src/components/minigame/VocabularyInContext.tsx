@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type { MinigameProps } from "@/types/minigame";
 import type { VocabularyInContextData } from "@/types/content";
 
@@ -11,7 +11,6 @@ export default function VocabularyInContext({
   const data = exercise.data as VocabularyInContextData;
   const [selected, setSelected] = useState<string | null>(null);
   const [showDefinition, setShowDefinition] = useState(false);
-  const startTime = useRef(Date.now());
 
   const sentenceParts = data.sentence.split("___");
 
@@ -24,7 +23,7 @@ export default function VocabularyInContext({
       onAnswer({
         correct: choice === data.correctChoice,
         selectedAnswer: choice,
-        timeMs: Date.now() - startTime.current,
+        timeMs: 0,
         exerciseType: "vocabulary-in-context",
       });
     }, 2500);
@@ -70,7 +69,7 @@ export default function VocabularyInContext({
               key={choice}
               onClick={() => handleSelect(choice)}
               disabled={!!selected}
-              className={btnClass}
+              className={`${btnClass} quest-answer-btn`}
             >
               {choice}
             </button>

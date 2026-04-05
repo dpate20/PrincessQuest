@@ -3,7 +3,7 @@
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "ghost" | "gold";
+  variant?: "primary" | "secondary" | "ghost" | "gold" | "danger";
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
   className?: string;
@@ -16,6 +16,8 @@ const variants = {
     "bg-[var(--color-bg-panel)] hover:bg-purple-50 text-[var(--color-primary)] border-2 border-purple-300",
   ghost: "bg-transparent hover:bg-purple-50 text-[var(--color-primary)]",
   gold: "bg-gradient-to-r from-yellow-400 to-orange-400 text-white shadow-xl shadow-amber-200 border-4 border-white/30 hover:from-yellow-500 hover:to-orange-500",
+  danger:
+    "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg shadow-red-200 border-4 border-white/30 hover:from-red-400 hover:to-red-500",
 };
 
 const sizes = {
@@ -37,8 +39,10 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={`
-        rounded-full font-bold transition-all duration-200
-        hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
+        rounded-full font-bold transition-all duration-200 ease-out
+        hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg
+        active:scale-95 active:translate-y-0
+        disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:translate-y-0
         ${variants[variant]} ${sizes[size]} ${className}
       `}
     >

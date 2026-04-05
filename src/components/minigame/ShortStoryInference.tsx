@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type { MinigameProps } from "@/types/minigame";
 import type { ShortStoryInferenceData } from "@/types/content";
 import { validateFreeResponse } from "@/lib/answer-validation";
@@ -19,7 +19,6 @@ export default function ShortStoryInference({
   const [subResults, setSubResults] = useState<
     { correct: boolean; question: string }[]
   >([]);
-  const startTime = useRef(Date.now());
 
   const currentQ = questions[questionIndex];
   const isLastQuestion = questionIndex === questions.length - 1;
@@ -41,7 +40,7 @@ export default function ShortStoryInference({
         onAnswer({
           correct: totalCorrect >= Math.ceil(questions.length / 2),
           selectedAnswer: `${totalCorrect}/${questions.length} correct`,
-          timeMs: Date.now() - startTime.current,
+          timeMs: 0,
           exerciseType: "short-story-inference",
           subResults: newSubResults,
         });
@@ -98,7 +97,7 @@ export default function ShortStoryInference({
           <button
             onClick={handleSubmit}
             disabled={!input.trim()}
-            className="mt-3 w-full bg-[var(--color-accent)] text-white font-semibold rounded-lg px-6 py-3 transition-all hover:brightness-110 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="mt-3 w-full bg-[var(--color-accent)] text-white font-semibold rounded-lg px-6 py-3 transition-all hover:brightness-110 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed quest-action-btn"
           >
             Submit Answer
           </button>

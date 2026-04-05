@@ -4,7 +4,7 @@ import { use } from "react";
 import { getWorld, getLevelsForWorld } from "@/lib/content-loader";
 import { isUnlocked } from "@/lib/progression";
 import { useGameStore } from "@/stores/useGameStore";
-import GameHeader from "@/components/layout/GameHeader";
+import TopBar from "@/components/layout/TopBar";
 import LevelNode from "@/components/ui/LevelNode";
 import NPCGuide, { SpeechBubble, WORLD_NPC_MAP, NPC_GREETINGS } from "@/components/characters/NPCGuide";
 import Icon from "@/components/ui/Icon";
@@ -56,7 +56,7 @@ export default function LevelSelectPage({
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden pb-8" style={{ background: gradientStyle }}>
-      <GameHeader backHref="/world" title={world.name} />
+      <TopBar backHref="/world" title={world.name} />
 
       {/* Animated stars background */}
       {Array.from({ length: 15 }, (_, i) => (

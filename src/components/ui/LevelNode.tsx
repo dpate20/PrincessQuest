@@ -47,8 +47,8 @@ export default function LevelNode({
     <Link href={`/world/${worldId}/${level.id}`} className={`flex flex-col items-center ${offset}`}>
       <div
         className={`
-          relative rounded-full flex items-center justify-center transition-all
-          hover:scale-110 active:scale-95
+          relative rounded-full flex items-center justify-center transition-all duration-200 ease-out
+          hover:scale-110 hover:-translate-y-0.5 active:scale-95 active:translate-y-0
           ${completed
             ? "w-14 h-14 shadow-lg animate-breathe"
             : isCurrent

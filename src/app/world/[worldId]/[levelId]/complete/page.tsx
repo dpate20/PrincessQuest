@@ -9,7 +9,8 @@ import Button from "@/components/ui/Button";
 import StarRating from "@/components/ui/StarRating";
 import Sparkle from "@/components/ui/Sparkle";
 import Confetti from "@/components/ui/Confetti";
-import PrincessSara from "@/components/characters/PrincessSara";
+import Princess from "@/components/characters/Princess";
+import Icon from "@/components/ui/Icon";
 import { playSound } from "@/lib/sounds";
 
 const encouragingMessages = [
@@ -37,8 +38,9 @@ export default function LevelCompletePage({
     ? getNextLevelId(levelId, world.levelIds)
     : null;
 
-  const message =
-    encouragingMessages[Math.floor(Math.random() * encouragingMessages.length)];
+  const messageIndex =
+    Math.abs(levelId.length + score + stars) % encouragingMessages.length;
+  const message = encouragingMessages[messageIndex];
 
   useEffect(() => {
     playSound("levelComplete");
@@ -55,10 +57,24 @@ export default function LevelCompletePage({
 
       {/* Princess Sara celebrating */}
       <div className="mb-4 animate-fade-in-up">
-        <PrincessSara
-          expression={passed ? "celebrating" : "thinking"}
-          size="md"
+        <Princess animationState={passed ? "correct" : "wrong"} size="lg" showName />
+      </div>
+
+      <div className="relative w-full max-w-sm h-20 mb-4 overflow-hidden rounded-2xl border-2 border-white/40 bg-purple-900/30 backdrop-blur-sm">
+        <div
+          className={`absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-purple-800 to-purple-700 border-r border-white/20 ${
+            passed ? "animate-gate-open-left" : ""
+          }`}
         />
+        <div
+          className={`absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-purple-800 to-purple-700 border-l border-white/20 ${
+            passed ? "animate-gate-open-right" : ""
+          }`}
+        />
+        <div className="absolute inset-0 flex items-center justify-center gap-2 text-white font-bold text-sm font-[var(--font-heading)]">
+          <Icon name={passed ? "check" : "lock"} size={16} />
+          {passed ? "The Royal Gate Opens" : "Gate Still Locked"}
+        </div>
       </div>
 
       <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm w-full text-center animate-fade-in-up border-4 border-white/30">

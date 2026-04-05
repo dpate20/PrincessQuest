@@ -10,13 +10,30 @@ interface NPCGuideProps {
 interface SpeechBubbleProps {
   children: React.ReactNode;
   className?: string;
+  bubbleBg?: string;
+  bubbleBorder?: string;
 }
 
-export function SpeechBubble({ children, className = "" }: SpeechBubbleProps) {
+export function SpeechBubble({
+  children,
+  className = "",
+  bubbleBg = "rgba(255,255,255,0.96)",
+  bubbleBorder = "#E9D8FD",
+}: SpeechBubbleProps) {
   return (
-    <div className={`relative bg-white rounded-xl px-4 py-2.5 shadow-md border border-purple-100 ${className}`}>
+    <div
+      className={`relative rounded-xl px-4 py-2.5 shadow-md border ${className}`}
+      style={{ backgroundColor: bubbleBg, borderColor: bubbleBorder }}
+    >
       <p className="text-sm text-gray-700 italic">{children}</p>
-      <div className="absolute -bottom-2 left-6 w-4 h-4 bg-white border-b border-r border-purple-100 transform rotate-45" />
+      <div
+        className="absolute -bottom-2 left-6 w-4 h-4 border-b border-r transform rotate-45"
+        style={{
+          backgroundColor: bubbleBg,
+          borderBottomColor: bubbleBorder,
+          borderRightColor: bubbleBorder,
+        }}
+      />
     </div>
   );
 }

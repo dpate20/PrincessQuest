@@ -4,6 +4,11 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { LevelProgress, StreakData, ExerciseTypeTracking } from "@/types/game";
 import type { AnswerResult } from "@/types/minigame";
+import {
+  DEFAULT_OWNED_ITEMS,
+  STARTER_LOADOUT,
+  getItemCategory,
+} from "@/data/princess-customization";
 
 function getTodayStr(): string {
   return new Date().toISOString().split("T")[0];
@@ -29,8 +34,14 @@ interface GameState {
   levelProgress: Record<string, LevelProgress>;
   streak: StreakData;
   totalStars: number;
+  coins: number;
   totalExercisesCompleted: number;
   exerciseTypeStats: ExerciseTypeTracking;
+  hasSeenNamingModal: boolean;
+  equippedDress: string;
+  equippedCrown: string;
+  equippedAccessory: string;
+  ownedItems: string[];
 
   completeLevel: (
     levelId: string,
@@ -41,7 +52,14 @@ interface GameState {
   ) => void;
   recordExerciseResults: (results: AnswerResult[]) => void;
   recordActivity: () => void;
+  addCoins: (amount: number) => void;
+  purchaseItem: (
+    itemId: string,
+    cost: number
+  ) => { success: boolean; reason?: "not-enough-coins" | "already-owned" };
+  equipItem: (itemId: string) => void;
   setDisplayName: (name: string) => void;
+  setHasSeenNamingModal: () => void;
   resetProgress: () => void;
 }
 
@@ -57,8 +75,15 @@ export const useGameStore = create<GameState>()(
         lastActiveDate: "",
       },
       totalStars: 0,
+      coins: 0,
       totalExercisesCompleted: 0,
       exerciseTypeStats: { ...EMPTY_EXERCISE_STATS },
+      hasSeenNamingModal: false,
+      // Starter loadout is always available so the avatar is never blank.
+      equippedDress: STARTER_LOADOUT.dress,
+      equippedCrown: STARTER_LOADOUT.crown,
+      equippedAccessory: STARTER_LOADOUT.accessory,
+      ownedItems: [...DEFAULT_OWNED_ITEMS],
 
       completeLevel: (levelId, worldId, score, starCount, results) => {
         const state = get();
@@ -130,30 +155,106 @@ export const useGameStore = create<GameState>()(
         });
       },
 
+      addCoins: (amount) => {
+        const safeAmount = Math.max(0, amount);
+        if (safeAmount === 0) return;
+
+        set((state) => ({
+          // Coins are the shop currency used for cosmetic unlocks.
+          coins: state.coins + safeAmount,
+        }));
+      },
+
+      purchaseItem: (itemId, cost) => {
+        const state = get();
+        if (state.ownedItems.includes(itemId)) {
+          return { success: false, reason: "already-owned" as const };
+        }
+
+        if (state.coins < cost) {
+          return { success: false, reason: "not-enough-coins" as const };
+        }
+
+        set({
+          coins: state.coins - cost,
+          ownedItems: [...state.ownedItems, itemId],
+        });
+
+        return { success: true };
+      },
+
+      equipItem: (itemId) => {
+        const state = get();
+        if (!state.ownedItems.includes(itemId)) return;
+
+        const category = getItemCategory(itemId);
+        if (!category) return;
+
+        if (category === "dresses") {
+          set({ equippedDress: itemId });
+          return;
+        }
+
+        if (category === "crowns") {
+          set({ equippedCrown: itemId });
+          return;
+        }
+
+        set({ equippedAccessory: itemId });
+      },
+
       setDisplayName: (name) => set({ displayName: name }),
+
+      setHasSeenNamingModal: () => set({ hasSeenNamingModal: true }),
 
       resetProgress: () =>
         set({
           levelProgress: {},
           streak: { currentStreak: 0, longestStreak: 0, lastActiveDate: "" },
           totalStars: 0,
+          coins: 0,
           totalExercisesCompleted: 0,
           exerciseTypeStats: { ...EMPTY_EXERCISE_STATS },
+          equippedDress: STARTER_LOADOUT.dress,
+          equippedCrown: STARTER_LOADOUT.crown,
+          equippedAccessory: STARTER_LOADOUT.accessory,
+          ownedItems: [...DEFAULT_OWNED_ITEMS],
         }),
     }),
     {
       name: "princess-quest-game",
-      version: 2,
-      migrate: () => {
-        // V2: Complete content overhaul — wipe old progress
+      version: 3,
+      migrate: (persistedState) => {
+        const state = (persistedState ?? {}) as Partial<GameState>;
+        const earnedStars = state.totalStars ?? 0;
+        const ownedItems = Array.from(
+          new Set([...(state.ownedItems ?? []), ...DEFAULT_OWNED_ITEMS])
+        );
+
         return {
-          playerId: crypto.randomUUID?.() ?? Math.random().toString(36).slice(2),
-          displayName: "Scholar",
-          levelProgress: {},
-          streak: { currentStreak: 0, longestStreak: 0, lastActiveDate: "" },
-          totalStars: 0,
-          totalExercisesCompleted: 0,
-          exerciseTypeStats: { ...EMPTY_EXERCISE_STATS },
+          playerId:
+            state.playerId ??
+            crypto.randomUUID?.() ??
+            Math.random().toString(36).slice(2),
+          displayName: state.displayName ?? "Scholar",
+          levelProgress: state.levelProgress ?? {},
+          streak: state.streak ?? {
+            currentStreak: 0,
+            longestStreak: 0,
+            lastActiveDate: "",
+          },
+          totalStars: earnedStars,
+          coins: state.coins ?? earnedStars * 10,
+          totalExercisesCompleted: state.totalExercisesCompleted ?? 0,
+          exerciseTypeStats: state.exerciseTypeStats ?? {
+            ...EMPTY_EXERCISE_STATS,
+          },
+          hasSeenNamingModal: state.hasSeenNamingModal ?? false,
+          equippedDress: state.equippedDress ?? STARTER_LOADOUT.dress,
+          equippedCrown: state.equippedCrown ?? STARTER_LOADOUT.crown,
+          equippedAccessory:
+            state.equippedAccessory ?? STARTER_LOADOUT.accessory,
+          ownedItems,
         };
       },
     }

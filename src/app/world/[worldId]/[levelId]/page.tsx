@@ -51,6 +51,8 @@ export default function MinigamePlayPage({
       </div>
 
       <MinigameShell
+        worldId={worldId}
+        levelStorySnippet={level.storySnippet}
         exercises={level.exercises}
         starThresholds={level.starThresholds}
         onComplete={handleComplete}

@@ -3,12 +3,11 @@
 import { useState } from "react";
 import { useGameStore } from "@/stores/useGameStore";
 import { useSettingsStore } from "@/stores/useSettingsStore";
-import GameHeader from "@/components/layout/GameHeader";
+import TopBar from "@/components/layout/TopBar";
 import BottomNav from "@/components/layout/BottomNav";
 import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 import Icon from "@/components/ui/Icon";
-import PrincessSara from "@/components/characters/PrincessSara";
-import { SpeechBubble } from "@/components/characters/NPCGuide";
 
 export default function SettingsPage() {
   const displayName = useGameStore((s) => s.displayName);
@@ -32,8 +31,8 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-32">
-      <GameHeader title="Royal Chambers" />
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-900 via-purple-700 to-purple-500 relative overflow-hidden pb-16">
+      <TopBar title="Royal Chambers" />
 
       {/* Decorative stars */}
       {Array.from({ length: 10 }, (_, i) => (
@@ -50,19 +49,12 @@ export default function SettingsPage() {
         </div>
       ))}
 
-      <div className="relative z-10 flex-1 px-4 py-6 max-w-lg mx-auto w-full">
-        {/* Princess Sara guide */}
-        <div className="flex items-end gap-3 mb-6 animate-fade-in-up">
-          <PrincessSara expression="happy" size="sm" />
-          <SpeechBubble className="flex-1">
-            Customize your quest settings here!
-          </SpeechBubble>
-        </div>
-
-        {/* Display Name */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-white/30 shadow-lg mb-4">
+      <div className="relative z-10 flex-1 px-4 py-6 max-w-[900px] mx-auto w-full">
+        {/* Princess Name */}
+        <Card className="p-5 mb-4 animate-fade-in-up">
           <label className="block text-sm font-semibold text-purple-800 mb-2">
-            Display Name
+            <Icon name="crown" size={16} className="inline text-yellow-500 mr-1.5" />
+            Princess Name
           </label>
           <div className="flex gap-2">
             <input
@@ -70,7 +62,7 @@ export default function SettingsPage() {
               value={nameInput}
               onChange={(e) => setNameInput(e.target.value)}
               maxLength={20}
-              className="flex-1 rounded-full border-2 border-purple-200 px-4 py-2 text-sm outline-none focus:border-yellow-400 transition-colors bg-white"
+              className="flex-1 rounded-full border-2 border-purple-200 px-4 py-2 text-sm outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all bg-white"
             />
             <Button
               variant="gold"
@@ -81,12 +73,13 @@ export default function SettingsPage() {
               Save
             </Button>
           </div>
-        </div>
+        </Card>
 
         {/* Sound Effects */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-white/30 shadow-lg mb-4">
+        <Card className="p-5 mb-4 animate-fade-in-up" style={{ animationDelay: "0.05s" } as React.CSSProperties}>
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold text-purple-800">
+              <Icon name="gem" size={16} className="inline text-purple-500 mr-1.5" />
               Sound Effects
             </span>
             <button
@@ -121,16 +114,18 @@ export default function SettingsPage() {
                   backgroundColor: "white",
                   boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
                   transition: "transform 0.2s",
-                  transform: soundEffectsEnabled ? "translateX(20px)" : "translateX(0px)",
+                  transform: soundEffectsEnabled
+                    ? "translateX(20px)"
+                    : "translateX(0px)",
                   display: "block",
                 }}
               />
             </button>
           </div>
-        </div>
+        </Card>
 
         {/* Reset Progress */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border-2 border-red-200/50 shadow-lg">
+        <Card className="p-5 border-2 border-red-200/50 animate-fade-in-up" style={{ animationDelay: "0.1s" } as React.CSSProperties}>
           <h3 className="text-sm font-semibold text-purple-800 mb-2">
             Reset Progress
           </h3>
@@ -140,15 +135,16 @@ export default function SettingsPage() {
           </p>
           {showResetConfirm ? (
             <div className="flex gap-2">
-              <Button variant="ghost" size="sm" onClick={() => setShowResetConfirm(false)}>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowResetConfirm(false)}
+              >
                 Cancel
               </Button>
-              <button
-                onClick={handleReset}
-                className="px-4 py-2 text-sm font-semibold rounded-full bg-[var(--color-error)] text-white hover:brightness-110 active:scale-95 transition-all"
-              >
+              <Button variant="danger" size="sm" onClick={handleReset}>
                 Confirm Reset
-              </button>
+              </Button>
             </div>
           ) : (
             <Button
@@ -159,7 +155,7 @@ export default function SettingsPage() {
               Reset All Progress
             </Button>
           )}
-        </div>
+        </Card>
       </div>
 
       <BottomNav />

@@ -13,6 +13,11 @@
   --gradient-royal: linear-gradient(135deg, #6B46C1, #805AD5);
   --gradient-gold: linear-gradient(135deg, #FBD38D, #F6AD55);
   --gradient-parchment: linear-gradient(180deg, #FAF5FF 0%, #F3E8FF 100%);
+  --shadow-card: 0 4px 16px rgba(107, 70, 193, 0.12);
+  --shadow-button: 0 4px 12px rgba(107, 70, 193, 0.2);
+  --shadow-glow-gold: 0 0 20px rgba(251, 211, 141, 0.4);
+  --radius-card: 16px;
+  --radius-button: 9999px;
   --color-kingdom-fortress: #4299E1;
   --color-kingdom-courtyard: #48BB78;
   --color-kingdom-tower: #ED8936;
@@ -102,6 +107,63 @@ body {
   100% { background-position: 200% 0; }
 }
 
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-8px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes glow-green {
+  0%, 100% { box-shadow: 0 0 8px rgba(56, 161, 105, 0.2); }
+  50% { box-shadow: 0 0 24px rgba(56, 161, 105, 0.5); }
+}
+
+@keyframes glow-red {
+  0%, 100% { box-shadow: 0 0 8px rgba(252, 129, 129, 0.2); }
+  50% { box-shadow: 0 0 24px rgba(252, 129, 129, 0.5); }
+}
+
+@keyframes princess-celebrate {
+  0% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-8px) scale(1.04); }
+  60% { transform: translateY(0) scale(1.02); }
+  100% { transform: translateY(-2px) scale(1); }
+}
+
+@keyframes princess-wrong {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-4px) rotate(-3deg); }
+  40% { transform: translateX(4px) rotate(3deg); }
+  60% { transform: translateX(-3px) rotate(-2deg); }
+  80% { transform: translateX(3px) rotate(2deg); }
+}
+
+@keyframes coin-pop {
+  0% { transform: translateX(-50%) translateY(8px) scale(0.9); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-8px) scale(1); opacity: 0; }
+}
+
+@keyframes coin-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.6); }
+  45% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes gate-open-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-110%); }
+}
+
+@keyframes gate-open-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(110%); }
+}
+
 .animate-star-fill { animation: star-fill 0.5s ease-out forwards; }
 .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
 .animate-gentle-float { animation: gentle-float 3s ease-in-out infinite; }
@@ -111,3 +173,37 @@ body {
 .animate-breathe { animation: breathe 3s ease-in-out infinite; }
 .animate-fire-flicker { animation: fire-flicker 0.8s ease-in-out infinite; }
 .animate-star-burst { animation: star-burst 0.6s ease-out forwards; }
+.animate-slide-down { animation: slide-down 0.2s ease-out forwards; }
+.animate-bounce-in { animation: bounce-in 0.3s ease-out forwards; }
+.animate-glow-green { animation: glow-green 1.5s ease-in-out infinite; }
+.animate-glow-red { animation: glow-red 1.5s ease-in-out infinite; }
+.animate-princess-celebrate { animation: princess-celebrate 0.6s ease-out; }
+.animate-princess-wrong { animation: princess-wrong 0.5s ease-in-out; }
+.animate-coin-pop { animation: coin-pop 1s ease-out forwards; }
+.animate-coin-sparkle { animation: coin-sparkle 0.9s ease-in-out infinite; }
+.animate-gate-open-left { animation: gate-open-left 0.9s ease-in forwards; }
+.animate-gate-open-right { animation: gate-open-right 0.9s ease-in forwards; }
+
+.quest-answer-btn {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+.quest-answer-btn:hover {
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.35);
+  transform: translateY(-2px);
+}
+
+.quest-answer-btn:active {
+  transform: scale(0.96);
+}
+
+.quest-action-btn {
+  box-shadow: 0 8px 18px rgba(246, 173, 85, 0.35);
+}
+
+.quest-action-btn:hover {
+  box-shadow: 0 10px 24px rgba(246, 173, 85, 0.45);
+}

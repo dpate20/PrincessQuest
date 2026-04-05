@@ -133,7 +133,7 @@ export default function KingdomCard({
   return (
     <Link href={`/world/${world.id}`}>
       <div
-        className="rounded-xl overflow-hidden border-2 shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] hover:shadow-xl cursor-pointer"
+        className="rounded-xl overflow-hidden border-2 shadow-lg transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98] active:translate-y-0 cursor-pointer"
         style={{
           borderColor: colors.border,
           boxShadow: `0 4px 14px ${colors.glow}`,

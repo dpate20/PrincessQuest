@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type { MinigameProps } from "@/types/minigame";
 import type { FillInTheBlankData } from "@/types/content";
 import { validateSpelling } from "@/lib/answer-validation";
@@ -10,7 +10,6 @@ export default function FillInTheBlank({ exercise, onAnswer }: MinigameProps) {
   const [input, setInput] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const startTime = useRef(Date.now());
 
   const sentenceParts = data.sentence.split("___");
 
@@ -28,7 +27,7 @@ export default function FillInTheBlank({ exercise, onAnswer }: MinigameProps) {
       onAnswer({
         correct,
         selectedAnswer: input.trim(),
-        timeMs: Date.now() - startTime.current,
+        timeMs: 0,
         exerciseType: "fill-in-the-blank",
       });
     }, 800);
@@ -81,7 +80,7 @@ export default function FillInTheBlank({ exercise, onAnswer }: MinigameProps) {
         <button
           onClick={handleSubmit}
           disabled={!input.trim()}
-          className="bg-[var(--color-accent)] text-white font-semibold rounded-lg px-8 py-3 transition-all hover:brightness-110 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
+          className="bg-[var(--color-accent)] text-white font-semibold rounded-lg px-8 py-3 transition-all hover:brightness-110 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed quest-action-btn"
         >
           Check Answer
         </button>

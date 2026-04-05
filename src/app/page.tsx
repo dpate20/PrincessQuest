@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { useGameStore } from "@/stores/useGameStore";
+import TopBar from "@/components/layout/TopBar";
 import BottomNav from "@/components/layout/BottomNav";
 import Button from "@/components/ui/Button";
-import Icon from "@/components/ui/Icon";
-import PrincessSara from "@/components/characters/PrincessSara";
+import Princess from "@/components/characters/Princess";
+import PrincessNameModal from "@/components/ui/PrincessNameModal";
+import Sparkle from "@/components/ui/Sparkle";
 
 export default function HomePage() {
-  const totalStars = useGameStore((s) => s.totalStars);
-  const streak = useGameStore((s) => s.streak);
+  const hasSeenNamingModal = useGameStore((s) => s.hasSeenNamingModal);
   const levelProgress = useGameStore((s) => s.levelProgress);
 
   const progressEntries = Object.values(levelProgress).sort(
@@ -19,76 +20,48 @@ export default function HomePage() {
   const lastPlayed = progressEntries[0];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-purple-600 via-purple-500 to-pink-400 relative overflow-hidden pb-32">
-      {/* Decorative stars */}
-      <div className="absolute top-8 left-12 text-yellow-300 animate-pulse">
-        <Icon name="star" size={32} />
-      </div>
-      <div className="absolute top-24 right-20 text-yellow-200 animate-pulse" style={{ animationDelay: "0.2s" }}>
-        <Icon name="star" size={24} />
-      </div>
-      <div className="absolute top-16 right-40 text-yellow-300 animate-pulse" style={{ animationDelay: "0.4s" }}>
-        <Icon name="star" size={20} />
-      </div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-purple-600 via-purple-500 to-pink-400 relative overflow-hidden pb-16">
+      <TopBar />
 
-      {/* Clouds */}
-      <div className="absolute top-12 left-32 w-24 h-12 bg-white/30 rounded-full blur-sm" />
-      <div className="absolute top-20 left-40 w-32 h-10 bg-white/20 rounded-full blur-sm" />
-      <div className="absolute top-16 right-24 w-28 h-12 bg-white/25 rounded-full blur-sm" />
+      {/* Naming modal for first-time users */}
+      <PrincessNameModal open={!hasSeenNamingModal} />
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 py-12">
+      <div className="relative z-10 flex flex-col items-center max-w-[900px] mx-auto px-6 pt-4">
         {/* Title */}
-        <div className="mb-8 text-center">
-          <div className="inline-block bg-gradient-to-r from-yellow-200 to-yellow-400 px-8 py-3 rounded-full shadow-lg mb-4">
-            <h1 className="text-4xl font-bold text-purple-800 drop-shadow-sm font-[var(--font-heading)]">
+        <div className="mb-6 text-center animate-fade-in-up">
+          <div className="inline-block bg-gradient-to-r from-yellow-200 to-yellow-400 px-6 py-2 rounded-full shadow-lg mb-3">
+            <h1 className="text-2xl sm:text-3xl font-bold text-purple-800 drop-shadow-sm font-[var(--font-heading)]">
               Princess English Quest
             </h1>
           </div>
-          <p className="text-white text-lg mt-4 drop-shadow-md">
-            Join Princess Sara on a magical quest for learning
-          </p>
-          <p className="text-white text-lg drop-shadow-md">
-            vocabulary, spelling and reading comprehension!
+          <p className="text-white/90 text-sm drop-shadow-md">
+            A magical quest for learning through adventure
           </p>
         </div>
 
-        {/* Character */}
-        <div className="mb-8 animate-fade-in-up">
-          <PrincessSara expression="celebrating" size="lg" />
-        </div>
-
-        {/* Stats row */}
-        <div className="flex items-center gap-4 mb-8">
-          {streak.currentStreak > 0 && (
-            <div className="flex items-center gap-2 bg-white/90 px-6 py-3 rounded-full shadow-lg">
-              <span className="animate-fire-flicker">
-                <Icon name="flame" size={24} className="text-orange-500" />
-              </span>
-              <span className="text-2xl font-bold text-purple-800">
-                {streak.currentStreak} day{streak.currentStreak !== 1 ? "s" : ""}
-              </span>
-            </div>
-          )}
-          <div className="flex items-center gap-2 bg-white/90 px-6 py-3 rounded-full shadow-lg">
-            <Icon name="star" size={24} className="text-yellow-400" />
-            <span className="text-2xl font-bold text-purple-800">
-              {totalStars} star{totalStars !== 1 ? "s" : ""}
-            </span>
+        {/* Princess centerpiece with sparkles */}
+        <div className="relative mt-8 mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <div className="absolute inset-0 -m-8 pointer-events-none">
+            <Sparkle count={8} />
           </div>
+          <Princess animationState="idle" size="lg" showName={hasSeenNamingModal} />
         </div>
 
         {/* Main CTA button */}
-        <Link href="/world" className="mb-4">
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-white px-12 py-5 rounded-full shadow-xl text-2xl font-bold transform transition-all hover:scale-105 active:scale-95">
-            Begin Your Quest
-          </button>
-        </Link>
+        <div className="animate-fade-in-up w-full max-w-xs" style={{ animationDelay: "0.3s" }}>
+          <Link href="/world" className="block">
+            <Button variant="gold" size="lg" className="w-full text-xl">
+              Begin Your Quest
+            </Button>
+          </Link>
+        </div>
 
         {lastPlayed && (
           <Link
             href={`/world/${lastPlayed.worldId}/${lastPlayed.levelId}`}
-            className="text-center text-sm text-white/90 hover:text-yellow-200 hover:underline transition-colors drop-shadow"
+            className="mt-4 text-center text-sm text-white/90 hover:text-yellow-200 hover:underline transition-colors drop-shadow animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
           >
             Continue your adventure
           </Link>

@@ -7,14 +7,19 @@ interface ConfettiProps {
 }
 
 const COLORS = [
-  "#F6AD55", // gold
-  "#6B46C1", // purple
-  "#48BB78", // emerald
-  "#FC8181", // pink
-  "#4299E1", // blue
-  "#FBD38D", // light gold
-  "#805AD5", // light purple
+  "#F6AD55",
+  "#6B46C1",
+  "#48BB78",
+  "#FC8181",
+  "#4299E1",
+  "#FBD38D",
+  "#805AD5",
 ];
+
+function seededFloat(seed: number): number {
+  const value = Math.sin(seed * 9999.713) * 43758.5453123;
+  return value - Math.floor(value);
+}
 
 export default function Confetti({ count = 40 }: ConfettiProps) {
   const [visible, setVisible] = useState(true);
@@ -26,16 +31,25 @@ export default function Confetti({ count = 40 }: ConfettiProps) {
 
   const pieces = useMemo(
     () =>
-      Array.from({ length: count }, (_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        width: Math.random() * 6 + 4,
-        height: Math.random() * 4 + 2,
-        color: COLORS[i % COLORS.length],
-        delay: `${Math.random() * 0.8}s`,
-        duration: `${Math.random() * 1.5 + 2}s`,
-        rotation: Math.random() * 360,
-      })),
+      Array.from({ length: count }, (_, i) => {
+        const leftSeed = seededFloat(i + 1);
+        const widthSeed = seededFloat((i + 1) * 2);
+        const heightSeed = seededFloat((i + 1) * 3);
+        const delaySeed = seededFloat((i + 1) * 4);
+        const durationSeed = seededFloat((i + 1) * 5);
+        const rotateSeed = seededFloat((i + 1) * 6);
+
+        return {
+          id: i,
+          left: `${leftSeed * 100}%`,
+          width: widthSeed * 6 + 4,
+          height: heightSeed * 4 + 2,
+          color: COLORS[i % COLORS.length],
+          delay: `${delaySeed * 0.8}s`,
+          duration: `${durationSeed * 1.5 + 2}s`,
+          rotation: rotateSeed * 360,
+        };
+      }),
     [count]
   );
 

@@ -1,19 +1,18 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useMemo } from "react";
 import type { MinigameProps } from "@/types/minigame";
 import type { SpellingPairsData } from "@/types/content";
 
 export default function SpellingPairs({ exercise, onAnswer }: MinigameProps) {
   const data = exercise.data as SpellingPairsData;
   const [selected, setSelected] = useState<string | null>(null);
-  const startTime = useRef(Date.now());
 
-  // Randomize left/right position
-  const [options] = useState(() => {
+  const options = useMemo(() => {
     const pair = [data.correctSpelling, data.incorrectSpelling];
-    return Math.random() > 0.5 ? pair : pair.reverse();
-  });
+    const shouldFlip = (exercise.id.length + data.correctSpelling.length) % 2 === 0;
+    return shouldFlip ? [pair[1], pair[0]] : pair;
+  }, [data.correctSpelling, data.incorrectSpelling, exercise.id]);
 
   function handleSelect(word: string) {
     if (selected) return;
@@ -24,7 +23,7 @@ export default function SpellingPairs({ exercise, onAnswer }: MinigameProps) {
       onAnswer({
         correct,
         selectedAnswer: word,
-        timeMs: Date.now() - startTime.current,
+        timeMs: 0,
         exerciseType: "spelling-pairs",
       });
     }, 600);
@@ -70,7 +69,7 @@ export default function SpellingPairs({ exercise, onAnswer }: MinigameProps) {
               key={word}
               onClick={() => handleSelect(word)}
               disabled={!!selected}
-              className={cardClass}
+              className={`${cardClass} quest-answer-btn`}
             >
               {word}
             </button>

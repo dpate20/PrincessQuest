@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type { MinigameProps } from "@/types/minigame";
 import type { ReadingComprehensionData } from "@/types/content";
 import ScrollContainer from "@/components/ui/ScrollContainer";
@@ -17,7 +17,6 @@ export default function ReadingComprehension({
   const [subResults, setSubResults] = useState<
     { correct: boolean; question: string }[]
   >([]);
-  const startTime = useRef(Date.now());
 
   const currentQ = questions[questionIndex];
   const isLastQuestion = questionIndex === questions.length - 1;
@@ -38,7 +37,7 @@ export default function ReadingComprehension({
         onAnswer({
           correct: totalCorrect >= Math.ceil(questions.length / 2),
           selectedAnswer: `${totalCorrect}/${questions.length} correct`,
-          timeMs: Date.now() - startTime.current,
+          timeMs: 0,
           exerciseType: "reading-comprehension",
           subResults: newSubResults,
         });
@@ -89,7 +88,7 @@ export default function ReadingComprehension({
                 key={option}
                 onClick={() => handleSelectOption(option)}
                 disabled={!!selectedOption}
-                className={cls}
+                className={`${cls} quest-answer-btn`}
               >
                 {option}
               </button>
