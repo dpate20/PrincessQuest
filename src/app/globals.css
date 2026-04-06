@@ -154,6 +154,36 @@ body {
   45% { opacity: 1; transform: scale(1.1); }
 }
 
+@keyframes correct-feedback-wash {
+  0% { background: rgba(16, 185, 129, 0); }
+  45% { background: rgba(16, 185, 129, 0.16); }
+  100% { background: rgba(16, 185, 129, 0); }
+}
+
+@keyframes wrong-feedback-wash {
+  0% { background: rgba(244, 63, 94, 0); }
+  45% { background: rgba(244, 63, 94, 0.14); }
+  100% { background: rgba(244, 63, 94, 0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 0.45; }
+  50% { transform: scale(1.45); opacity: 1; }
+}
+
+@keyframes quest-panel-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes quest-card-in {
+  0% { opacity: 0; transform: translateY(8px) scale(0.985); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 @keyframes gate-open-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-110%); }
@@ -181,6 +211,11 @@ body {
 .animate-princess-wrong { animation: princess-wrong 0.5s ease-in-out; }
 .animate-coin-pop { animation: coin-pop 1s ease-out forwards; }
 .animate-coin-sparkle { animation: coin-sparkle 0.9s ease-in-out infinite; }
+.animate-correct-feedback-wash { animation: correct-feedback-wash 0.75s ease-out; }
+.animate-wrong-feedback-wash { animation: wrong-feedback-wash 0.8s ease-out; }
+.animate-pulse-dot { animation: pulse-dot 1.2s ease-in-out infinite; }
+.animate-quest-panel-shake { animation: quest-panel-shake 0.45s ease-in-out; }
+.animate-quest-card-in { animation: quest-card-in 0.28s ease-out; }
 .animate-gate-open-left { animation: gate-open-left 0.9s ease-in forwards; }
 .animate-gate-open-right { animation: gate-open-right 0.9s ease-in forwards; }
 

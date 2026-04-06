@@ -10,13 +10,17 @@ import {
 } from "@/data/princess-customization";
 
 export type PrincessAnimationState = "idle" | "correct" | "wrong";
-export type PrincessSize = "sm" | "md" | "lg" | "xl";
+export type PrincessSize = "sm" | "md" | "lg" | "xl" | "hero";
 
 interface PrincessProps {
   animationState?: PrincessAnimationState;
   size?: PrincessSize;
   showName?: boolean;
   animateIdle?: boolean;
+  dressId?: string;
+  crownId?: string;
+  accessoryId?: string;
+  nameOverride?: string;
   className?: string;
 }
 
@@ -25,6 +29,7 @@ const sizeToSaraSize: Record<PrincessSize, "sm" | "md" | "lg"> = {
   md: "md",
   lg: "lg",
   xl: "lg",
+  hero: "md",
 };
 
 const outerScale: Record<PrincessSize, number> = {
@@ -32,6 +37,7 @@ const outerScale: Record<PrincessSize, number> = {
   md: 1,
   lg: 1.2,
   xl: 1.32,
+  hero: 1.33,
 };
 
 export default function Princess({
@@ -39,6 +45,10 @@ export default function Princess({
   size = "md",
   showName = false,
   animateIdle = true,
+  dressId,
+  crownId,
+  accessoryId,
+  nameOverride,
   className = "",
 }: PrincessProps) {
   const displayName = useGameStore((s) => s.displayName);
@@ -46,17 +56,22 @@ export default function Princess({
   const equippedCrown = useGameStore((s) => s.equippedCrown);
   const equippedAccessory = useGameStore((s) => s.equippedAccessory);
 
+  const activeDress = dressId ?? equippedDress;
+  const activeCrown = crownId ?? equippedCrown;
+  const activeAccessory = accessoryId ?? equippedAccessory;
+  const activeName = nameOverride ?? displayName;
+
   const dressStyle = useMemo(
-    () => getDressStyle(equippedDress),
-    [equippedDress]
+    () => getDressStyle(activeDress),
+    [activeDress]
   );
   const crownStyle = useMemo(
-    () => getCrownStyle(equippedCrown),
-    [equippedCrown]
+    () => getCrownStyle(activeCrown),
+    [activeCrown]
   );
   const accessoryStyle = useMemo(
-    () => getAccessoryStyle(equippedAccessory),
-    [equippedAccessory]
+    () => getAccessoryStyle(activeAccessory),
+    [activeAccessory]
   );
 
   const shouldAnimateIdle = animationState === "idle" && animateIdle;
@@ -118,7 +133,7 @@ export default function Princess({
       {showName && (
         <div className="bg-gradient-to-r from-yellow-300 to-yellow-400 px-5 py-1.5 rounded-full shadow-md border-2 border-white/40">
           <span className="text-sm font-bold text-purple-800 font-[var(--font-heading)]">
-            {displayName}
+            {activeName}
           </span>
         </div>
       )}

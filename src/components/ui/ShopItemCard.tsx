@@ -4,6 +4,8 @@ import type { ShopItem } from "@/data/shop-items";
 import Card from "./Card";
 import Button from "./Button";
 import Icon from "./Icon";
+import Princess from "@/components/characters/Princess";
+import { useGameStore } from "@/stores/useGameStore";
 
 interface ShopItemCardProps {
   item: ShopItem;
@@ -20,19 +22,21 @@ export default function ShopItemCard({
   onBuy,
   onEquip,
 }: ShopItemCardProps) {
-  const categoryIcon =
-    item.category === "dresses"
-      ? "dress"
-      : item.category === "crowns"
-        ? "crown-shop"
-        : "accessory";
+  const equippedDress = useGameStore((s) => s.equippedDress);
+  const equippedCrown = useGameStore((s) => s.equippedCrown);
+  const equippedAccessory = useGameStore((s) => s.equippedAccessory);
 
-  const categoryColor =
+  const previewDress = item.category === "dresses" ? item.id : equippedDress;
+  const previewCrown = item.category === "crowns" ? item.id : equippedCrown;
+  const previewAccessory =
+    item.category === "accessories" ? item.id : equippedAccessory;
+
+  const previewBg =
     item.category === "dresses"
-      ? "#805AD5"
+      ? "from-fuchsia-100 to-purple-100"
       : item.category === "crowns"
-        ? "#D69E2E"
-        : "#319795";
+        ? "from-amber-100 to-yellow-100"
+        : "from-cyan-100 to-indigo-100";
 
   return (
     <Card
@@ -42,12 +46,23 @@ export default function ShopItemCard({
     >
       {/* Item illustration placeholder */}
       <div
-        className="w-full aspect-square rounded-xl mb-3 flex items-center justify-center relative"
-        style={{ backgroundColor: `${categoryColor}15` }}
+        className={`w-full aspect-square rounded-xl mb-3 flex items-center justify-center relative bg-gradient-to-br ${previewBg}`}
       >
-        <span style={{ color: state === "locked" ? "#9CA3AF" : categoryColor }}>
-          <Icon name={categoryIcon} size={40} />
-        </span>
+        <div
+          className={`pointer-events-none transition-all duration-200 ${
+            state === "locked" ? "grayscale-[0.7] opacity-85" : ""
+          }`}
+        >
+          <Princess
+            size="md"
+            animateIdle={false}
+            showName={false}
+            dressId={previewDress}
+            crownId={previewCrown}
+            accessoryId={previewAccessory}
+            className="scale-90"
+          />
+        </div>
         {state === "locked" && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/10 rounded-xl">
             <div className="w-8 h-8 rounded-full bg-gray-400/80 flex items-center justify-center">

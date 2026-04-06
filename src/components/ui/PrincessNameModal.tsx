@@ -8,22 +8,52 @@ import Icon from "./Icon";
 
 interface PrincessNameModalProps {
   open: boolean;
+  canClose?: boolean;
+  initialName?: string;
+  onClose?: () => void;
+  onComplete?: (name: string) => void;
 }
 
-export default function PrincessNameModal({ open }: PrincessNameModalProps) {
+export default function PrincessNameModal({
+  open,
+  canClose = false,
+  initialName = "",
+  onClose,
+  onComplete,
+}: PrincessNameModalProps) {
   const setDisplayName = useGameStore((s) => s.setDisplayName);
   const setHasSeenNamingModal = useGameStore((s) => s.setHasSeenNamingModal);
-  const [name, setName] = useState("");
+  const [nameDraft, setNameDraft] = useState<string | null>(null);
+  const inputValue = nameDraft ?? initialName;
+
+  function resetDraft() {
+    setNameDraft(null);
+  }
 
   function handleConfirm() {
-    if (name.trim()) {
-      setDisplayName(name.trim());
+    const trimmed = inputValue.trim();
+    if (trimmed) {
+      setDisplayName(trimmed);
       setHasSeenNamingModal();
+      onComplete?.(trimmed);
+      resetDraft();
+      if (canClose) onClose?.();
     }
   }
 
   return (
-    <Modal open={open} onClose={() => {}} title="">
+    <Modal
+      open={open}
+      onClose={
+        canClose
+          ? () => {
+              resetDraft();
+              onClose?.();
+            }
+          : () => {}
+      }
+      title=""
+    >
       <div className="flex flex-col items-center gap-5 py-2">
         {/* Crown icon */}
         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center shadow-lg animate-bounce-in">
@@ -43,8 +73,8 @@ export default function PrincessNameModal({ open }: PrincessNameModalProps) {
         {/* Name input */}
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={inputValue}
+          onChange={(e) => setNameDraft(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleConfirm()}
           placeholder="Enter your name..."
           maxLength={20}
@@ -57,12 +87,12 @@ export default function PrincessNameModal({ open }: PrincessNameModalProps) {
           variant="gold"
           size="lg"
           onClick={handleConfirm}
-          disabled={!name.trim()}
+          disabled={!inputValue.trim()}
           className="w-full"
         >
           <span className="flex items-center justify-center gap-2">
             <Icon name="sparkle" size={20} />
-            Begin My Quest
+            {initialName.trim() ? "Save My Name" : "Begin My Quest"}
             <Icon name="sparkle" size={20} />
           </span>
         </Button>

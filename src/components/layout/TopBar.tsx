@@ -10,6 +10,7 @@ import Dropdown, { type DropdownItem } from "@/components/ui/Dropdown";
 interface TopBarProps {
   title?: string;
   backHref?: string;
+  titleSize?: "default" | "large";
 }
 
 const NAV_ITEMS: DropdownItem[] = [
@@ -20,7 +21,11 @@ const NAV_ITEMS: DropdownItem[] = [
   { label: "Settings", icon: "settings", href: "/settings" },
 ];
 
-export default function TopBar({ title, backHref }: TopBarProps) {
+export default function TopBar({
+  title,
+  backHref,
+  titleSize = "default",
+}: TopBarProps) {
   const coins = useGameStore((s) => s.coins);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -59,7 +64,11 @@ export default function TopBar({ title, backHref }: TopBarProps) {
 
       {/* Center: title */}
       {title && (
-        <span className="bg-purple-500/80 backdrop-blur-sm text-white px-5 py-1.5 rounded-full font-bold text-sm shadow-md border border-white/20">
+        <span
+          className={`bg-purple-500/80 backdrop-blur-sm text-white px-5 py-1.5 rounded-full font-bold shadow-md border border-white/20 ${
+            titleSize === "large" ? "text-base sm:text-lg" : "text-sm"
+          }`}
+        >
           {title}
         </span>
       )}

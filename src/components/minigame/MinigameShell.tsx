@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { Exercise, MinigameType } from "@/types/content";
 import type { MinigameProps, AnswerResult } from "@/types/minigame";
 import { useMinigame } from "@/hooks/useMinigame";
@@ -61,6 +61,25 @@ export default function MinigameShell({
     total,
   } = useMinigame(exercises, starThresholds);
 
+  const streakStats = useMemo(() => {
+    let runningStreak = 0;
+    let bestStreak = 0;
+
+    for (const answer of results) {
+      if (answer.correct) {
+        runningStreak += 1;
+        bestStreak = Math.max(bestStreak, runningStreak);
+      } else {
+        runningStreak = 0;
+      }
+    }
+
+    return {
+      currentStreak: runningStreak,
+      bestStreak,
+    };
+  }, [results]);
+
   const handleFeedbackDone = useCallback(() => {
     advance();
   }, [advance]);
@@ -115,8 +134,24 @@ export default function MinigameShell({
     ? currentIndex
     : Math.min(currentIndex + 1, total);
 
+  const pacingText = showingFeedback
+    ? lastResult?.correct
+      ? "Excellent answer. Preparing your next challenge..."
+      : "Shake it off. The next challenge is on the way..."
+    : "Take your time and pick the strongest answer.";
+
   return (
     <div className="flex flex-col flex-1 px-4 py-5 gap-4 max-w-[980px] mx-auto w-full">
+      {showingFeedback && lastResult && (
+        <div
+          className={`pointer-events-none fixed inset-0 z-20 ${
+            lastResult.correct
+              ? "animate-correct-feedback-wash"
+              : "animate-wrong-feedback-wash"
+          }`}
+        />
+      )}
+
       <div className="bg-white/85 backdrop-blur-sm rounded-2xl border-2 border-white/40 shadow-lg p-4 animate-fade-in-up">
         <div className="flex justify-between items-center mb-2">
           <p className="text-sm font-bold text-purple-800 font-[var(--font-heading)]">
@@ -141,6 +176,19 @@ export default function MinigameShell({
             />
           ))}
         </div>
+
+        <div className="mt-2 pt-2 border-t border-purple-100/80 flex items-center justify-between gap-2">
+          <span className="text-[11px] text-purple-700 font-medium flex items-center gap-1.5 min-w-0">
+            <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse-dot shrink-0" />
+            <span className="truncate">{pacingText}</span>
+          </span>
+          {streakStats.bestStreak >= 2 && (
+            <span className="shrink-0 text-[11px] font-bold text-amber-700 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <Icon name="flame" size={12} className="text-amber-500" />
+              Best x{streakStats.bestStreak}
+            </span>
+          )}
+        </div>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[260px_1fr] items-start">
@@ -159,6 +207,11 @@ export default function MinigameShell({
                 <span className="block text-[10px] font-semibold text-emerald-600 mt-0.5">
                   {narratorScene.successLine}
                 </span>
+                {streakStats.currentStreak >= 2 && (
+                  <span className="block text-[10px] font-bold text-emerald-700 mt-0.5">
+                    Combo streak x{streakStats.currentStreak}
+                  </span>
+                )}
               </div>
             )}
             {showingFeedback && lastResult && !lastResult.correct && (
@@ -169,7 +222,13 @@ export default function MinigameShell({
           </div>
         </div>
 
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-2 border-white/40 shadow-lg p-4 sm:p-5 animate-fade-in-up">
+        <div
+          className={`bg-white/90 backdrop-blur-sm rounded-2xl border-2 border-white/40 shadow-lg p-4 sm:p-5 animate-fade-in-up ${
+            showingFeedback && lastResult && !lastResult.correct
+              ? "animate-quest-panel-shake"
+              : ""
+          }`}
+        >
           <div className="flex items-end gap-3 mb-4">
             <NPCGuide npc={narratorScene.npc} />
             <SpeechBubble
@@ -198,11 +257,17 @@ export default function MinigameShell({
             </SpeechBubble>
           </div>
 
-          <MinigameComponent
+          <div
             key={currentExercise.id}
-            exercise={currentExercise}
-            onAnswer={submitAnswer}
-          />
+            className={`transition-all duration-300 ${
+              showingFeedback ? "opacity-80 translate-y-1" : "animate-quest-card-in"
+            }`}
+          >
+            <MinigameComponent
+              exercise={currentExercise}
+              onAnswer={submitAnswer}
+            />
+          </div>
         </div>
       </div>
 
