@@ -10,8 +10,13 @@ import PrincessNameModal from "@/components/ui/PrincessNameModal";
 import Sparkle from "@/components/ui/Sparkle";
 
 export default function HomePage() {
+  const displayName = useGameStore((s) => s.displayName);
   const hasSeenNamingModal = useGameStore((s) => s.hasSeenNamingModal);
   const levelProgress = useGameStore((s) => s.levelProgress);
+  const normalizedName = displayName.trim().toLowerCase();
+  const hasCustomName =
+    !!normalizedName && normalizedName !== "scholar" && normalizedName !== "dev";
+  const shouldShowNamingModal = !hasSeenNamingModal || !hasCustomName;
 
   const progressEntries = Object.values(levelProgress).sort(
     (a, b) =>
@@ -24,7 +29,7 @@ export default function HomePage() {
       <TopBar />
 
       {/* Naming modal for first-time users */}
-      <PrincessNameModal open={!hasSeenNamingModal} />
+      <PrincessNameModal open={shouldShowNamingModal} />
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-[900px] mx-auto px-6 pt-4">
@@ -45,7 +50,7 @@ export default function HomePage() {
           <div className="absolute inset-0 -m-8 pointer-events-none">
             <Sparkle count={8} />
           </div>
-          <Princess animationState="idle" size="lg" showName={hasSeenNamingModal} />
+          <Princess animationState="idle" size="lg" showName={hasCustomName} />
         </div>
 
         {/* Main CTA button */}

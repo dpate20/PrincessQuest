@@ -20,6 +20,12 @@ function getYesterdayStr(): string {
   return d.toISOString().split("T")[0];
 }
 
+function isCustomDisplayName(name: string): boolean {
+  const normalized = name.trim().toLowerCase();
+  if (!normalized) return false;
+  return normalized !== "scholar" && normalized !== "dev";
+}
+
 const EMPTY_EXERCISE_STATS: ExerciseTypeTracking = {
   "spelling-pairs": { totalAttempted: 0, totalCorrect: 0 },
   "vocabulary-in-context": { totalAttempted: 0, totalCorrect: 0 },
@@ -203,7 +209,10 @@ export const useGameStore = create<GameState>()(
         set({ equippedAccessory: itemId });
       },
 
-      setDisplayName: (name) => set({ displayName: name }),
+      setDisplayName: (name) => {
+        const trimmed = name.trim();
+        set({ displayName: trimmed || "Scholar" });
+      },
 
       setHasSeenNamingModal: () => set({ hasSeenNamingModal: true }),
 
@@ -223,20 +232,23 @@ export const useGameStore = create<GameState>()(
     }),
     {
       name: "princess-quest-game",
-      version: 3,
+      version: 4,
       migrate: (persistedState) => {
         const state = (persistedState ?? {}) as Partial<GameState>;
         const earnedStars = state.totalStars ?? 0;
         const ownedItems = Array.from(
           new Set([...(state.ownedItems ?? []), ...DEFAULT_OWNED_ITEMS])
         );
+        const rawDisplayName = (state.displayName ?? "Scholar").trim();
+        const displayName = rawDisplayName || "Scholar";
+        const hasCustomName = isCustomDisplayName(displayName);
 
         return {
           playerId:
             state.playerId ??
             crypto.randomUUID?.() ??
             Math.random().toString(36).slice(2),
-          displayName: state.displayName ?? "Scholar",
+          displayName,
           levelProgress: state.levelProgress ?? {},
           streak: state.streak ?? {
             currentStreak: 0,
@@ -249,7 +261,10 @@ export const useGameStore = create<GameState>()(
           exerciseTypeStats: state.exerciseTypeStats ?? {
             ...EMPTY_EXERCISE_STATS,
           },
-          hasSeenNamingModal: state.hasSeenNamingModal ?? false,
+          // Placeholder names should re-open naming until the player picks a real one.
+          hasSeenNamingModal: hasCustomName
+            ? (state.hasSeenNamingModal ?? false)
+            : false,
           equippedDress: state.equippedDress ?? STARTER_LOADOUT.dress,
           equippedCrown: state.equippedCrown ?? STARTER_LOADOUT.crown,
           equippedAccessory:
