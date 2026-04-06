@@ -184,6 +184,31 @@ body {
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+@keyframes home-cloud-drift {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(10px); opacity: 0.85; }
+}
+
+@keyframes home-twinkle {
+  0%, 100% { transform: scale(0.9); opacity: 0.35; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes home-haze-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes home-moon-breath {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+@keyframes home-mist-drift {
+  0%, 100% { transform: translateX(0); opacity: 0.55; }
+  50% { transform: translateX(12px); opacity: 0.78; }
+}
+
 @keyframes gate-open-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-110%); }
@@ -216,6 +241,11 @@ body {
 .animate-pulse-dot { animation: pulse-dot 1.2s ease-in-out infinite; }
 .animate-quest-panel-shake { animation: quest-panel-shake 0.45s ease-in-out; }
 .animate-quest-card-in { animation: quest-card-in 0.28s ease-out; }
+.animate-home-cloud-drift { animation: home-cloud-drift 9s ease-in-out infinite; }
+.animate-home-twinkle { animation: home-twinkle 3s ease-in-out infinite; }
+.animate-home-haze-pulse { animation: home-haze-pulse 6s ease-in-out infinite; }
+.animate-home-moon-breath { animation: home-moon-breath 7s ease-in-out infinite; }
+.animate-home-mist-drift { animation: home-mist-drift 11s ease-in-out infinite; }
 .animate-gate-open-left { animation: gate-open-left 0.9s ease-in forwards; }
 .animate-gate-open-right { animation: gate-open-right 0.9s ease-in forwards; }
 
