@@ -24,19 +24,18 @@ export default function ShopItemCard({
 }: ShopItemCardProps) {
   const equippedDress = useGameStore((s) => s.equippedDress);
   const equippedCrown = useGameStore((s) => s.equippedCrown);
-  const equippedAccessory = useGameStore((s) => s.equippedAccessory);
 
   const previewDress = item.category === "dresses" ? item.id : equippedDress;
   const previewCrown = item.category === "crowns" ? item.id : equippedCrown;
   const previewAccessory =
-    item.category === "accessories" ? item.id : equippedAccessory;
+    item.category === "accessories" ? item.id : "acc-pendant";
 
   const previewBg =
     item.category === "dresses"
-      ? "from-fuchsia-100 to-purple-100"
+      ? "from-fuchsia-100 to-violet-100"
       : item.category === "crowns"
-        ? "from-amber-100 to-yellow-100"
-        : "from-cyan-100 to-indigo-100";
+        ? "from-amber-100 to-orange-100"
+        : "from-cyan-100 to-sky-100";
 
   return (
     <Card
@@ -54,13 +53,13 @@ export default function ShopItemCard({
           }`}
         >
           <Princess
-            size="md"
+            size="sm"
             animateIdle={false}
             showName={false}
             dressId={previewDress}
             crownId={previewCrown}
             accessoryId={previewAccessory}
-            className="scale-90"
+            className="scale-[1.08] translate-y-0.5"
           />
         </div>
         {state === "locked" && (

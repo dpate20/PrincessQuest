@@ -81,7 +81,7 @@ export default function ShopPage() {
       <div className="relative z-10 flex-1 px-4 py-6 max-w-[900px] mx-auto w-full">
         <div className="grid gap-4 lg:grid-cols-[260px_1fr] mb-6">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-2 border-white/30 shadow-lg p-4">
-            <Princess size="lg" showName animationState="idle" />
+            <Princess size="md" showName animationState="idle" />
             <p className="text-center text-xs text-purple-700 font-semibold mt-3">
               Your current look is live in every level.
             </p>
